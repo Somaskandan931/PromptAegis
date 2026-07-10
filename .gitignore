@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Databases
+*.db
+*.sqlite3
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+*.safetensors
+*.pkl
+*.joblib
+
+# FAISS indexes
+*.faiss
+*.index
+
+# Reports
+backend/reports.zip
+backend/reports/
+
+# Datasets
+backend/data/*.csv
+backend/data/*.json
+backend/data/*.parquet
+backend/data/*.zip
+
+# Keep directory structure
+!backend/data/.gitkeep
+
+# Evaluation outputs
+backend/results/
+backend/outputs/
+backend/cache/

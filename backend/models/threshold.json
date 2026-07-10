@@ -1,0 +1,11 @@
+{
+  "medium_classifier_threshold": 0.0482,
+  "high_classifier_threshold": 0.2482,
+  "precision_at_threshold": 0.9002,
+  "recall_at_threshold": 0.974,
+  "class_weight": "3x attack",
+  "recall_by_category": {
+    "prompt_injection": 0.9895,
+    "harmful_content_request": 0.6364
+  }
+}
