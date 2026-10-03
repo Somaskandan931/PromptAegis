@@ -1,3 +1,9 @@
+/**
+ * LEGACY COMPONENT: ToolInterceptor
+ * Superseded by the Dual-Plane Security Control Plane (GovernancePanel.jsx -> Plane B: Verification Lab).
+ * Retained for backward-compatible reference only. Not referenced in active application routing.
+ */
+
 import { useEffect, useState, useCallback } from 'react'
 import { PageHeader } from './Playground'
 import { api } from '../api'

@@ -25,7 +25,17 @@ def _load_dotenv(path: str) -> None:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 _load_dotenv(os.path.join(BASE_DIR, ".env"))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-DB_PATH = os.path.join(BASE_DIR, "database", "gateway.db")
+DATABASE_DIR = os.path.join(BASE_DIR, "database")
+
+# Environment Database Paths (Physical Isolation)
+BENCHMARK_DB_PATH = os.path.join(DATABASE_DIR, "gateway_benchmark.db")
+LOCAL_DEV_DB_PATH = os.path.join(DATABASE_DIR, "gateway_local_dev.db")
+CONNECTED_APP_DB_PATH = os.path.join(DATABASE_DIR, "gateway_connected.db")
+ENVIRONMENTS_REGISTRY_PATH = os.path.join(DATABASE_DIR, "environments.json")
+CREDENTIALS_REGISTRY_PATH = os.path.join(DATABASE_DIR, "credentials.json")
+
+# Authoritative default path (resolves to benchmark DB for research reproducibility)
+DB_PATH = BENCHMARK_DB_PATH
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 
 ATTACK_CORPUS_PATH = os.path.join(DATA_DIR, "attacks.csv")

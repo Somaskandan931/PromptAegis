@@ -140,21 +140,38 @@ CREATE INDEX IF NOT EXISTS idx_exp_events_run ON experiment_events(run_id);
 """
 
 
-def init_db():
-    os.makedirs(os.path.dirname(config.DB_PATH), exist_ok=True)
-    with get_conn() as conn:
+def init_db(env: Optional[str] = None):
+    """Initialize database schemas for one or all registered environments with WAL mode enabled."""
+    from database.environments import EnvironmentRegistry
+    envs_to_init = [env] if env else [e["id"] for e in EnvironmentRegistry.list_environments()]
+    for e_id in envs_to_init:
+        db_path = EnvironmentRegistry.resolve_db_path(e_id)
+        os.makedirs(os.path.dirname(db_path), exist_ok=True)
+        conn = sqlite3.connect(db_path)
+        conn.execute("PRAGMA journal_mode=WAL;")
+        conn.execute("PRAGMA foreign_keys=ON;")
         conn.executescript(_SCHEMA)
+        conn.commit()
+        conn.close()
 
 
 @contextmanager
-def get_conn():
-    conn = sqlite3.connect(config.DB_PATH)
+def get_conn(env: Optional[str] = None):
+    """Authoritative connection provider routing to the current or specified environment DB."""
+    from database.environments import EnvironmentRegistry, get_current_environment
+    target_env = env or get_current_environment()
+    db_path = EnvironmentRegistry.resolve_db_path(target_env)
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL;")
+    conn.execute("PRAGMA foreign_keys=ON;")
     try:
         yield conn
         conn.commit()
     finally:
         conn.close()
+
 
 
 def insert_log(result) -> None:

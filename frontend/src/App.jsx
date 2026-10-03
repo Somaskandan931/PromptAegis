@@ -1,10 +1,9 @@
-import { Routes, Route, NavLink } from 'react-router-dom'
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import AegisChat from './pages/AegisChat'
 import Playground from './pages/Playground'
 import Dashboard from './pages/Dashboard'
 import Logs from './pages/Logs'
 import GovernancePanel from './pages/GovernancePanel'
-import ToolInterceptor from './pages/ToolInterceptor'
 import ExperimentRunner from './pages/ExperimentRunner'
 
 const NAV_ITEMS = [
@@ -12,8 +11,7 @@ const NAV_ITEMS = [
   { to: '/playground', label: 'Gateway Lab', icon: '>' },
   { to: '/dashboard', label: 'Evaluation', icon: '#' },
   { to: '/logs', label: 'Audit Logs', icon: '=' },
-  { to: '/governance', label: 'Governance', icon: '⚙' },
-  { to: '/intercept', label: 'Tool Interceptor', icon: '⚡' },
+  { to: '/governance', label: 'Security Control Plane', icon: '🛡' },
   { to: '/experiments', label: 'Experiments', icon: '⬡' },
 ]
 
@@ -59,7 +57,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/logs" element={<Logs />} />
           <Route path="/governance" element={<GovernancePanel />} />
-          <Route path="/intercept" element={<ToolInterceptor />} />
+          <Route path="/intercept" element={<Navigate to="/governance?tab=LAB" replace />} />
           <Route path="/experiments" element={<ExperimentRunner />} />
         </Routes>
       </main>

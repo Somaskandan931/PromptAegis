@@ -68,9 +68,9 @@ PROMPT INJECTION ATTACK (Direct or Indirect)
 ```
 
 ### What PromptAegis Is
-- **An Execution Confinement Gateway**: An intermediary enforcement layer that evaluates candidate tool calls against deterministic security invariants (RBAC, regex parameter constraints, rate limits, and approval policies).
+- **An Application-Level AI Decision Security Gateway / Reference Monitor**: An intermediary sequential enforcement layer that evaluates candidate structured tool proposals against deterministic security invariants (60-second fixed/tumbling window rate limits, RBAC default-deny matrix, parameter canonicalization, invariant policies, risk scoring/approval gates, and structured SQLite audit logging).
 - **A Decoupled Security Boundary**: An architecture ensuring that an agent's internal cognitive compromise does not automatically translate into unauthorized execution privilege.
-- **An Auditable Governance Platform**: A full-stack system providing real-time interception, policy authoring, automated benchmark reproduction, and cryptographic forensic execution tracing.
+- **An Auditable Governance Platform**: A full-stack reference monitor providing sequential interception, policy authoring, automated benchmark reproduction, and structured forensic audit logging.
 
 ### What PromptAegis Is NOT
 - **Not a Universal Prompt Injection Detector**: It does not inspect raw natural language inputs to decide whether a user prompt is semantically hostile.
@@ -154,7 +154,7 @@ flowchart TD
 | **Database & Audit** | `backend/database/db.py` | Thread-safe SQLite context manager managing 9 relational tables; logs immutable forensic traces for every intercepted call. |
 | **Experiments API** | `backend/api/experiments.py` | Programmatic benchmark orchestration engine supporting automated reproduction, configuration ablations, and CSV export. |
 | **Governance API** | `backend/api/governance.py` | REST endpoints for agent registration, tool provisioning, RBAC assignment, policy management, and statistics. |
-| **Administrative UI** | `frontend/src/` | React 18 single-page application featuring interactive policy panels, real-time interceptor logs, and benchmark runners. |
+| **Security Control Plane UI** | `frontend/src/` | Dual-plane React SPA mediating structured tool proposals across isolated environments (Posture & Access Boundary vs Runtime Enforcement). |
 
 ---
 

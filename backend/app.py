@@ -52,3 +52,8 @@ app.include_router(experiments_router.router, tags=["experiments"])
 def health():
     return {"status": "ok", "version": "2.0.0"}
 
+
+@app.get("/readiness")
+def readiness():
+    return {"status": "ready", "version": "2.0.0"}
+

@@ -27,25 +27,30 @@ _GLOBAL_DEFAULT = 50
 _WINDOW_SECONDS = 60.0
 
 
-# In-memory overrides (can be updated at runtime)
-_overrides: Dict[str, int] = {}
+from database.environments import get_current_environment
+
+# In-memory overrides scoped by (environment_id, tool_name)
+_overrides: Dict[Tuple[str, str], int] = {}
 
 
-def get_limit(tool_name: str) -> int:
-    """Return configured call limit per window for this tool."""
-    if tool_name in _overrides:
-        return _overrides[tool_name]
+def get_limit(tool_name: str, env_id: str = None) -> int:
+    """Return configured call limit per window for this tool in the target or current environment."""
+    env = env_id or get_current_environment()
+    if (env, tool_name) in _overrides:
+        return _overrides[(env, tool_name)]
     return _DEFAULT_LIMITS.get(tool_name, _GLOBAL_DEFAULT)
 
 
-def set_limit(tool_name: str, limit: int) -> None:
-    """Override rate limit for a tool at runtime."""
-    _overrides[tool_name] = limit
+def set_limit(tool_name: str, limit: int, env_id: str = None) -> None:
+    """Override rate limit for a tool at runtime in the target or current environment."""
+    env = env_id or get_current_environment()
+    _overrides[(env, tool_name)] = limit
 
 
-def reset_rate_limits() -> None:
-    """Clear all rate limit counters from DB."""
-    with db.get_conn() as conn:
+def reset_rate_limits(env_id: str = None) -> None:
+    """Clear all rate limit counters from DB for the target or current environment."""
+    env = env_id or get_current_environment()
+    with db.get_conn(env=env) as conn:
         conn.execute("DELETE FROM rate_limit_counters")
 
 

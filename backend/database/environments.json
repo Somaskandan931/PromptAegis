@@ -1,0 +1,35 @@
+[
+  {
+    "id": "research_benchmark",
+    "name": "Research Benchmark",
+    "type": "research_benchmark",
+    "description": "Simulated CRM, order, and email tools for paper reproducibility and scientific evaluation",
+    "db_filename": "gateway_benchmark.db",
+    "allow_seed": true,
+    "allow_external_runtime": true,
+    "status": "active",
+    "created_at": 1790000000.0
+  },
+  {
+    "id": "local_dev",
+    "name": "Local Dev Sandbox",
+    "type": "local_dev",
+    "description": "Isolated developer scratchpad for custom principals, capabilities, and policies",
+    "db_filename": "gateway_local_dev.db",
+    "allow_seed": false,
+    "allow_external_runtime": true,
+    "status": "active",
+    "created_at": 1790900000.0
+  },
+  {
+    "id": "connected_application",
+    "name": "Connected Application",
+    "type": "connected_application",
+    "description": "Live application gateway mediating external agent tool proposals",
+    "db_filename": "gateway_connected.db",
+    "allow_seed": false,
+    "allow_external_runtime": true,
+    "status": "active",
+    "created_at": 1790900000.0
+  }
+]

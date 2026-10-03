@@ -172,8 +172,13 @@ def test_research_clock_determinism():
     res1 = runner1.run_benchmark(configurations=["full"], scenarios=scenarios, save_raw=False)
     res2 = runner2.run_benchmark(configurations=["full"], scenarios=scenarios, save_raw=False)
 
-    decisions1 = [e["actual_decision"] for e in res1["events"]]
-    decisions2 = [e["actual_decision"] for e in res2["events"]]
-    assert decisions1 == decisions2, "Research clock did not produce deterministic outcomes"
-    assert len(decisions1) == 10
+    try:
+        decisions1 = [e["actual_decision"] for e in res1["events"]]
+        decisions2 = [e["actual_decision"] for e in res2["events"]]
+        assert decisions1 == decisions2, "Research clock did not produce deterministic outcomes"
+        assert len(decisions1) == 10
+    finally:
+        from database import db
+        with db.get_conn() as conn:
+            conn.execute("DELETE FROM tool_calls WHERE experiment_run_id IN (?, ?)", (res1["run_id"], res2["run_id"]))
 
