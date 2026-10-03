@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { to: '/dashboard', label: 'Evaluation', icon: '#' },
   { to: '/logs', label: 'Audit Logs', icon: '=' },
   { to: '/governance', label: 'Security Control Plane', icon: '🛡' },
-  { to: '/experiments', label: 'Experiments', icon: '⬡' },
+  { to: '/experiments', label: 'Research Benchmark', icon: '⬡' },
 ]
 
 export default function App() {
