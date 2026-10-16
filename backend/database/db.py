@@ -502,6 +502,37 @@ def increment_rate_limit(agent_id: str, tool_name: str, window_start: float) -> 
         return row["call_count"] if row else 1
 
 
+def consume_rate_limit(agent_id: str, tool_name: str, window_start: float,
+                       limit: int) -> tuple[bool, int]:
+    """Atomically consume one slot when the window has not reached ``limit``.
+
+    The conditional UPDATE is serialized by SQLite's writer lock, so concurrent
+    requests cannot all pass a separate read-then-increment check.
+    Returns ``(allowed, current_count)``.
+    """
+    rid = f"{agent_id}::{tool_name}::{window_start}"
+    with get_conn() as conn:
+        conn.execute(
+            """INSERT INTO rate_limit_counters (id, agent_id, tool_name, window_start, call_count)
+               VALUES (?,?,?,?,0)
+               ON CONFLICT(agent_id, tool_name, window_start) DO NOTHING""",
+            (rid, agent_id, tool_name, window_start),
+        )
+        updated = conn.execute(
+            """UPDATE rate_limit_counters
+               SET call_count = call_count + 1
+               WHERE agent_id=? AND tool_name=? AND window_start=? AND call_count < ?""",
+            (agent_id, tool_name, window_start, limit),
+        )
+        row = conn.execute(
+            """SELECT call_count FROM rate_limit_counters
+               WHERE agent_id=? AND tool_name=? AND window_start=?""",
+            (agent_id, tool_name, window_start),
+        ).fetchone()
+        count = row["call_count"] if row else 0
+        return updated.rowcount == 1, count
+
+
 # ============================================================================
 # Governance CRUD — Experiment Runs (FR-10, FR-12)
 # ============================================================================

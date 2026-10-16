@@ -30,6 +30,7 @@
 - [Engineering vs. Research Contributions](#engineering-vs-research-contributions)
 - [Evidence Hierarchy and Traceability](#evidence-hierarchy-and-traceability)
 - [Citation and Security Disclosure](#citation-and-security-disclosure)
+- [Research Alignment and Paper Plan](docs/RESEARCH_ALIGNMENT_AND_PAPER_PLAN.md)
 
 ---
 

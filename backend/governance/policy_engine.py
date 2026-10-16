@@ -16,6 +16,18 @@ import urllib.parse
 from database import db
 
 
+def _string_values(value: Any):
+    """Yield scalar values nested anywhere in a structured tool argument."""
+    if isinstance(value, dict):
+        for nested in value.values():
+            yield from _string_values(nested)
+    elif isinstance(value, (list, tuple)):
+        for nested in value:
+            yield from _string_values(nested)
+    elif isinstance(value, (str, int, float)):
+        yield str(value)
+
+
 def _safe_b64_decode(raw_token: str) -> str:
     """Safely decode a base64 token if it yields printable text without domain keywords."""
     try:
@@ -132,12 +144,12 @@ def evaluate_policies(
             if raw_val is None:
                 if not param_key:
                     # If no specific param_key was required, inspect all string args
-                    arg_strings = [str(v) for v in arguments.values() if isinstance(v, (str, int, float))]
+                    arg_strings = list(_string_values(arguments))
                 else:
                     # Specific param_key was required by policy but is absent from tool arguments
                     continue
             else:
-                arg_strings = [str(raw_val)]
+                arg_strings = list(_string_values(raw_val))
 
             for val_str in arg_strings:
                 inspect_str = _normalize_value(val_str) if hardened else val_str

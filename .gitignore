@@ -5,7 +5,12 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
+.hypothesis/
+.ipynb_checkpoints/
 .coverage
+coverage.xml
 htmlcov/
 
 # Scratch & temporary artifacts
@@ -13,6 +18,10 @@ scratch/
 tmp/
 temp/
 output/
+*.tmp
+*.swp
+*.swo
+*.pid
 
 # Virtual environments
 .venv/
@@ -22,10 +31,18 @@ env/
 # Environment variables
 .env
 .env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
 
 # Databases
 *.db
 *.sqlite3
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+backend/database/*.db-*
 
 # Build
 build/
@@ -34,6 +51,8 @@ dist/
 
 # Node
 node_modules/
+frontend/.vite/
+frontend/dist/
 
 # IDE
 .vscode/
@@ -46,6 +65,10 @@ Thumbs.db
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Model checkpoints
 *.pt
@@ -56,6 +79,9 @@ Thumbs.db
 *.safetensors
 *.pkl
 *.joblib
+# Downloaded embedding and transformer-model caches.
+backend/models/cache/
+backend/models/downloads/
 
 # FAISS indexes
 *.faiss
@@ -67,6 +93,13 @@ backend/reports.zip
 # Datasets
 backend/data/*.parquet
 backend/data/*.zip
+# Large benchmark corpus; keep locally, but do not commit to GitHub.
+backend/data/hackaprompt_attacks.csv
+# External source downloads and intermediate corpus builds are reproducible
+# locally and can be much larger than GitHub's file-size limit.
+backend/data/external/
+backend/data/downloads/
+backend/data/intermediate/
 
 # Keep directory structure
 !backend/data/.gitkeep
@@ -75,3 +108,7 @@ backend/data/*.zip
 backend/results/
 backend/outputs/
 backend/cache/
+
+# Local runtime state
+backend/.env.local
+frontend/.env.*.local

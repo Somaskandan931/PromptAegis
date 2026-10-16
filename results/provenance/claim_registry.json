@@ -188,7 +188,7 @@
     {
       "claim_id": "CLM-PROD-009",
       "metric": "Baseline Median Latency (P50)",
-      "value": 10.89,
+      "value": 33.48,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -205,12 +205,12 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "In-process native execution pass-through latency.",
-      "notes": "P50 latency of unmitigated execution pass-through (10.89 ms)."
+      "notes": "P50 latency of unmitigated execution pass-through (33.48 ms)."
     },
     {
       "claim_id": "CLM-PROD-010",
       "metric": "RBAC-Only Median Latency (P50)",
-      "value": 12.86,
+      "value": 48.22,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -227,12 +227,12 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "Single-table SQLite permission lookup.",
-      "notes": "Single-table SQLite permission lookup P50 latency (12.86 ms)."
+      "notes": "Single-table SQLite permission lookup P50 latency (48.22 ms)."
     },
     {
       "claim_id": "CLM-PROD-011",
       "metric": "Policy-Only Median Latency (P50)",
-      "value": 12.95,
+      "value": 79.15,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -249,12 +249,12 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "Regex and boundary rule evaluation.",
-      "notes": "Regex and parameter boundary rule evaluation P50 latency (12.95 ms)."
+      "notes": "Regex and parameter boundary rule evaluation P50 latency (79.15 ms)."
     },
     {
       "claim_id": "CLM-PROD-012",
       "metric": "Full Normalized Median Latency (P50)",
-      "value": 22.75,
+      "value": 124.67,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -271,12 +271,12 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "In-process native execution latency on Windows runtime.",
-      "notes": "High-resolution measured P50 execution latency on native Windows runtime (22.75 ms)."
+      "notes": "High-resolution measured P50 execution latency on native Windows runtime (124.67 ms)."
     },
     {
       "claim_id": "CLM-PROD-013",
       "metric": "Full Burst Median Latency (P50)",
-      "value": 20.6,
+      "value": 114.33,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -293,12 +293,12 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "High-frequency burst pipeline with rate limiter evaluation.",
-      "notes": "P50 latency under high-frequency burst traffic (20.60 ms)."
+      "notes": "P50 latency under high-frequency burst traffic (114.33 ms)."
     },
     {
       "claim_id": "CLM-PROD-014",
       "metric": "Hardened Median Latency (P50)",
-      "value": 17.83,
+      "value": 123.22,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -315,7 +315,7 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "Multi-encoding normalizers and pre-execution decoders plus burst pipeline.",
-      "notes": "P50 latency of hardened governance with normalizers (17.83 ms)."
+      "notes": "P50 latency of hardened governance with normalizers (123.22 ms)."
     },
     {
       "claim_id": "CLM-STAT-001",
@@ -342,7 +342,7 @@
     {
       "claim_id": "CLM-STAT-002",
       "metric": "Paired Median Overhead (Full Normalized - Baseline)",
-      "value": 12.01,
+      "value": 90.98,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -359,7 +359,7 @@
       "production_runtime": true,
       "measurement_type": "DERIVED",
       "limitations": "Median of paired differences across 600 requests on native Windows runtime.",
-      "notes": "Median of paired differences (L_full_norm - L_baseline) = +12.01 ms. Wilcoxon W = 10.0, p = 6.29e-100."
+      "notes": "Median of paired differences (L_full_norm - L_baseline) = +90.98 ms. Wilcoxon W = 3621.0, p = 3.11e-92."
     },
     {
       "claim_id": "CLM-STAT-003",
@@ -433,7 +433,7 @@
     {
       "claim_id": "CLM-STAT-006",
       "metric": "Paired Median Overhead (Full Burst - Baseline)",
-      "value": 9.24,
+      "value": 81.13,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -450,7 +450,7 @@
       "production_runtime": true,
       "measurement_type": "DERIVED",
       "limitations": "Median of paired differences under burst traffic.",
-      "notes": "Median of paired differences (L_full_burst - L_baseline) = +9.24 ms. Wilcoxon W = 796.0, p = 3.16e-98."
+      "notes": "Median of paired differences (L_full_burst - L_baseline) = +81.13 ms. Wilcoxon W = 3608.0, p = 2.92e-92."
     },
     {
       "claim_id": "CLM-CAL-001",
@@ -521,7 +521,7 @@
     {
       "claim_id": "CLM-CAL-004",
       "metric": "Calibrated Median Latency (P50)",
-      "value": 23.73,
+      "value": 132.97,
       "unit": "ms",
       "numerator": null,
       "denominator": null,
@@ -538,7 +538,7 @@
       "production_runtime": true,
       "measurement_type": "MEASURED",
       "limitations": "Live gateway execution overhead across 600 requests.",
-      "notes": "Live production gateway P50 latency (23.73 ms)."
+      "notes": "Live production gateway P50 latency (132.97 ms)."
     },
     {
       "claim_id": "CLM-ADV-001",

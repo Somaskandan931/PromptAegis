@@ -207,7 +207,7 @@ def intercept(
     # Step 4: Risk-based gate
     risk_score = compute_risk_score(tool_risk, perm_ok, arguments, call_count, limit, requires_approval)
     stage_evals["risk_scorer"] = {"executed": True, "score": risk_score, "requires_approval": requires_approval}
-    if requires_approval and risk_score >= 7.0:
+    if requires_approval or risk_score >= 7.0:
         decision = "REQUIRE_APPROVAL"
         reason = f"HIGH_RISK_REQUIRES_APPROVAL:score={risk_score}"
         latency_ms = (time.perf_counter() - t0) * 1000

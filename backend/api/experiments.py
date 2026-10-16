@@ -12,14 +12,16 @@ import json
 import os
 import statistics
 import uuid
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from database import db
+from database.environments import environment_scope
 from governance.interceptor import intercept
+from api.auth import EnvironmentContext, get_authenticated_environment
 
 router = APIRouter()
 
@@ -29,12 +31,26 @@ _BENCHMARK_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data"
 class ExperimentRunRequest(BaseModel):
     configuration: str = Field(..., pattern="^(baseline|permission|rbac_only|policy|policy_only|full|full_governance|hardened|full_burst|full_normalized)$")
     description: str = ""
-    scenario_categories: List[str] = []
+    scenario_categories: List[str] = Field(default_factory=list)
     max_scenarios: int = 0
 
 
 @router.post("/experiments/run", tags=["experiments"])
-def run_experiment(body: ExperimentRunRequest):
+def run_experiment(
+    body: ExperimentRunRequest,
+    env_ctx: EnvironmentContext = Depends(get_authenticated_environment),
+):
+    if env_ctx.environment_id not in ("research_benchmark", "local_dev"):
+        raise HTTPException(
+            status_code=403,
+            detail={"error": "EXPERIMENT_ENVIRONMENT_FORBIDDEN",
+                    "message": "Experiments are limited to research_benchmark and local_dev."},
+        )
+    with environment_scope(env_ctx.environment_id):
+        return _run_experiment(body)
+
+
+def _run_experiment(body: ExperimentRunRequest):
     run_id = f"run_{uuid.uuid4().hex[:12]}"
     desc = body.description or f"{body.configuration} configuration experiment"
     db.create_experiment_run(run_id, body.configuration, desc)
@@ -131,21 +147,30 @@ def run_experiment(body: ExperimentRunRequest):
 
 
 @router.get("/experiments", tags=["experiments"])
-def list_experiments():
-    return db.list_experiment_runs()
+def list_experiments(env_ctx: EnvironmentContext = Depends(get_authenticated_environment)):
+    if env_ctx.environment_id not in ("research_benchmark", "local_dev"):
+        raise HTTPException(status_code=403, detail="Experiments are not available in this environment.")
+    with environment_scope(env_ctx.environment_id):
+        return db.list_experiment_runs()
 
 
 @router.get("/experiments/{run_id}", tags=["experiments"])
-def get_experiment(run_id: str):
-    run = db.get_experiment_run(run_id)
-    if not run:
-        raise HTTPException(404, f"Run '{run_id}' not found.")
-    return run
+def get_experiment(run_id: str, env_ctx: EnvironmentContext = Depends(get_authenticated_environment)):
+    if env_ctx.environment_id not in ("research_benchmark", "local_dev"):
+        raise HTTPException(status_code=403, detail="Experiments are not available in this environment.")
+    with environment_scope(env_ctx.environment_id):
+        run = db.get_experiment_run(run_id)
+        if not run:
+            raise HTTPException(404, f"Run '{run_id}' not found.")
+        return run
 
 
 @router.get("/experiments/{run_id}/export", tags=["experiments"])
-def export_experiment(run_id: str):
-    run = db.get_experiment_run(run_id)
+def export_experiment(run_id: str, env_ctx: EnvironmentContext = Depends(get_authenticated_environment)):
+    if env_ctx.environment_id not in ("research_benchmark", "local_dev"):
+        raise HTTPException(status_code=403, detail="Experiments are not available in this environment.")
+    with environment_scope(env_ctx.environment_id):
+        run = db.get_experiment_run(run_id)
     if not run:
         raise HTTPException(404, f"Run '{run_id}' not found.")
     output = io.StringIO()

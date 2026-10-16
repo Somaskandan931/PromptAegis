@@ -72,14 +72,13 @@ class AgentAdapter:
         config = configuration or self.configuration
         uid = user_id if user_id is not None else self.default_user_id
 
-        # Normalize tool naming: e.g. "database.search" -> "search_customer" if namespaced
-        normalized_tool = tool_name.split(".")[-1] if "." in tool_name else tool_name
-
-        standard_req = self.format_request(normalized_tool, arguments, user_id=uid)
+        # Authorization uses the exact registered identifier. Stripping a
+        # namespace could map distinct tools onto the same permission record.
+        standard_req = self.format_request(tool_name, arguments, user_id=uid)
 
         result = intercept(
             agent_id=self.agent_id,
-            tool_name=normalized_tool,
+            tool_name=tool_name,
             arguments=arguments,
             user_id=uid,
             configuration=config,

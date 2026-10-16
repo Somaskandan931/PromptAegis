@@ -83,7 +83,7 @@ class PolicyCreate(BaseModel):
     action: str = Field(..., pattern="^(ALLOW|DENY|REQUIRE_APPROVAL|RATE_LIMIT)$")
     target_agent_id: Optional[str] = None
     target_tool_id: Optional[str] = None
-    condition: Dict[str, Any] = {}
+    condition: Dict[str, Any] = Field(default_factory=dict)
     priority: int = 100
 
 class PolicyToggle(BaseModel):
@@ -92,7 +92,7 @@ class PolicyToggle(BaseModel):
 class InterceptRequest(BaseModel):
     agent_id: str
     tool_name: str
-    arguments: Dict[str, Any] = {}
+    arguments: Dict[str, Any] = Field(default_factory=dict)
     user_id: str = ""
     configuration: str = "full"
     experiment_run_id: str = ""
@@ -405,6 +405,14 @@ def intercept_tool_call(
     Evaluates tool invocation proposal strictly inside the authenticated environment.
     """
     env = _resolve_env_context(env_ctx)
+    if env.environment_id == "connected_application" and body.configuration not in ("full", "hardened"):
+        raise HTTPException(
+            status_code=403,
+            detail={
+                "error": "UNSAFE_GOVERNANCE_CONFIGURATION",
+                "message": "The connected application environment requires full governance.",
+            },
+        )
     if (body.source == "verification_lab" or body.experiment_run_id.startswith("lab_")) and env.environment_id == "connected_application":
         raise HTTPException(
             status_code=403,

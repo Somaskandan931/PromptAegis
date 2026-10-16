@@ -1,5 +1,5 @@
 {
-  "run_id": "run_calibrated_1790917859",
+  "run_id": "run_calibrated_1792146634",
   "commit": "e12a06ad8062518dbe7c67dbee6988298ae5597d",
   "events": [
     {
@@ -13,7 +13,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.30240000144113
+      "latency_ms": 104.53079999570036
     },
     {
       "scenario_id": "EXC-002",
@@ -26,7 +26,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.083199998131022
+      "latency_ms": 97.50150000036228
     },
     {
       "scenario_id": "EXC-003",
@@ -39,7 +39,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.69430000160355
+      "latency_ms": 101.06459999951767
     },
     {
       "scenario_id": "EXC-004",
@@ -52,7 +52,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.72949999780394
+      "latency_ms": 102.26030000194442
     },
     {
       "scenario_id": "EXC-005",
@@ -65,7 +65,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.92520000244258
+      "latency_ms": 108.25569999724394
     },
     {
       "scenario_id": "EXC-006",
@@ -78,7 +78,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.461600002017803
+      "latency_ms": 98.38299999682931
     },
     {
       "scenario_id": "EXC-007",
@@ -91,7 +91,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.039699994318653
+      "latency_ms": 180.1802000045427
     },
     {
       "scenario_id": "EXC-008",
@@ -104,7 +104,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.33360000193352
+      "latency_ms": 97.94780000083847
     },
     {
       "scenario_id": "EXC-009",
@@ -117,7 +117,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.545199994870927
+      "latency_ms": 148.6194000026444
     },
     {
       "scenario_id": "EXC-010",
@@ -130,7 +130,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.31290000095032
+      "latency_ms": 156.63929999573156
     },
     {
       "scenario_id": "EXC-011",
@@ -143,7 +143,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.10440000676317
+      "latency_ms": 169.22799999883864
     },
     {
       "scenario_id": "EXC-012",
@@ -156,7 +156,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.785700002510566
+      "latency_ms": 146.8996999974479
     },
     {
       "scenario_id": "EXC-013",
@@ -169,7 +169,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.293399994145148
+      "latency_ms": 146.92289999948116
     },
     {
       "scenario_id": "EXC-014",
@@ -182,7 +182,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.561400000588037
+      "latency_ms": 113.13470000459347
     },
     {
       "scenario_id": "EXC-015",
@@ -195,7 +195,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.65840000170283
+      "latency_ms": 101.23549999843817
     },
     {
       "scenario_id": "EXC-016",
@@ -208,7 +208,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.044600001710933
+      "latency_ms": 196.02289999602363
     },
     {
       "scenario_id": "EXC-017",
@@ -221,7 +221,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.97059999970952
+      "latency_ms": 196.5411999990465
     },
     {
       "scenario_id": "EXC-018",
@@ -234,7 +234,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.333800003048964
+      "latency_ms": 101.98010000021895
     },
     {
       "scenario_id": "EXC-019",
@@ -247,7 +247,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.96240000234684
+      "latency_ms": 97.59840000333497
     },
     {
       "scenario_id": "EXC-020",
@@ -260,7 +260,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.651600006909575
+      "latency_ms": 102.70549999404466
     },
     {
       "scenario_id": "EXC-021",
@@ -273,7 +273,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.871499997971114
+      "latency_ms": 135.69879999704426
     },
     {
       "scenario_id": "EXC-022",
@@ -286,7 +286,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.753800003556535
+      "latency_ms": 169.95219999807887
     },
     {
       "scenario_id": "EXC-023",
@@ -299,7 +299,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.718600001302548
+      "latency_ms": 166.29939999984344
     },
     {
       "scenario_id": "EXC-024",
@@ -312,7 +312,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.79650000127731
+      "latency_ms": 126.24420000065584
     },
     {
       "scenario_id": "EXC-025",
@@ -325,7 +325,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.063000000547618
+      "latency_ms": 155.46309999626828
     },
     {
       "scenario_id": "EXC-026",
@@ -338,7 +338,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.762399999715853
+      "latency_ms": 124.99649999517715
     },
     {
       "scenario_id": "EXC-027",
@@ -351,7 +351,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 18.7073999986751
+      "latency_ms": 206.98429999902146
     },
     {
       "scenario_id": "EXC-028",
@@ -364,7 +364,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.818500001449138
+      "latency_ms": 128.84179999673506
     },
     {
       "scenario_id": "EXC-029",
@@ -377,7 +377,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.135800001502503
+      "latency_ms": 114.06619999615941
     },
     {
       "scenario_id": "EXC-030",
@@ -390,7 +390,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.642500000889413
+      "latency_ms": 111.93970000022091
     },
     {
       "scenario_id": "EXC-031",
@@ -403,7 +403,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.512799995136447
+      "latency_ms": 147.25580000231275
     },
     {
       "scenario_id": "EXC-032",
@@ -416,7 +416,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.867199997766875
+      "latency_ms": 123.22649999987334
     },
     {
       "scenario_id": "EXC-033",
@@ -429,7 +429,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.597700000507757
+      "latency_ms": 158.14890000183368
     },
     {
       "scenario_id": "EXC-034",
@@ -442,7 +442,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.668700002715923
+      "latency_ms": 111.27200000191806
     },
     {
       "scenario_id": "EXC-035",
@@ -455,7 +455,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.778200000175275
+      "latency_ms": 123.95350000588223
     },
     {
       "scenario_id": "EXC-036",
@@ -468,7 +468,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 18.370199999480974
+      "latency_ms": 248.808000003919
     },
     {
       "scenario_id": "EXC-037",
@@ -481,7 +481,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.008000003756024
+      "latency_ms": 112.14509999990696
     },
     {
       "scenario_id": "EXC-038",
@@ -494,7 +494,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.37580000393791
+      "latency_ms": 123.61500000406522
     },
     {
       "scenario_id": "EXC-039",
@@ -507,7 +507,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.77150000090478
+      "latency_ms": 157.47520000149962
     },
     {
       "scenario_id": "EXC-040",
@@ -520,7 +520,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.700600002892315
+      "latency_ms": 104.0932999967481
     },
     {
       "scenario_id": "EXC-041",
@@ -533,7 +533,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.213199998892378
+      "latency_ms": 166.3736999980756
     },
     {
       "scenario_id": "EXC-042",
@@ -546,7 +546,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.11669999815058
+      "latency_ms": 111.96289999497822
     },
     {
       "scenario_id": "EXC-043",
@@ -559,7 +559,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.522299997741356
+      "latency_ms": 136.04810000106227
     },
     {
       "scenario_id": "EXC-044",
@@ -572,7 +572,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.349400005012285
+      "latency_ms": 304.003899997042
     },
     {
       "scenario_id": "EXC-045",
@@ -585,7 +585,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.14329999696929
+      "latency_ms": 212.41290000034496
     },
     {
       "scenario_id": "EXC-046",
@@ -598,7 +598,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 17.20470000145724
+      "latency_ms": 134.47059999452904
     },
     {
       "scenario_id": "EXC-047",
@@ -611,7 +611,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.57859999797074
+      "latency_ms": 112.30129999603378
     },
     {
       "scenario_id": "EXC-048",
@@ -624,7 +624,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.989500004565343
+      "latency_ms": 171.36659999960102
     },
     {
       "scenario_id": "EXC-049",
@@ -637,7 +637,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.025599999935366
+      "latency_ms": 157.06340000178898
     },
     {
       "scenario_id": "EXC-050",
@@ -650,7 +650,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 18.483799998648465
+      "latency_ms": 158.22380000463454
     },
     {
       "scenario_id": "EXC-051",
@@ -663,7 +663,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.221300002362113
+      "latency_ms": 134.47289999749046
     },
     {
       "scenario_id": "EXC-052",
@@ -676,7 +676,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.844799998390954
+      "latency_ms": 123.8971999991918
     },
     {
       "scenario_id": "EXC-053",
@@ -689,7 +689,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.208300000987947
+      "latency_ms": 99.56919999967795
     },
     {
       "scenario_id": "EXC-054",
@@ -702,7 +702,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.17250000144122
+      "latency_ms": 124.21020000329008
     },
     {
       "scenario_id": "EXC-055",
@@ -715,7 +715,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.94790000107605
+      "latency_ms": 146.87409999896772
     },
     {
       "scenario_id": "EXC-056",
@@ -728,7 +728,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 18.224300001747906
+      "latency_ms": 213.31930000451393
     },
     {
       "scenario_id": "EXC-057",
@@ -741,7 +741,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.312100002542138
+      "latency_ms": 123.05040000501322
     },
     {
       "scenario_id": "EXC-058",
@@ -754,7 +754,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.050800003053155
+      "latency_ms": 124.11229999997886
     },
     {
       "scenario_id": "EXC-059",
@@ -767,7 +767,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.071699998690747
+      "latency_ms": 146.48699999816017
     },
     {
       "scenario_id": "EXC-060",
@@ -780,7 +780,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.303999999072403
+      "latency_ms": 179.3547999986913
     },
     {
       "scenario_id": "EXC-061",
@@ -793,7 +793,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.928299997351132
+      "latency_ms": 147.07029999408405
     },
     {
       "scenario_id": "EXC-062",
@@ -806,7 +806,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.224399997270666
+      "latency_ms": 169.94870000053197
     },
     {
       "scenario_id": "EXC-063",
@@ -819,7 +819,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.188800004892983
+      "latency_ms": 113.37559999810765
     },
     {
       "scenario_id": "EXC-064",
@@ -832,7 +832,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.97190000192495
+      "latency_ms": 99.84350000013364
     },
     {
       "scenario_id": "EXC-065",
@@ -845,7 +845,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.621999997994862
+      "latency_ms": 156.7706999994698
     },
     {
       "scenario_id": "EXC-066",
@@ -858,7 +858,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.117400000046473
+      "latency_ms": 202.81610000529326
     },
     {
       "scenario_id": "EXC-067",
@@ -871,7 +871,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.74829999805661
+      "latency_ms": 168.21949999575736
     },
     {
       "scenario_id": "EXC-068",
@@ -884,7 +884,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.128399996901862
+      "latency_ms": 173.3262999987346
     },
     {
       "scenario_id": "EXC-069",
@@ -897,7 +897,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.793499996012542
+      "latency_ms": 158.32450000016252
     },
     {
       "scenario_id": "EXC-070",
@@ -910,7 +910,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.641299997805618
+      "latency_ms": 134.5902999964892
     },
     {
       "scenario_id": "EXC-071",
@@ -923,7 +923,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.996000003127847
+      "latency_ms": 95.17680000135442
     },
     {
       "scenario_id": "EXC-072",
@@ -936,7 +936,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 18.800800004100893
+      "latency_ms": 107.40389999409672
     },
     {
       "scenario_id": "EXC-073",
@@ -949,7 +949,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.465100003406405
+      "latency_ms": 147.84920000238344
     },
     {
       "scenario_id": "EXC-074",
@@ -962,7 +962,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.14410000690259
+      "latency_ms": 146.77990000200225
     },
     {
       "scenario_id": "EXC-075",
@@ -975,7 +975,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.6574999995064
+      "latency_ms": 212.20390000235057
     },
     {
       "scenario_id": "EXC-076",
@@ -988,7 +988,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.134300004225224
+      "latency_ms": 112.32539999764413
     },
     {
       "scenario_id": "EXC-077",
@@ -1001,7 +1001,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.355000000970904
+      "latency_ms": 123.1127999999444
     },
     {
       "scenario_id": "EXC-078",
@@ -1014,7 +1014,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.899699997447897
+      "latency_ms": 184.3157000039355
     },
     {
       "scenario_id": "EXC-079",
@@ -1027,7 +1027,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.38519999809796
+      "latency_ms": 102.85889999795472
     },
     {
       "scenario_id": "EXC-080",
@@ -1040,7 +1040,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.61690000159433
+      "latency_ms": 124.22299999889219
     },
     {
       "scenario_id": "EXC-081",
@@ -1053,7 +1053,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 17.98350000171922
+      "latency_ms": 134.51809999969555
     },
     {
       "scenario_id": "EXC-082",
@@ -1066,7 +1066,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.15119999932358
+      "latency_ms": 112.72110000572866
     },
     {
       "scenario_id": "EXC-083",
@@ -1079,7 +1079,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.269900004786905
+      "latency_ms": 124.35399999958463
     },
     {
       "scenario_id": "EXC-084",
@@ -1092,7 +1092,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.02100000088103
+      "latency_ms": 213.46300000004703
     },
     {
       "scenario_id": "EXC-085",
@@ -1105,7 +1105,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.385199998505414
+      "latency_ms": 111.63059999671532
     },
     {
       "scenario_id": "EXC-086",
@@ -1118,7 +1118,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 17.655400006333366
+      "latency_ms": 112.92519999551587
     },
     {
       "scenario_id": "EXC-087",
@@ -1131,7 +1131,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.201300005079247
+      "latency_ms": 201.91990000603255
     },
     {
       "scenario_id": "EXC-088",
@@ -1144,7 +1144,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.545000000216532
+      "latency_ms": 184.64709999534534
     },
     {
       "scenario_id": "EXC-089",
@@ -1157,7 +1157,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.17189999303082
+      "latency_ms": 148.52449999307282
     },
     {
       "scenario_id": "EXC-090",
@@ -1170,7 +1170,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.2182000032044
+      "latency_ms": 191.25160000112373
     },
     {
       "scenario_id": "EXC-091",
@@ -1183,7 +1183,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.465899994946085
+      "latency_ms": 123.59780000406317
     },
     {
       "scenario_id": "EXC-092",
@@ -1196,7 +1196,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.8959999983781
+      "latency_ms": 113.18049999681534
     },
     {
       "scenario_id": "EXC-093",
@@ -1209,7 +1209,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.046899998211302
+      "latency_ms": 213.93330000137212
     },
     {
       "scenario_id": "EXC-094",
@@ -1222,7 +1222,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.683599996729754
+      "latency_ms": 123.72679999680258
     },
     {
       "scenario_id": "EXC-095",
@@ -1235,7 +1235,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.602499997243285
+      "latency_ms": 146.0573999938788
     },
     {
       "scenario_id": "EXC-096",
@@ -1248,7 +1248,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.485600005893502
+      "latency_ms": 168.50989999511512
     },
     {
       "scenario_id": "EXC-097",
@@ -1261,7 +1261,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.867299998528324
+      "latency_ms": 206.2664999975823
     },
     {
       "scenario_id": "EXC-098",
@@ -1274,7 +1274,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.53609999793116
+      "latency_ms": 113.39820000284817
     },
     {
       "scenario_id": "EXC-099",
@@ -1287,7 +1287,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.633100001665298
+      "latency_ms": 112.03999999997905
     },
     {
       "scenario_id": "EXC-100",
@@ -1300,7 +1300,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.66970000305446
+      "latency_ms": 134.91480000084266
     },
     {
       "scenario_id": "LEG-001",
@@ -1313,7 +1313,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.773300000058953
+      "latency_ms": 169.49269999895478
     },
     {
       "scenario_id": "LEG-002",
@@ -1326,7 +1326,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.87380000174744
+      "latency_ms": 246.41879999398952
     },
     {
       "scenario_id": "LEG-003",
@@ -1339,7 +1339,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.26099999481812
+      "latency_ms": 134.91000000067288
     },
     {
       "scenario_id": "LEG-004",
@@ -1352,7 +1352,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 19.344599997566547
+      "latency_ms": 113.88239999359939
     },
     {
       "scenario_id": "LEG-005",
@@ -1365,7 +1365,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.723399998038076
+      "latency_ms": 122.80179999652319
     },
     {
       "scenario_id": "LEG-006",
@@ -1378,7 +1378,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.91800000582589
+      "latency_ms": 124.60329999885289
     },
     {
       "scenario_id": "LEG-007",
@@ -1391,7 +1391,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.33730000059586
+      "latency_ms": 160.62950000195997
     },
     {
       "scenario_id": "LEG-008",
@@ -1404,7 +1404,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.14649999566609
+      "latency_ms": 146.98610000050394
     },
     {
       "scenario_id": "LEG-009",
@@ -1417,7 +1417,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.21679999982007
+      "latency_ms": 146.69970000250032
     },
     {
       "scenario_id": "LEG-010",
@@ -1430,7 +1430,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.9303999983822
+      "latency_ms": 124.19729999965057
     },
     {
       "scenario_id": "LEG-011",
@@ -1443,7 +1443,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.36379999521887
+      "latency_ms": 235.35070000070846
     },
     {
       "scenario_id": "LEG-012",
@@ -1456,7 +1456,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 21.906699999817647
+      "latency_ms": 123.72119999781717
     },
     {
       "scenario_id": "LEG-013",
@@ -1469,7 +1469,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.600500000000466
+      "latency_ms": 135.31530000182102
     },
     {
       "scenario_id": "LEG-014",
@@ -1482,7 +1482,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.09410000493517
+      "latency_ms": 112.28580000170041
     },
     {
       "scenario_id": "LEG-015",
@@ -1495,7 +1495,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.365900004748255
+      "latency_ms": 113.8479000001098
     },
     {
       "scenario_id": "LEG-016",
@@ -1508,7 +1508,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.368900005763862
+      "latency_ms": 125.26770000113174
     },
     {
       "scenario_id": "LEG-017",
@@ -1521,7 +1521,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.223500001535285
+      "latency_ms": 148.93609999853652
     },
     {
       "scenario_id": "LEG-018",
@@ -1534,7 +1534,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.666800004430115
+      "latency_ms": 124.49530000594677
     },
     {
       "scenario_id": "LEG-019",
@@ -1547,7 +1547,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.317599997739308
+      "latency_ms": 222.4380999978166
     },
     {
       "scenario_id": "LEG-020",
@@ -1560,7 +1560,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.5132999997586
+      "latency_ms": 116.03160000231583
     },
     {
       "scenario_id": "LEG-021",
@@ -1573,7 +1573,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 33.283400000073016
+      "latency_ms": 167.6757000022917
     },
     {
       "scenario_id": "LEG-022",
@@ -1586,7 +1586,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.14570000272943
+      "latency_ms": 112.02100000082282
     },
     {
       "scenario_id": "LEG-023",
@@ -1599,7 +1599,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.77470000082394
+      "latency_ms": 112.34439999680035
     },
     {
       "scenario_id": "LEG-024",
@@ -1612,7 +1612,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 79.00510000035865
+      "latency_ms": 202.32540000142762
     },
     {
       "scenario_id": "LEG-025",
@@ -1625,7 +1625,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 60.582999998587184
+      "latency_ms": 169.25030000129482
     },
     {
       "scenario_id": "LEG-026",
@@ -1638,7 +1638,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 43.57440000603674
+      "latency_ms": 174.61570000159554
     },
     {
       "scenario_id": "LEG-027",
@@ -1651,7 +1651,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 40.624399996886496
+      "latency_ms": 123.19929999648593
     },
     {
       "scenario_id": "LEG-028",
@@ -1664,7 +1664,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 39.651599996432196
+      "latency_ms": 213.61469999828842
     },
     {
       "scenario_id": "LEG-029",
@@ -1677,7 +1677,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 40.60089999984484
+      "latency_ms": 168.15710000082618
     },
     {
       "scenario_id": "LEG-030",
@@ -1690,7 +1690,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 33.733600001141895
+      "latency_ms": 135.98710000223946
     },
     {
       "scenario_id": "LEG-031",
@@ -1703,7 +1703,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 35.326099998201244
+      "latency_ms": 123.45459999778541
     },
     {
       "scenario_id": "LEG-032",
@@ -1716,7 +1716,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.253999994078185
+      "latency_ms": 122.94029999611666
     },
     {
       "scenario_id": "LEG-033",
@@ -1729,7 +1729,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.51160000177333
+      "latency_ms": 169.46729999472154
     },
     {
       "scenario_id": "LEG-034",
@@ -1742,7 +1742,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.79250000033062
+      "latency_ms": 132.03420000354527
     },
     {
       "scenario_id": "LEG-035",
@@ -1755,7 +1755,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.64629999769386
+      "latency_ms": 142.42899999953806
     },
     {
       "scenario_id": "LEG-036",
@@ -1768,7 +1768,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.421299996902235
+      "latency_ms": 135.04500000271946
     },
     {
       "scenario_id": "LEG-037",
@@ -1781,7 +1781,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.31849999690894
+      "latency_ms": 157.82740000577178
     },
     {
       "scenario_id": "LEG-038",
@@ -1794,7 +1794,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.8079999993206
+      "latency_ms": 212.3280000014347
     },
     {
       "scenario_id": "LEG-039",
@@ -1807,7 +1807,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.83650000189664
+      "latency_ms": 112.28319999645464
     },
     {
       "scenario_id": "LEG-040",
@@ -1820,7 +1820,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.971899995871354
+      "latency_ms": 181.9007000012789
     },
     {
       "scenario_id": "LEG-041",
@@ -1833,7 +1833,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.424300002574455
+      "latency_ms": 136.4060999985668
     },
     {
       "scenario_id": "LEG-042",
@@ -1846,7 +1846,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.203099993930664
+      "latency_ms": 111.24520000157645
     },
     {
       "scenario_id": "LEG-043",
@@ -1859,7 +1859,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.480700006184634
+      "latency_ms": 145.9214000060456
     },
     {
       "scenario_id": "LEG-044",
@@ -1872,7 +1872,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.64919999410631
+      "latency_ms": 123.45990000176243
     },
     {
       "scenario_id": "LEG-045",
@@ -1885,7 +1885,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.552899999951478
+      "latency_ms": 128.6679999975604
     },
     {
       "scenario_id": "LEG-046",
@@ -1898,7 +1898,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.44839999609394
+      "latency_ms": 124.45860000298126
     },
     {
       "scenario_id": "LEG-047",
@@ -1911,7 +1911,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.738499997823965
+      "latency_ms": 201.26569999411004
     },
     {
       "scenario_id": "LEG-048",
@@ -1924,7 +1924,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.055700000957586
+      "latency_ms": 112.3412000015378
     },
     {
       "scenario_id": "LEG-049",
@@ -1937,7 +1937,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.459000004047994
+      "latency_ms": 112.04359999828739
     },
     {
       "scenario_id": "LEG-050",
@@ -1950,7 +1950,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.719700003624894
+      "latency_ms": 123.50819999846863
     },
     {
       "scenario_id": "LEG-051",
@@ -1963,7 +1963,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.17139999731444
+      "latency_ms": 124.02010000369046
     },
     {
       "scenario_id": "LEG-052",
@@ -1976,7 +1976,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.798200001299847
+      "latency_ms": 92.02689999801805
     },
     {
       "scenario_id": "LEG-053",
@@ -1989,7 +1989,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.962899999693036
+      "latency_ms": 123.5720000040601
     },
     {
       "scenario_id": "LEG-054",
@@ -2002,7 +2002,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.02120000059949
+      "latency_ms": 145.31410000199685
     },
     {
       "scenario_id": "LEG-055",
@@ -2015,7 +2015,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.76040000328794
+      "latency_ms": 365.62279999634484
     },
     {
       "scenario_id": "LEG-056",
@@ -2028,7 +2028,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.332800000091083
+      "latency_ms": 112.81700000108685
     },
     {
       "scenario_id": "LEG-057",
@@ -2041,7 +2041,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.201199995644856
+      "latency_ms": 123.75909999536816
     },
     {
       "scenario_id": "LEG-058",
@@ -2054,7 +2054,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 26.357000002462883
+      "latency_ms": 112.63789999793516
     },
     {
       "scenario_id": "LEG-059",
@@ -2067,7 +2067,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.185600003576837
+      "latency_ms": 112.62700000224868
     },
     {
       "scenario_id": "LEG-060",
@@ -2080,7 +2080,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.33680000063032
+      "latency_ms": 123.87869999656687
     },
     {
       "scenario_id": "LEG-061",
@@ -2093,7 +2093,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.00869999837596
+      "latency_ms": 135.30080000055023
     },
     {
       "scenario_id": "LEG-062",
@@ -2106,7 +2106,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.94590000383323
+      "latency_ms": 113.33680000097957
     },
     {
       "scenario_id": "LEG-063",
@@ -2119,7 +2119,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.944300006201956
+      "latency_ms": 203.66729999659583
     },
     {
       "scenario_id": "LEG-064",
@@ -2132,7 +2132,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.87340000172844
+      "latency_ms": 114.20370000269031
     },
     {
       "scenario_id": "LEG-065",
@@ -2145,7 +2145,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.41120000387309
+      "latency_ms": 224.1982999985339
     },
     {
       "scenario_id": "LEG-066",
@@ -2158,7 +2158,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 20.59450000524521
+      "latency_ms": 114.32870000135154
     },
     {
       "scenario_id": "LEG-067",
@@ -2171,7 +2171,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.48319999530213
+      "latency_ms": 101.28030000487342
     },
     {
       "scenario_id": "LEG-068",
@@ -2184,7 +2184,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.946199995814823
+      "latency_ms": 87.58800000214251
     },
     {
       "scenario_id": "LEG-069",
@@ -2197,7 +2197,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 23.40610000101151
+      "latency_ms": 114.96919999626698
     },
     {
       "scenario_id": "LEG-070",
@@ -2210,7 +2210,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.959699999773875
+      "latency_ms": 169.10320000170032
     },
     {
       "scenario_id": "LEG-071",
@@ -2223,7 +2223,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.135300002759323
+      "latency_ms": 145.54230000067037
     },
     {
       "scenario_id": "LEG-072",
@@ -2236,7 +2236,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 25.519100003293715
+      "latency_ms": 122.87829999695532
     },
     {
       "scenario_id": "LEG-073",
@@ -2249,7 +2249,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 22.23239999875659
+      "latency_ms": 182.2528000047896
     },
     {
       "scenario_id": "LEG-074",
@@ -2262,7 +2262,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.179100001987536
+      "latency_ms": 139.67549999506446
     },
     {
       "scenario_id": "LEG-075",
@@ -2275,7 +2275,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.369200001179706
+      "latency_ms": 134.83129999804078
     },
     {
       "scenario_id": "LEG-076",
@@ -2288,7 +2288,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.934599995205645
+      "latency_ms": 211.62819999881322
     },
     {
       "scenario_id": "LEG-077",
@@ -2301,7 +2301,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.782899997779168
+      "latency_ms": 126.63129999418743
     },
     {
       "scenario_id": "LEG-078",
@@ -2314,7 +2314,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.750499998452142
+      "latency_ms": 156.8364999984624
     },
     {
       "scenario_id": "LEG-079",
@@ -2327,7 +2327,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 33.04879999632249
+      "latency_ms": 112.32680000102846
     },
     {
       "scenario_id": "LEG-080",
@@ -2340,7 +2340,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 33.68119999504415
+      "latency_ms": 123.84410000231583
     },
     {
       "scenario_id": "LEG-081",
@@ -2353,7 +2353,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 35.79489999538055
+      "latency_ms": 157.28849999868544
     },
     {
       "scenario_id": "LEG-082",
@@ -2366,7 +2366,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 39.60630000074161
+      "latency_ms": 122.63630000234116
     },
     {
       "scenario_id": "LEG-083",
@@ -2379,7 +2379,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 35.33479999896372
+      "latency_ms": 136.02089999767486
     },
     {
       "scenario_id": "LEG-084",
@@ -2392,7 +2392,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.30040000198642
+      "latency_ms": 129.71290000132285
     },
     {
       "scenario_id": "LEG-085",
@@ -2405,7 +2405,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 29.10639999754494
+      "latency_ms": 200.43069999519503
     },
     {
       "scenario_id": "LEG-086",
@@ -2418,7 +2418,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 33.33849999762606
+      "latency_ms": 101.10419999546139
     },
     {
       "scenario_id": "LEG-087",
@@ -2431,7 +2431,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.324100000143517
+      "latency_ms": 134.94160000118427
     },
     {
       "scenario_id": "LEG-088",
@@ -2444,7 +2444,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.533999998122454
+      "latency_ms": 125.05919999966864
     },
     {
       "scenario_id": "LEG-089",
@@ -2457,7 +2457,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.506999995850492
+      "latency_ms": 136.50970000162488
     },
     {
       "scenario_id": "LEG-090",
@@ -2470,7 +2470,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.70109999680426
+      "latency_ms": 123.85209999774816
     },
     {
       "scenario_id": "LEG-091",
@@ -2483,7 +2483,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.65150000434369
+      "latency_ms": 133.63489999755984
     },
     {
       "scenario_id": "LEG-092",
@@ -2496,7 +2496,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 34.669699998630676
+      "latency_ms": 133.66929999756394
     },
     {
       "scenario_id": "LEG-093",
@@ -2509,7 +2509,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.00569999899017
+      "latency_ms": 114.19960000057472
     },
     {
       "scenario_id": "LEG-094",
@@ -2522,7 +2522,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 34.89619999891147
+      "latency_ms": 238.26350000308594
     },
     {
       "scenario_id": "LEG-095",
@@ -2535,7 +2535,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.31299999525072
+      "latency_ms": 115.90370000340044
     },
     {
       "scenario_id": "LEG-096",
@@ -2548,7 +2548,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.50960000109626
+      "latency_ms": 112.74119999870891
     },
     {
       "scenario_id": "LEG-097",
@@ -2561,7 +2561,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 31.32010000263108
+      "latency_ms": 112.7617999954964
     },
     {
       "scenario_id": "LEG-098",
@@ -2574,7 +2574,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 28.217099999892525
+      "latency_ms": 135.01009999890812
     },
     {
       "scenario_id": "LEG-099",
@@ -2587,7 +2587,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 24.79219999804627
+      "latency_ms": 123.62470000516623
     },
     {
       "scenario_id": "LEG-100",
@@ -2600,7 +2600,7 @@
       "is_correct": 1,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 27.115900003991555
+      "latency_ms": 135.81729999714298
     },
     {
       "scenario_id": "PAR-001",
@@ -2613,7 +2613,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 22.14539999840781
+      "latency_ms": 102.0381999987876
     },
     {
       "scenario_id": "PAR-002",
@@ -2626,7 +2626,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 28.192300000227988
+      "latency_ms": 123.6633999942569
     },
     {
       "scenario_id": "PAR-003",
@@ -2639,7 +2639,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 27.67870000388939
+      "latency_ms": 134.0444999950705
     },
     {
       "scenario_id": "PAR-004",
@@ -2652,7 +2652,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.897100000292994
+      "latency_ms": 168.77689999819268
     },
     {
       "scenario_id": "PAR-005",
@@ -2665,7 +2665,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 26.773199999297503
+      "latency_ms": 275.7052999950247
     },
     {
       "scenario_id": "PAR-006",
@@ -2678,7 +2678,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.45570000074804
+      "latency_ms": 156.93000000464963
     },
     {
       "scenario_id": "PAR-007",
@@ -2691,7 +2691,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 27.379400002246257
+      "latency_ms": 158.25880000193138
     },
     {
       "scenario_id": "PAR-008",
@@ -2704,7 +2704,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 30.542499996954575
+      "latency_ms": 201.81149999552872
     },
     {
       "scenario_id": "PAR-009",
@@ -2717,7 +2717,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 28.01069999986794
+      "latency_ms": 136.6686999972444
     },
     {
       "scenario_id": "PAR-010",
@@ -2730,7 +2730,7 @@
       "is_correct": 1,
       "reason": "DOMAIN_VIOLATION:recipient",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 24.123300005157944
+      "latency_ms": 123.80610000400338
     },
     {
       "scenario_id": "PAR-011",
@@ -2743,7 +2743,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.720600001164712
+      "latency_ms": 134.60939999640686
     },
     {
       "scenario_id": "PAR-012",
@@ -2756,7 +2756,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.618400001490954
+      "latency_ms": 156.70350000436883
     },
     {
       "scenario_id": "PAR-013",
@@ -2769,7 +2769,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.07899999828078
+      "latency_ms": 150.14159999554977
     },
     {
       "scenario_id": "PAR-014",
@@ -2782,7 +2782,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.947799999499694
+      "latency_ms": 235.57930000242777
     },
     {
       "scenario_id": "PAR-015",
@@ -2795,7 +2795,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.070500004687347
+      "latency_ms": 112.7855999948224
     },
     {
       "scenario_id": "PAR-016",
@@ -2808,7 +2808,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.463299999188166
+      "latency_ms": 123.53040000016335
     },
     {
       "scenario_id": "PAR-017",
@@ -2821,7 +2821,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.576899997948203
+      "latency_ms": 122.99590000475291
     },
     {
       "scenario_id": "PAR-018",
@@ -2834,7 +2834,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 12.905800002044998
+      "latency_ms": 113.65680000017164
     },
     {
       "scenario_id": "PAR-019",
@@ -2847,7 +2847,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 14.349099998071324
+      "latency_ms": 123.35100000200327
     },
     {
       "scenario_id": "PAR-020",
@@ -2860,7 +2860,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.721799999591894
+      "latency_ms": 101.4701000021887
     },
     {
       "scenario_id": "PAR-021",
@@ -2873,7 +2873,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.43530000303872
+      "latency_ms": 123.67109999468084
     },
     {
       "scenario_id": "PAR-022",
@@ -2886,7 +2886,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.03519999946002
+      "latency_ms": 124.11059999431018
     },
     {
       "scenario_id": "PAR-023",
@@ -2899,7 +2899,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.839899996644817
+      "latency_ms": 117.4888000023202
     },
     {
       "scenario_id": "PAR-024",
@@ -2912,7 +2912,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.200999999360647
+      "latency_ms": 123.49700000049779
     },
     {
       "scenario_id": "PAR-025",
@@ -2925,7 +2925,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.488199999614153
+      "latency_ms": 122.70279999938793
     },
     {
       "scenario_id": "PAR-026",
@@ -2938,7 +2938,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.457799997529946
+      "latency_ms": 248.27340000047116
     },
     {
       "scenario_id": "PAR-027",
@@ -2951,7 +2951,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.211600006499793
+      "latency_ms": 123.66269999620272
     },
     {
       "scenario_id": "PAR-028",
@@ -2964,7 +2964,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.108499996946193
+      "latency_ms": 168.7376999980188
     },
     {
       "scenario_id": "PAR-029",
@@ -2977,7 +2977,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.56530000118073
+      "latency_ms": 145.57410000270465
     },
     {
       "scenario_id": "PAR-030",
@@ -2990,7 +2990,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.45229999930598
+      "latency_ms": 145.58649999526097
     },
     {
       "scenario_id": "PAR-031",
@@ -3003,7 +3003,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.335300003760494
+      "latency_ms": 101.6715999940061
     },
     {
       "scenario_id": "PAR-032",
@@ -3016,7 +3016,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.5087999998359
+      "latency_ms": 124.89199999981793
     },
     {
       "scenario_id": "PAR-033",
@@ -3029,7 +3029,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.93990000442136
+      "latency_ms": 140.29850000224542
     },
     {
       "scenario_id": "PAR-034",
@@ -3042,7 +3042,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.39279999694554
+      "latency_ms": 100.6792000043788
     },
     {
       "scenario_id": "PAR-035",
@@ -3055,7 +3055,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.564600003126543
+      "latency_ms": 112.52699999749893
     },
     {
       "scenario_id": "PAR-036",
@@ -3068,7 +3068,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.029099997482263
+      "latency_ms": 111.61590000119759
     },
     {
       "scenario_id": "PAR-037",
@@ -3081,7 +3081,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.873699999356177
+      "latency_ms": 179.37939999683294
     },
     {
       "scenario_id": "PAR-038",
@@ -3094,7 +3094,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.888700003619306
+      "latency_ms": 112.30139999679523
     },
     {
       "scenario_id": "PAR-039",
@@ -3107,7 +3107,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.39559999643825
+      "latency_ms": 170.03159999876516
     },
     {
       "scenario_id": "PAR-040",
@@ -3120,7 +3120,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.6976000010618
+      "latency_ms": 146.5258000025642
     },
     {
       "scenario_id": "PAR-041",
@@ -3133,7 +3133,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.38319999742089
+      "latency_ms": 157.6820999980555
     },
     {
       "scenario_id": "PAR-042",
@@ -3146,7 +3146,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.949599998653866
+      "latency_ms": 122.9068999964511
     },
     {
       "scenario_id": "PAR-043",
@@ -3159,7 +3159,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.216900004423223
+      "latency_ms": 208.10280000296189
     },
     {
       "scenario_id": "PAR-044",
@@ -3172,7 +3172,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.47569999942789
+      "latency_ms": 135.93769999715732
     },
     {
       "scenario_id": "PAR-045",
@@ -3185,7 +3185,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.70080000400776
+      "latency_ms": 122.5886999964132
     },
     {
       "scenario_id": "PAR-046",
@@ -3198,7 +3198,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.304800000507385
+      "latency_ms": 158.23789999558358
     },
     {
       "scenario_id": "PAR-047",
@@ -3211,7 +3211,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.39269999577664
+      "latency_ms": 223.50890000234358
     },
     {
       "scenario_id": "PAR-048",
@@ -3224,7 +3224,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.784700005606283
+      "latency_ms": 112.37599999731174
     },
     {
       "scenario_id": "PAR-049",
@@ -3237,7 +3237,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.163300002517644
+      "latency_ms": 114.68489999970188
     },
     {
       "scenario_id": "PAR-050",
@@ -3250,7 +3250,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.66429999488173
+      "latency_ms": 97.96530000312487
     },
     {
       "scenario_id": "PAR-051",
@@ -3263,7 +3263,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 22.717799998645205
+      "latency_ms": 136.97849999880418
     },
     {
       "scenario_id": "PAR-052",
@@ -3276,7 +3276,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 24.342900003830437
+      "latency_ms": 146.62870000029216
     },
     {
       "scenario_id": "PAR-053",
@@ -3289,7 +3289,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.25410000089323
+      "latency_ms": 138.4290999994846
     },
     {
       "scenario_id": "PAR-054",
@@ -3302,7 +3302,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.210200001311023
+      "latency_ms": 114.33469999610679
     },
     {
       "scenario_id": "PAR-055",
@@ -3315,7 +3315,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.080899999011308
+      "latency_ms": 100.7298999975319
     },
     {
       "scenario_id": "PAR-056",
@@ -3328,7 +3328,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 28.386199999658857
+      "latency_ms": 145.03830000467133
     },
     {
       "scenario_id": "PAR-057",
@@ -3341,7 +3341,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 29.528599996410776
+      "latency_ms": 90.1127999968594
     },
     {
       "scenario_id": "PAR-058",
@@ -3354,7 +3354,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 25.490200001513585
+      "latency_ms": 202.20030000200495
     },
     {
       "scenario_id": "PAR-059",
@@ -3367,7 +3367,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 29.67960000387393
+      "latency_ms": 101.72250000323402
     },
     {
       "scenario_id": "PAR-060",
@@ -3380,7 +3380,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 26.30689999932656
+      "latency_ms": 100.36540000146488
     },
     {
       "scenario_id": "PAR-061",
@@ -3393,7 +3393,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 28.386099998897407
+      "latency_ms": 134.7299000044586
     },
     {
       "scenario_id": "PAR-062",
@@ -3406,7 +3406,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 33.96049999719253
+      "latency_ms": 136.72869999572868
     },
     {
       "scenario_id": "PAR-063",
@@ -3419,7 +3419,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 31.026399999973364
+      "latency_ms": 89.96430000115652
     },
     {
       "scenario_id": "PAR-064",
@@ -3432,7 +3432,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 29.833099993993528
+      "latency_ms": 148.25109999947017
     },
     {
       "scenario_id": "PAR-065",
@@ -3445,7 +3445,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 32.4454000001424
+      "latency_ms": 148.7249000056181
     },
     {
       "scenario_id": "PAR-066",
@@ -3458,7 +3458,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 30.58710000186693
+      "latency_ms": 100.9078999995836
     },
     {
       "scenario_id": "PAR-067",
@@ -3471,7 +3471,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 26.867499997024424
+      "latency_ms": 158.00890000537038
     },
     {
       "scenario_id": "PAR-068",
@@ -3484,7 +3484,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 31.09519999998156
+      "latency_ms": 101.80060000129743
     },
     {
       "scenario_id": "PAR-069",
@@ -3497,7 +3497,7 @@
       "is_correct": 0,
       "reason": "ALL_CHECKS_PASSED",
       "first_blocking_stage": "none",
-      "latency_ms": 30.40809999947669
+      "latency_ms": 190.61409999994794
     },
     {
       "scenario_id": "PAR-070",
@@ -3510,7 +3510,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 37.580500000331085
+      "latency_ms": 101.14140000223415
     },
     {
       "scenario_id": "PAR-071",
@@ -3523,7 +3523,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 37.56720000092173
+      "latency_ms": 111.33970000082627
     },
     {
       "scenario_id": "PAR-072",
@@ -3536,7 +3536,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 36.64800000115065
+      "latency_ms": 282.37609999632696
     },
     {
       "scenario_id": "PAR-073",
@@ -3549,7 +3549,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 33.45679999620188
+      "latency_ms": 147.93009999993956
     },
     {
       "scenario_id": "PAR-074",
@@ -3562,7 +3562,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 35.97500000614673
+      "latency_ms": 148.95399999659276
     },
     {
       "scenario_id": "PAR-075",
@@ -3575,7 +3575,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 33.91209999972489
+      "latency_ms": 90.49129999766592
     },
     {
       "scenario_id": "PAR-076",
@@ -3588,7 +3588,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 32.3733999975957
+      "latency_ms": 101.96240000368562
     },
     {
       "scenario_id": "PAR-077",
@@ -3601,7 +3601,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 35.09240000130376
+      "latency_ms": 114.09589999675518
     },
     {
       "scenario_id": "PAR-078",
@@ -3614,7 +3614,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 32.40899999946123
+      "latency_ms": 190.51430000399705
     },
     {
       "scenario_id": "PAR-079",
@@ -3627,7 +3627,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 35.54680000524968
+      "latency_ms": 123.48810000548838
     },
     {
       "scenario_id": "PAR-080",
@@ -3640,7 +3640,7 @@
       "is_correct": 1,
       "reason": "REGEX_VIOLATION:query",
       "first_blocking_stage": "policy_engine",
-      "latency_ms": 33.69119999842951
+      "latency_ms": 89.89290000317851
     },
     {
       "scenario_id": "PAR-081",
@@ -3653,7 +3653,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.83139999397099
+      "latency_ms": 121.50610000389861
     },
     {
       "scenario_id": "PAR-082",
@@ -3666,7 +3666,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.638800004846416
+      "latency_ms": 92.96679999533808
     },
     {
       "scenario_id": "PAR-083",
@@ -3679,7 +3679,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.785499997145962
+      "latency_ms": 110.79050000262214
     },
     {
       "scenario_id": "PAR-084",
@@ -3692,7 +3692,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.33229999971809
+      "latency_ms": 157.15159999672323
     },
     {
       "scenario_id": "PAR-085",
@@ -3705,7 +3705,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.523599999549333
+      "latency_ms": 265.09749999968335
     },
     {
       "scenario_id": "PAR-086",
@@ -3718,7 +3718,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.783899999514688
+      "latency_ms": 135.92719999724068
     },
     {
       "scenario_id": "PAR-087",
@@ -3731,7 +3731,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.367400000803173
+      "latency_ms": 134.41720000264468
     },
     {
       "scenario_id": "PAR-088",
@@ -3744,7 +3744,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.247699998843018
+      "latency_ms": 135.89949999732198
     },
     {
       "scenario_id": "PAR-089",
@@ -3757,7 +3757,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.184499997412786
+      "latency_ms": 224.25099999964004
     },
     {
       "scenario_id": "PAR-090",
@@ -3770,7 +3770,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.317099996143952
+      "latency_ms": 142.98350000171922
     },
     {
       "scenario_id": "PAR-091",
@@ -3783,7 +3783,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.222099997336045
+      "latency_ms": 126.6847000006237
     },
     {
       "scenario_id": "PAR-092",
@@ -3796,7 +3796,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.289699998917058
+      "latency_ms": 123.22049999784213
     },
     {
       "scenario_id": "PAR-093",
@@ -3809,7 +3809,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.18179999908898
+      "latency_ms": 127.72889999905601
     },
     {
       "scenario_id": "PAR-094",
@@ -3822,7 +3822,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.217700000212062
+      "latency_ms": 192.39830000151414
     },
     {
       "scenario_id": "PAR-095",
@@ -3835,7 +3835,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.45250000548549
+      "latency_ms": 112.26059999899007
     },
     {
       "scenario_id": "PAR-096",
@@ -3848,7 +3848,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.0645000016666
+      "latency_ms": 135.014699997555
     },
     {
       "scenario_id": "PAR-097",
@@ -3861,7 +3861,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 29.067900002701208
+      "latency_ms": 123.47589999990305
     },
     {
       "scenario_id": "PAR-098",
@@ -3874,7 +3874,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 29.704799999308307
+      "latency_ms": 112.05599999811966
     },
     {
       "scenario_id": "PAR-099",
@@ -3887,7 +3887,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.6366000000271
+      "latency_ms": 210.3860999995959
     },
     {
       "scenario_id": "PAR-100",
@@ -3900,7 +3900,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.811800005612895
+      "latency_ms": 148.26060000632424
     },
     {
       "scenario_id": "PES-001",
@@ -3913,7 +3913,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 41.50290000688983
+      "latency_ms": 125.16709999908926
     },
     {
       "scenario_id": "PES-002",
@@ -3926,7 +3926,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 68.05999999778578
+      "latency_ms": 145.75049999984913
     },
     {
       "scenario_id": "PES-003",
@@ -3939,7 +3939,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 57.44409999897471
+      "latency_ms": 195.2224999986356
     },
     {
       "scenario_id": "PES-004",
@@ -3952,7 +3952,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 45.642100005352404
+      "latency_ms": 145.81889999681152
     },
     {
       "scenario_id": "PES-005",
@@ -3965,7 +3965,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 45.95580000022892
+      "latency_ms": 158.10090000013588
     },
     {
       "scenario_id": "PES-006",
@@ -3978,7 +3978,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.701200004841667
+      "latency_ms": 112.8270999979577
     },
     {
       "scenario_id": "PES-007",
@@ -3991,7 +3991,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 33.93789999972796
+      "latency_ms": 123.65239999780897
     },
     {
       "scenario_id": "PES-008",
@@ -4004,7 +4004,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 29.108399998222012
+      "latency_ms": 156.9969000047422
     },
     {
       "scenario_id": "PES-009",
@@ -4017,7 +4017,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.49650000280235
+      "latency_ms": 211.91850000468548
     },
     {
       "scenario_id": "PES-010",
@@ -4030,7 +4030,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 31.08300000167219
+      "latency_ms": 123.20780000300147
     },
     {
       "scenario_id": "PES-011",
@@ -4043,7 +4043,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.05029999621911
+      "latency_ms": 101.87189999851398
     },
     {
       "scenario_id": "PES-012",
@@ -4056,7 +4056,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.48060000076657
+      "latency_ms": 114.96189999888884
     },
     {
       "scenario_id": "PES-013",
@@ -4069,7 +4069,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.192899997113273
+      "latency_ms": 148.81429999513784
     },
     {
       "scenario_id": "PES-014",
@@ -4082,7 +4082,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.850500001979526
+      "latency_ms": 112.70779999904335
     },
     {
       "scenario_id": "PES-015",
@@ -4095,7 +4095,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.15580000221962
+      "latency_ms": 202.47869999730028
     },
     {
       "scenario_id": "PES-016",
@@ -4108,7 +4108,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.710600002435967
+      "latency_ms": 113.04509999899892
     },
     {
       "scenario_id": "PES-017",
@@ -4121,7 +4121,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.51579999999376
+      "latency_ms": 102.29919999983395
     },
     {
       "scenario_id": "PES-018",
@@ -4134,7 +4134,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.43870000145398
+      "latency_ms": 112.78509999829112
     },
     {
       "scenario_id": "PES-019",
@@ -4147,7 +4147,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.889100001426414
+      "latency_ms": 100.27809999883175
     },
     {
       "scenario_id": "PES-020",
@@ -4160,7 +4160,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.417600001266692
+      "latency_ms": 201.1246000038227
     },
     {
       "scenario_id": "PES-021",
@@ -4173,7 +4173,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.288099997851532
+      "latency_ms": 124.07359999633627
     },
     {
       "scenario_id": "PES-022",
@@ -4186,7 +4186,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.55640000011772
+      "latency_ms": 144.47260000451934
     },
     {
       "scenario_id": "PES-023",
@@ -4199,7 +4199,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.102900006459095
+      "latency_ms": 154.04860000126064
     },
     {
       "scenario_id": "PES-024",
@@ -4212,7 +4212,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.077600002172403
+      "latency_ms": 157.4010000040289
     },
     {
       "scenario_id": "PES-025",
@@ -4225,7 +4225,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.95390000351472
+      "latency_ms": 157.3015999965719
     },
     {
       "scenario_id": "PES-026",
@@ -4238,7 +4238,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.911999999952968
+      "latency_ms": 179.93869999918388
     },
     {
       "scenario_id": "PES-027",
@@ -4251,7 +4251,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.151599998527672
+      "latency_ms": 134.44239999807905
     },
     {
       "scenario_id": "PES-028",
@@ -4264,7 +4264,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.97239999845624
+      "latency_ms": 114.22760000277776
     },
     {
       "scenario_id": "PES-029",
@@ -4277,7 +4277,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.342899996147025
+      "latency_ms": 134.4427000003634
     },
     {
       "scenario_id": "PES-030",
@@ -4290,7 +4290,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.14610000414541
+      "latency_ms": 212.79369999683695
     },
     {
       "scenario_id": "PES-031",
@@ -4303,7 +4303,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.84889999969164
+      "latency_ms": 168.37410000152886
     },
     {
       "scenario_id": "PES-032",
@@ -4316,7 +4316,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.36589999665739
+      "latency_ms": 138.01619999867398
     },
     {
       "scenario_id": "PES-033",
@@ -4329,7 +4329,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.64849999867147
+      "latency_ms": 113.82880000019213
     },
     {
       "scenario_id": "PES-034",
@@ -4342,7 +4342,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.654799997922964
+      "latency_ms": 112.50109999673441
     },
     {
       "scenario_id": "PES-035",
@@ -4355,7 +4355,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.540699998789933
+      "latency_ms": 135.09169999451842
     },
     {
       "scenario_id": "PES-036",
@@ -4368,7 +4368,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 25.518400005239528
+      "latency_ms": 168.324099999154
     },
     {
       "scenario_id": "PES-037",
@@ -4381,7 +4381,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 32.45919999608304
+      "latency_ms": 134.9636999948416
     },
     {
       "scenario_id": "PES-038",
@@ -4394,7 +4394,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.34839999739779
+      "latency_ms": 142.8754999942612
     },
     {
       "scenario_id": "PES-039",
@@ -4407,7 +4407,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.743000005197246
+      "latency_ms": 203.71580000210088
     },
     {
       "scenario_id": "PES-040",
@@ -4420,7 +4420,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.4682000039611
+      "latency_ms": 148.30060000531375
     },
     {
       "scenario_id": "PES-041",
@@ -4433,7 +4433,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.764999996870756
+      "latency_ms": 146.69169999979204
     },
     {
       "scenario_id": "PES-042",
@@ -4446,7 +4446,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.53449999948498
+      "latency_ms": 103.94429999723798
     },
     {
       "scenario_id": "PES-043",
@@ -4459,7 +4459,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.50429999892367
+      "latency_ms": 134.28099999873666
     },
     {
       "scenario_id": "PES-044",
@@ -4472,7 +4472,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.978199998964556
+      "latency_ms": 112.95319999771891
     },
     {
       "scenario_id": "PES-045",
@@ -4485,7 +4485,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.904700002574828
+      "latency_ms": 136.98180000210414
     },
     {
       "scenario_id": "PES-046",
@@ -4498,7 +4498,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.476199999800883
+      "latency_ms": 123.87220000528032
     },
     {
       "scenario_id": "PES-047",
@@ -4511,7 +4511,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.19350000086706
+      "latency_ms": 135.19559999986086
     },
     {
       "scenario_id": "PES-048",
@@ -4524,7 +4524,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.34110000001965
+      "latency_ms": 132.39610000164248
     },
     {
       "scenario_id": "PES-049",
@@ -4537,7 +4537,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.175500002049375
+      "latency_ms": 125.27930000214837
     },
     {
       "scenario_id": "PES-050",
@@ -4550,7 +4550,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.261900004697964
+      "latency_ms": 223.96670000307495
     },
     {
       "scenario_id": "PES-051",
@@ -4563,7 +4563,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 36.39670000120532
+      "latency_ms": 141.0464000000502
     },
     {
       "scenario_id": "PES-052",
@@ -4576,7 +4576,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 33.939100001589395
+      "latency_ms": 110.50419999810401
     },
     {
       "scenario_id": "PES-053",
@@ -4589,7 +4589,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 34.188599995104596
+      "latency_ms": 158.14590000081807
     },
     {
       "scenario_id": "PES-054",
@@ -4602,7 +4602,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 36.82739999931073
+      "latency_ms": 134.69529999565566
     },
     {
       "scenario_id": "PES-055",
@@ -4615,7 +4615,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 35.08470000087982
+      "latency_ms": 124.09659999684663
     },
     {
       "scenario_id": "PES-056",
@@ -4628,7 +4628,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.183499997889157
+      "latency_ms": 112.09650000091642
     },
     {
       "scenario_id": "PES-057",
@@ -4641,7 +4641,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.334800000768155
+      "latency_ms": 125.23879999935161
     },
     {
       "scenario_id": "PES-058",
@@ -4654,7 +4654,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.100799997744616
+      "latency_ms": 133.55020000017248
     },
     {
       "scenario_id": "PES-059",
@@ -4667,7 +4667,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.193300002778415
+      "latency_ms": 101.9391000008909
     },
     {
       "scenario_id": "PES-060",
@@ -4680,7 +4680,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.80609999859007
+      "latency_ms": 201.738399999158
     },
     {
       "scenario_id": "PES-061",
@@ -4693,7 +4693,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.97539999865694
+      "latency_ms": 112.75120000209427
     },
     {
       "scenario_id": "PES-062",
@@ -4706,7 +4706,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.580200000840705
+      "latency_ms": 186.40880000020843
     },
     {
       "scenario_id": "PES-063",
@@ -4719,7 +4719,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.527399998973124
+      "latency_ms": 133.9252000034321
     },
     {
       "scenario_id": "PES-064",
@@ -4732,7 +4732,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.1805000033346
+      "latency_ms": 157.3839999982738
     },
     {
       "scenario_id": "PES-065",
@@ -4745,7 +4745,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.99119999911636
+      "latency_ms": 123.92439999530325
     },
     {
       "scenario_id": "PES-066",
@@ -4758,7 +4758,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.38400000007823
+      "latency_ms": 134.50059999740915
     },
     {
       "scenario_id": "PES-067",
@@ -4771,7 +4771,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.930300004896708
+      "latency_ms": 123.43890000192914
     },
     {
       "scenario_id": "PES-068",
@@ -4784,7 +4784,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.097299999382813
+      "latency_ms": 124.16099999973085
     },
     {
       "scenario_id": "PES-069",
@@ -4797,7 +4797,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.667700003599748
+      "latency_ms": 225.56929999700515
     },
     {
       "scenario_id": "PES-070",
@@ -4810,7 +4810,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.925499996636063
+      "latency_ms": 145.3165999992052
     },
     {
       "scenario_id": "PES-071",
@@ -4823,7 +4823,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.856100000150036
+      "latency_ms": 205.45280000078492
     },
     {
       "scenario_id": "PES-072",
@@ -4836,7 +4836,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.5876999971224
+      "latency_ms": 112.25460000423482
     },
     {
       "scenario_id": "PES-073",
@@ -4849,7 +4849,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.66459999716608
+      "latency_ms": 90.13270000286866
     },
     {
       "scenario_id": "PES-074",
@@ -4862,7 +4862,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.5328000037116
+      "latency_ms": 91.84800000366522
     },
     {
       "scenario_id": "PES-075",
@@ -4875,7 +4875,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.49739999731537
+      "latency_ms": 112.58989999623736
     },
     {
       "scenario_id": "PES-076",
@@ -4888,7 +4888,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.550299996510148
+      "latency_ms": 134.2501999970409
     },
     {
       "scenario_id": "PES-077",
@@ -4901,7 +4901,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.013199996668845
+      "latency_ms": 123.00340000365395
     },
     {
       "scenario_id": "PES-078",
@@ -4914,7 +4914,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.84519999678014
+      "latency_ms": 111.05639999732375
     },
     {
       "scenario_id": "PES-079",
@@ -4927,7 +4927,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.317100003012456
+      "latency_ms": 102.78200000175275
     },
     {
       "scenario_id": "PES-080",
@@ -4940,7 +4940,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.847200001298916
+      "latency_ms": 233.83160000230419
     },
     {
       "scenario_id": "PES-081",
@@ -4953,7 +4953,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.498699996911455
+      "latency_ms": 123.54709999635816
     },
     {
       "scenario_id": "PES-082",
@@ -4966,7 +4966,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.656199999095406
+      "latency_ms": 152.12310000060825
     },
     {
       "scenario_id": "PES-083",
@@ -4979,7 +4979,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.99049999844283
+      "latency_ms": 112.31820000102744
     },
     {
       "scenario_id": "PES-084",
@@ -4992,7 +4992,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.88930000597611
+      "latency_ms": 146.5745999958017
     },
     {
       "scenario_id": "PES-085",
@@ -5005,7 +5005,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.801500002969988
+      "latency_ms": 112.3273000048357
     },
     {
       "scenario_id": "PES-086",
@@ -5018,7 +5018,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.449300002132077
+      "latency_ms": 145.95079999708105
     },
     {
       "scenario_id": "PES-087",
@@ -5031,7 +5031,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.764400004642084
+      "latency_ms": 271.21210000041174
     },
     {
       "scenario_id": "PES-088",
@@ -5044,7 +5044,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.69569999811938
+      "latency_ms": 112.68199999904027
     },
     {
       "scenario_id": "PES-089",
@@ -5057,7 +5057,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.143200000049546
+      "latency_ms": 238.731799996458
     },
     {
       "scenario_id": "PES-090",
@@ -5070,7 +5070,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 29.67270000226563
+      "latency_ms": 85.61449999979232
     },
     {
       "scenario_id": "PES-091",
@@ -5083,7 +5083,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.003800001286436
+      "latency_ms": 105.73370000201976
     },
     {
       "scenario_id": "PES-092",
@@ -5096,7 +5096,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.009799999475945
+      "latency_ms": 101.40010000031907
     },
     {
       "scenario_id": "PES-093",
@@ -5109,7 +5109,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.78800000285264
+      "latency_ms": 101.21589999471325
     },
     {
       "scenario_id": "PES-094",
@@ -5122,7 +5122,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.864400001708418
+      "latency_ms": 89.40510000684299
     },
     {
       "scenario_id": "PES-095",
@@ -5135,7 +5135,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.30459999636514
+      "latency_ms": 91.20189999521244
     },
     {
       "scenario_id": "PES-096",
@@ -5148,7 +5148,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.17390000098385
+      "latency_ms": 100.86600000067847
     },
     {
       "scenario_id": "PES-097",
@@ -5161,7 +5161,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.63829999801237
+      "latency_ms": 134.94210000499152
     },
     {
       "scenario_id": "PES-098",
@@ -5174,7 +5174,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.970999995071907
+      "latency_ms": 94.30369999608956
     },
     {
       "scenario_id": "PES-099",
@@ -5187,7 +5187,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.365800004801713
+      "latency_ms": 73.42530000460101
     },
     {
       "scenario_id": "PES-100",
@@ -5200,7 +5200,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.701800001319498
+      "latency_ms": 89.76860000257147
     },
     {
       "scenario_id": "INJ-001",
@@ -5213,7 +5213,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.65250000002561
+      "latency_ms": 100.65249999752268
     },
     {
       "scenario_id": "INJ-002",
@@ -5226,7 +5226,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.805800003989134
+      "latency_ms": 282.55039999930887
     },
     {
       "scenario_id": "INJ-003",
@@ -5239,7 +5239,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.520399994798936
+      "latency_ms": 150.22330000647344
     },
     {
       "scenario_id": "INJ-004",
@@ -5252,7 +5252,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.32420000009006
+      "latency_ms": 169.03540000203066
     },
     {
       "scenario_id": "INJ-005",
@@ -5265,7 +5265,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.86680000158958
+      "latency_ms": 169.86000000179047
     },
     {
       "scenario_id": "INJ-006",
@@ -5278,7 +5278,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.17689999938011
+      "latency_ms": 134.87650000024587
     },
     {
       "scenario_id": "INJ-007",
@@ -5291,7 +5291,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.601599998073652
+      "latency_ms": 123.3661000005668
     },
     {
       "scenario_id": "INJ-008",
@@ -5304,7 +5304,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.738200001593214
+      "latency_ms": 123.45050000294577
     },
     {
       "scenario_id": "INJ-009",
@@ -5317,7 +5317,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.142299997038208
+      "latency_ms": 123.01300000399351
     },
     {
       "scenario_id": "INJ-010",
@@ -5330,7 +5330,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.887399996165186
+      "latency_ms": 124.70759999996517
     },
     {
       "scenario_id": "INJ-011",
@@ -5343,7 +5343,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.618900006520562
+      "latency_ms": 145.22529999521794
     },
     {
       "scenario_id": "INJ-012",
@@ -5356,7 +5356,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.368300005036872
+      "latency_ms": 252.2841000027256
     },
     {
       "scenario_id": "INJ-013",
@@ -5369,7 +5369,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.16609999758657
+      "latency_ms": 112.61889999877894
     },
     {
       "scenario_id": "INJ-014",
@@ -5382,7 +5382,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.014299998583738
+      "latency_ms": 123.41530000412604
     },
     {
       "scenario_id": "INJ-015",
@@ -5395,7 +5395,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.288000000524335
+      "latency_ms": 145.90100000350503
     },
     {
       "scenario_id": "INJ-016",
@@ -5408,7 +5408,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.897199998027645
+      "latency_ms": 123.58040000253823
     },
     {
       "scenario_id": "INJ-017",
@@ -5421,7 +5421,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 30.453200000920333
+      "latency_ms": 125.25479999749223
     },
     {
       "scenario_id": "INJ-018",
@@ -5434,7 +5434,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 32.0415000023786
+      "latency_ms": 134.3635000012
     },
     {
       "scenario_id": "INJ-019",
@@ -5447,7 +5447,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.894200003473088
+      "latency_ms": 112.79930000455352
     },
     {
       "scenario_id": "INJ-020",
@@ -5460,7 +5460,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.85619999829214
+      "latency_ms": 112.55890000029467
     },
     {
       "scenario_id": "INJ-021",
@@ -5473,7 +5473,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.555500000540633
+      "latency_ms": 124.12810000387253
     },
     {
       "scenario_id": "INJ-022",
@@ -5486,7 +5486,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.25760000187438
+      "latency_ms": 217.65050000249175
     },
     {
       "scenario_id": "INJ-023",
@@ -5499,7 +5499,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.293600003351457
+      "latency_ms": 122.41820000053849
     },
     {
       "scenario_id": "INJ-024",
@@ -5512,7 +5512,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.07490000425605
+      "latency_ms": 123.88890000147512
     },
     {
       "scenario_id": "INJ-025",
@@ -5525,7 +5525,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.98239999799989
+      "latency_ms": 135.00020000356017
     },
     {
       "scenario_id": "INJ-026",
@@ -5538,7 +5538,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.1565999967861
+      "latency_ms": 145.799400001124
     },
     {
       "scenario_id": "INJ-027",
@@ -5551,7 +5551,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.140800003602635
+      "latency_ms": 101.10459999850718
     },
     {
       "scenario_id": "INJ-028",
@@ -5564,7 +5564,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.453499994706362
+      "latency_ms": 144.4924999959767
     },
     {
       "scenario_id": "INJ-029",
@@ -5577,7 +5577,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.750200001406483
+      "latency_ms": 103.20719999435823
     },
     {
       "scenario_id": "INJ-030",
@@ -5590,7 +5590,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.62799999921117
+      "latency_ms": 125.83029999950668
     },
     {
       "scenario_id": "INJ-031",
@@ -5603,7 +5603,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.860900000319816
+      "latency_ms": 111.61900000297464
     },
     {
       "scenario_id": "INJ-032",
@@ -5616,7 +5616,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.52769999904558
+      "latency_ms": 100.11690000101225
     },
     {
       "scenario_id": "INJ-033",
@@ -5629,7 +5629,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.900999997043982
+      "latency_ms": 228.9694999999483
     },
     {
       "scenario_id": "INJ-034",
@@ -5642,7 +5642,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.188900003035087
+      "latency_ms": 124.77940000098897
     },
     {
       "scenario_id": "INJ-035",
@@ -5655,7 +5655,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.598500003980007
+      "latency_ms": 113.15659999672789
     },
     {
       "scenario_id": "INJ-036",
@@ -5668,7 +5668,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.992999998270534
+      "latency_ms": 134.36910000018543
     },
     {
       "scenario_id": "INJ-037",
@@ -5681,7 +5681,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.223900003766175
+      "latency_ms": 146.04179999878397
     },
     {
       "scenario_id": "INJ-038",
@@ -5694,7 +5694,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.48829999816371
+      "latency_ms": 89.3108999953256
     },
     {
       "scenario_id": "INJ-039",
@@ -5707,7 +5707,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.30269999988377
+      "latency_ms": 124.26889999915147
     },
     {
       "scenario_id": "INJ-040",
@@ -5720,7 +5720,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.867500004300382
+      "latency_ms": 146.26590000261785
     },
     {
       "scenario_id": "INJ-041",
@@ -5733,7 +5733,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 29.736299999058247
+      "latency_ms": 181.1613000027137
     },
     {
       "scenario_id": "INJ-042",
@@ -5746,7 +5746,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.203900000837166
+      "latency_ms": 159.4316000046092
     },
     {
       "scenario_id": "INJ-043",
@@ -5759,7 +5759,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.62580000126036
+      "latency_ms": 264.42759999918053
     },
     {
       "scenario_id": "INJ-044",
@@ -5772,7 +5772,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.599799999326933
+      "latency_ms": 140.9438000046066
     },
     {
       "scenario_id": "INJ-045",
@@ -5785,7 +5785,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.251599995594006
+      "latency_ms": 134.89349999872502
     },
     {
       "scenario_id": "INJ-046",
@@ -5798,7 +5798,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.534399999130983
+      "latency_ms": 181.96750000061002
     },
     {
       "scenario_id": "INJ-047",
@@ -5811,7 +5811,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 28.125400000135414
+      "latency_ms": 134.5528999954695
     },
     {
       "scenario_id": "INJ-048",
@@ -5824,7 +5824,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.92189999995753
+      "latency_ms": 112.62459999852581
     },
     {
       "scenario_id": "INJ-049",
@@ -5837,7 +5837,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.41999999730615
+      "latency_ms": 134.5260000016424
     },
     {
       "scenario_id": "INJ-050",
@@ -5850,7 +5850,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.58680000138702
+      "latency_ms": 145.97700000012992
     },
     {
       "scenario_id": "INJ-051",
@@ -5863,7 +5863,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.125000000116415
+      "latency_ms": 171.68489999312442
     },
     {
       "scenario_id": "INJ-052",
@@ -5876,7 +5876,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.008500003721565
+      "latency_ms": 193.03219999710564
     },
     {
       "scenario_id": "INJ-053",
@@ -5889,7 +5889,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.05680000083521
+      "latency_ms": 212.42630000051577
     },
     {
       "scenario_id": "INJ-054",
@@ -5902,7 +5902,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.80930000031367
+      "latency_ms": 169.04069999873172
     },
     {
       "scenario_id": "INJ-055",
@@ -5915,7 +5915,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.926999997755047
+      "latency_ms": 167.8682999990997
     },
     {
       "scenario_id": "INJ-056",
@@ -5928,7 +5928,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.462900004233234
+      "latency_ms": 125.14699999883305
     },
     {
       "scenario_id": "INJ-057",
@@ -5941,7 +5941,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.705899998778477
+      "latency_ms": 112.23780000000261
     },
     {
       "scenario_id": "INJ-058",
@@ -5954,7 +5954,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.561400001810398
+      "latency_ms": 112.42569999740226
     },
     {
       "scenario_id": "INJ-059",
@@ -5967,7 +5967,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.61410000291653
+      "latency_ms": 123.1333999967319
     },
     {
       "scenario_id": "INJ-060",
@@ -5980,7 +5980,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.960799997439608
+      "latency_ms": 111.89829999784706
     },
     {
       "scenario_id": "INJ-061",
@@ -5993,7 +5993,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.160500001627952
+      "latency_ms": 116.64190000010421
     },
     {
       "scenario_id": "INJ-062",
@@ -6006,7 +6006,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.711499998171348
+      "latency_ms": 91.41339999769116
     },
     {
       "scenario_id": "INJ-063",
@@ -6019,7 +6019,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.807099998928607
+      "latency_ms": 123.68209999840474
     },
     {
       "scenario_id": "INJ-064",
@@ -6032,7 +6032,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.38169999711681
+      "latency_ms": 123.56179999915184
     },
     {
       "scenario_id": "INJ-065",
@@ -6045,7 +6045,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.83159999892814
+      "latency_ms": 223.46420000394573
     },
     {
       "scenario_id": "INJ-066",
@@ -6058,7 +6058,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.80319999792846
+      "latency_ms": 134.75430000107735
     },
     {
       "scenario_id": "INJ-067",
@@ -6071,7 +6071,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.77319999464089
+      "latency_ms": 146.4101999954437
     },
     {
       "scenario_id": "INJ-068",
@@ -6084,7 +6084,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.173400000610854
+      "latency_ms": 112.37709999841172
     },
     {
       "scenario_id": "INJ-069",
@@ -6097,7 +6097,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.384700001974124
+      "latency_ms": 123.87769999622833
     },
     {
       "scenario_id": "INJ-070",
@@ -6110,7 +6110,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.74479999707546
+      "latency_ms": 90.85119999508606
     },
     {
       "scenario_id": "INJ-071",
@@ -6123,7 +6123,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.862200003350154
+      "latency_ms": 100.90450000279816
     },
     {
       "scenario_id": "INJ-072",
@@ -6136,7 +6136,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.443300003535114
+      "latency_ms": 128.11360000341665
     },
     {
       "scenario_id": "INJ-073",
@@ -6149,7 +6149,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.14090000395663
+      "latency_ms": 124.07539999549044
     },
     {
       "scenario_id": "INJ-074",
@@ -6162,7 +6162,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.474199995282106
+      "latency_ms": 100.5146000024979
     },
     {
       "scenario_id": "INJ-075",
@@ -6175,7 +6175,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.695299998507835
+      "latency_ms": 92.15920000133337
     },
     {
       "scenario_id": "INJ-076",
@@ -6188,7 +6188,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.680800000671297
+      "latency_ms": 201.04100000025937
     },
     {
       "scenario_id": "INJ-077",
@@ -6201,7 +6201,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.660400001972448
+      "latency_ms": 145.86430000053952
     },
     {
       "scenario_id": "INJ-078",
@@ -6214,7 +6214,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.4613000023528
+      "latency_ms": 168.72099999454804
     },
     {
       "scenario_id": "INJ-079",
@@ -6227,7 +6227,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.65600000100676
+      "latency_ms": 156.79580000141868
     },
     {
       "scenario_id": "INJ-080",
@@ -6240,7 +6240,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.875299997802358
+      "latency_ms": 112.9473999972106
     },
     {
       "scenario_id": "INJ-081",
@@ -6253,7 +6253,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.285400002554525
+      "latency_ms": 113.96830000012415
     },
     {
       "scenario_id": "INJ-082",
@@ -6266,7 +6266,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.736999999324325
+      "latency_ms": 102.10389999701874
     },
     {
       "scenario_id": "INJ-083",
@@ -6279,7 +6279,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.285000003350433
+      "latency_ms": 126.90009999641916
     },
     {
       "scenario_id": "INJ-084",
@@ -6292,7 +6292,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.188000002643093
+      "latency_ms": 100.89659999357536
     },
     {
       "scenario_id": "INJ-085",
@@ -6305,7 +6305,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.82710000104271
+      "latency_ms": 123.88890000147512
     },
     {
       "scenario_id": "INJ-086",
@@ -6318,7 +6318,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.941299998317845
+      "latency_ms": 112.63789999793516
     },
     {
       "scenario_id": "INJ-087",
@@ -6331,7 +6331,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.99119999993127
+      "latency_ms": 259.2865999977221
     },
     {
       "scenario_id": "INJ-088",
@@ -6344,7 +6344,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.62669999920763
+      "latency_ms": 190.40530000347644
     },
     {
       "scenario_id": "INJ-089",
@@ -6357,7 +6357,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.138799999083858
+      "latency_ms": 123.76909999875352
     },
     {
       "scenario_id": "INJ-090",
@@ -6370,7 +6370,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.04770000046119
+      "latency_ms": 123.65490000229329
     },
     {
       "scenario_id": "INJ-091",
@@ -6383,7 +6383,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.48329999606358
+      "latency_ms": 157.3872000008123
     },
     {
       "scenario_id": "INJ-092",
@@ -6396,7 +6396,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.595900002575945
+      "latency_ms": 138.7475999945309
     },
     {
       "scenario_id": "INJ-093",
@@ -6409,7 +6409,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.475599999073893
+      "latency_ms": 102.41230000247015
     },
     {
       "scenario_id": "INJ-094",
@@ -6422,7 +6422,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.00310000241734
+      "latency_ms": 99.96500000124797
     },
     {
       "scenario_id": "INJ-095",
@@ -6435,7 +6435,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.225599998317193
+      "latency_ms": 101.58659999433439
     },
     {
       "scenario_id": "INJ-096",
@@ -6448,7 +6448,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.883800000476185
+      "latency_ms": 123.8519999969867
     },
     {
       "scenario_id": "INJ-097",
@@ -6461,7 +6461,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.402299998153467
+      "latency_ms": 133.75999999698251
     },
     {
       "scenario_id": "INJ-098",
@@ -6474,7 +6474,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.166099995956756
+      "latency_ms": 200.94560000143247
     },
     {
       "scenario_id": "INJ-099",
@@ -6487,7 +6487,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.294800004805438
+      "latency_ms": 181.17239999992307
     },
     {
       "scenario_id": "INJ-100",
@@ -6500,7 +6500,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.617000001540873
+      "latency_ms": 113.03380000026664
     },
     {
       "scenario_id": "UNT-001",
@@ -6513,7 +6513,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.341700005810708
+      "latency_ms": 112.34159999730764
     },
     {
       "scenario_id": "UNT-002",
@@ -6526,7 +6526,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.467499999853317
+      "latency_ms": 138.07839999935823
     },
     {
       "scenario_id": "UNT-003",
@@ -6539,7 +6539,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.882299999764655
+      "latency_ms": 113.7178999997559
     },
     {
       "scenario_id": "UNT-004",
@@ -6552,7 +6552,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.597400002065115
+      "latency_ms": 214.99279999989085
     },
     {
       "scenario_id": "UNT-005",
@@ -6565,7 +6565,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.05450000090059
+      "latency_ms": 112.34289999993052
     },
     {
       "scenario_id": "UNT-006",
@@ -6578,7 +6578,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.378899997624103
+      "latency_ms": 304.06780000339495
     },
     {
       "scenario_id": "UNT-007",
@@ -6591,7 +6591,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.646800000278745
+      "latency_ms": 200.32440000068163
     },
     {
       "scenario_id": "UNT-008",
@@ -6604,7 +6604,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.740799998748116
+      "latency_ms": 135.75949999358272
     },
     {
       "scenario_id": "UNT-009",
@@ -6617,7 +6617,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.56969999911962
+      "latency_ms": 111.18709999573184
     },
     {
       "scenario_id": "UNT-010",
@@ -6630,7 +6630,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.111800000653602
+      "latency_ms": 115.06269999517826
     },
     {
       "scenario_id": "UNT-011",
@@ -6643,7 +6643,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.82359999662731
+      "latency_ms": 127.01830000150949
     },
     {
       "scenario_id": "UNT-012",
@@ -6656,7 +6656,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.96590000030119
+      "latency_ms": 123.48480000218842
     },
     {
       "scenario_id": "UNT-013",
@@ -6669,7 +6669,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.20730000064941
+      "latency_ms": 112.42029999993974
     },
     {
       "scenario_id": "UNT-014",
@@ -6682,7 +6682,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.998299998405855
+      "latency_ms": 168.9018999968539
     },
     {
       "scenario_id": "UNT-015",
@@ -6695,7 +6695,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.378499994170852
+      "latency_ms": 83.9720000003581
     },
     {
       "scenario_id": "UNT-016",
@@ -6708,7 +6708,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.529199995915405
+      "latency_ms": 118.9163999952143
     },
     {
       "scenario_id": "UNT-017",
@@ -6721,7 +6721,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.020099993620533
+      "latency_ms": 146.32519999577198
     },
     {
       "scenario_id": "UNT-018",
@@ -6734,7 +6734,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.577300000994
+      "latency_ms": 146.03059999353718
     },
     {
       "scenario_id": "UNT-019",
@@ -6747,7 +6747,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.40620000177296
+      "latency_ms": 257.5211999937892
     },
     {
       "scenario_id": "UNT-020",
@@ -6760,7 +6760,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.683700000518
+      "latency_ms": 185.2318000019295
     },
     {
       "scenario_id": "UNT-021",
@@ -6773,7 +6773,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.233099995588418
+      "latency_ms": 134.83329999871785
     },
     {
       "scenario_id": "UNT-022",
@@ -6786,7 +6786,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.128900003735907
+      "latency_ms": 157.5827000051504
     },
     {
       "scenario_id": "UNT-023",
@@ -6799,7 +6799,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.347000002104323
+      "latency_ms": 155.9969000009005
     },
     {
       "scenario_id": "UNT-024",
@@ -6812,7 +6812,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.9196999965352
+      "latency_ms": 136.18330000463175
     },
     {
       "scenario_id": "UNT-025",
@@ -6825,7 +6825,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.81150000251364
+      "latency_ms": 156.57520000240766
     },
     {
       "scenario_id": "UNT-026",
@@ -6838,7 +6838,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 26.657000002160203
+      "latency_ms": 135.23669999995036
     },
     {
       "scenario_id": "UNT-027",
@@ -6851,7 +6851,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.624400003929622
+      "latency_ms": 147.5401999996393
     },
     {
       "scenario_id": "UNT-028",
@@ -6864,7 +6864,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.72549999563489
+      "latency_ms": 234.32169999432517
     },
     {
       "scenario_id": "UNT-029",
@@ -6877,7 +6877,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.35070000460837
+      "latency_ms": 161.1960999944131
     },
     {
       "scenario_id": "UNT-030",
@@ -6890,7 +6890,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.567399999185
+      "latency_ms": 112.59199999767588
     },
     {
       "scenario_id": "UNT-031",
@@ -6903,7 +6903,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.925899996655062
+      "latency_ms": 100.48539999843342
     },
     {
       "scenario_id": "UNT-032",
@@ -6916,7 +6916,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.67299999948591
+      "latency_ms": 114.30319999635685
     },
     {
       "scenario_id": "UNT-033",
@@ -6929,7 +6929,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.815999999991618
+      "latency_ms": 122.37920000188751
     },
     {
       "scenario_id": "UNT-034",
@@ -6942,7 +6942,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.016799997596536
+      "latency_ms": 192.30949999473523
     },
     {
       "scenario_id": "UNT-035",
@@ -6955,7 +6955,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.4200999980676
+      "latency_ms": 100.68219999811845
     },
     {
       "scenario_id": "UNT-036",
@@ -6968,7 +6968,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.10790000349516
+      "latency_ms": 134.93949999974575
     },
     {
       "scenario_id": "UNT-037",
@@ -6981,7 +6981,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.125199996575247
+      "latency_ms": 145.92880000418518
     },
     {
       "scenario_id": "UNT-038",
@@ -6994,7 +6994,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.149900003161747
+      "latency_ms": 111.87649999919813
     },
     {
       "scenario_id": "UNT-039",
@@ -7007,7 +7007,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.289299998490606
+      "latency_ms": 252.6782999993884
     },
     {
       "scenario_id": "UNT-040",
@@ -7020,7 +7020,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.99339999363292
+      "latency_ms": 157.064499995613
     },
     {
       "scenario_id": "UNT-041",
@@ -7033,7 +7033,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.891600004280917
+      "latency_ms": 157.76589999586577
     },
     {
       "scenario_id": "UNT-042",
@@ -7046,7 +7046,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.579499996325467
+      "latency_ms": 124.0375999987009
     },
     {
       "scenario_id": "UNT-043",
@@ -7059,7 +7059,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.486500000813976
+      "latency_ms": 123.67509999603499
     },
     {
       "scenario_id": "UNT-044",
@@ -7072,7 +7072,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.59609999600798
+      "latency_ms": 101.34839999955148
     },
     {
       "scenario_id": "UNT-045",
@@ -7085,7 +7085,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.616900001186877
+      "latency_ms": 90.1397999987239
     },
     {
       "scenario_id": "UNT-046",
@@ -7098,7 +7098,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.705800005292986
+      "latency_ms": 112.95819999941159
     },
     {
       "scenario_id": "UNT-047",
@@ -7111,7 +7111,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.70380000420846
+      "latency_ms": 122.90180000127293
     },
     {
       "scenario_id": "UNT-048",
@@ -7124,7 +7124,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.508900004439056
+      "latency_ms": 112.75069999828702
     },
     {
       "scenario_id": "UNT-049",
@@ -7137,7 +7137,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.91549999488052
+      "latency_ms": 129.15690000227187
     },
     {
       "scenario_id": "UNT-050",
@@ -7150,7 +7150,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.096599997894373
+      "latency_ms": 212.23969999846304
     },
     {
       "scenario_id": "UNT-051",
@@ -7163,7 +7163,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.752699998614844
+      "latency_ms": 146.5461999978288
     },
     {
       "scenario_id": "UNT-052",
@@ -7176,7 +7176,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.959600003261585
+      "latency_ms": 146.05199999641627
     },
     {
       "scenario_id": "UNT-053",
@@ -7189,7 +7189,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.567899999557994
+      "latency_ms": 122.98680000094464
     },
     {
       "scenario_id": "UNT-054",
@@ -7202,7 +7202,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 21.742699995229486
+      "latency_ms": 147.13099999789847
     },
     {
       "scenario_id": "UNT-055",
@@ -7215,7 +7215,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 23.646999994525686
+      "latency_ms": 134.80160000472097
     },
     {
       "scenario_id": "UNT-056",
@@ -7228,7 +7228,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.14370000042254
+      "latency_ms": 147.98919999884674
     },
     {
       "scenario_id": "UNT-057",
@@ -7241,7 +7241,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.990000004938338
+      "latency_ms": 134.51699999859557
     },
     {
       "scenario_id": "UNT-058",
@@ -7254,7 +7254,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 25.718500000948552
+      "latency_ms": 195.0892000022577
     },
     {
       "scenario_id": "UNT-059",
@@ -7267,7 +7267,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 27.45639999920968
+      "latency_ms": 123.99119999463437
     },
     {
       "scenario_id": "UNT-060",
@@ -7280,7 +7280,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:2/2_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 24.708799996005837
+      "latency_ms": 191.22990000323625
     },
     {
       "scenario_id": "UNT-061",
@@ -7293,7 +7293,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 19.318099999509286
+      "latency_ms": 134.81399999727728
     },
     {
       "scenario_id": "UNT-062",
@@ -7306,7 +7306,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.992599998251535
+      "latency_ms": 100.84410000126809
     },
     {
       "scenario_id": "UNT-063",
@@ -7319,7 +7319,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.8546999997925
+      "latency_ms": 112.4707999988459
     },
     {
       "scenario_id": "UNT-064",
@@ -7332,7 +7332,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.91489999939222
+      "latency_ms": 101.04449999926146
     },
     {
       "scenario_id": "UNT-065",
@@ -7345,7 +7345,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 22.56669999769656
+      "latency_ms": 146.07799999794224
     },
     {
       "scenario_id": "UNT-066",
@@ -7358,7 +7358,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.375799993809778
+      "latency_ms": 145.98709999700077
     },
     {
       "scenario_id": "UNT-067",
@@ -7371,7 +7371,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.866200003074482
+      "latency_ms": 134.62569999683183
     },
     {
       "scenario_id": "UNT-068",
@@ -7384,7 +7384,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.559600001433864
+      "latency_ms": 136.44780000322498
     },
     {
       "scenario_id": "UNT-069",
@@ -7397,7 +7397,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 14.92819999839412
+      "latency_ms": 222.38110000034794
     },
     {
       "scenario_id": "UNT-070",
@@ -7410,7 +7410,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.90850000199862
+      "latency_ms": 117.14399999618763
     },
     {
       "scenario_id": "UNT-071",
@@ -7423,7 +7423,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.176799996581394
+      "latency_ms": 100.78710000379942
     },
     {
       "scenario_id": "UNT-072",
@@ -7436,7 +7436,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.220699996163603
+      "latency_ms": 112.62559999886435
     },
     {
       "scenario_id": "UNT-073",
@@ -7449,7 +7449,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.431800005491823
+      "latency_ms": 100.81760000321083
     },
     {
       "scenario_id": "UNT-074",
@@ -7462,7 +7462,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 18.963100003020372
+      "latency_ms": 170.2824000021792
     },
     {
       "scenario_id": "UNT-075",
@@ -7475,7 +7475,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 12.41469999513356
+      "latency_ms": 134.47950000409037
     },
     {
       "scenario_id": "UNT-076",
@@ -7488,7 +7488,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 20.33619999565417
+      "latency_ms": 101.44040000159293
     },
     {
       "scenario_id": "UNT-077",
@@ -7501,7 +7501,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 11.938299998291768
+      "latency_ms": 112.25939999712864
     },
     {
       "scenario_id": "UNT-078",
@@ -7514,7 +7514,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 12.463399994885549
+      "latency_ms": 112.32680000102846
     },
     {
       "scenario_id": "UNT-079",
@@ -7527,7 +7527,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.328000005159993
+      "latency_ms": 161.90310000092722
     },
     {
       "scenario_id": "UNT-080",
@@ -7540,7 +7540,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 14.819800002442207
+      "latency_ms": 246.65480000112439
     },
     {
       "scenario_id": "UNT-081",
@@ -7553,7 +7553,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.809899996384047
+      "latency_ms": 101.85289999935776
     },
     {
       "scenario_id": "UNT-082",
@@ -7566,7 +7566,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.742100003582891
+      "latency_ms": 156.99319999839645
     },
     {
       "scenario_id": "UNT-083",
@@ -7579,7 +7579,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 11.073399997258093
+      "latency_ms": 112.62359999818727
     },
     {
       "scenario_id": "UNT-084",
@@ -7592,7 +7592,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.434599994681776
+      "latency_ms": 76.70520000101533
     },
     {
       "scenario_id": "UNT-085",
@@ -7605,7 +7605,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 17.518100001325365
+      "latency_ms": 92.428200005088
     },
     {
       "scenario_id": "UNT-086",
@@ -7618,7 +7618,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 30.869899994286243
+      "latency_ms": 135.9708000018145
     },
     {
       "scenario_id": "UNT-087",
@@ -7631,7 +7631,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 24.684999996679835
+      "latency_ms": 134.8195000027772
     },
     {
       "scenario_id": "UNT-088",
@@ -7644,7 +7644,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 24.795999997877516
+      "latency_ms": 111.2827999968431
     },
     {
       "scenario_id": "UNT-089",
@@ -7657,7 +7657,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 20.559100004902575
+      "latency_ms": 101.13699999783421
     },
     {
       "scenario_id": "UNT-090",
@@ -7670,7 +7670,7 @@
       "is_correct": 1,
       "reason": "INSUFFICIENT_PERMISSION",
       "first_blocking_stage": "permission_engine",
-      "latency_ms": 22.41939999657916
+      "latency_ms": 139.09620000049472
     },
     {
       "scenario_id": "UNT-091",
@@ -7683,7 +7683,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 11.012500006472692
+      "latency_ms": 236.4168999993126
     },
     {
       "scenario_id": "UNT-092",
@@ -7696,7 +7696,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.94080000015674
+      "latency_ms": 102.01329999836162
     },
     {
       "scenario_id": "UNT-093",
@@ -7709,7 +7709,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 14.370299999427516
+      "latency_ms": 145.4710000034538
     },
     {
       "scenario_id": "UNT-094",
@@ -7722,7 +7722,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 13.76940000045579
+      "latency_ms": 113.14320000383304
     },
     {
       "scenario_id": "UNT-095",
@@ -7735,7 +7735,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.806500006874558
+      "latency_ms": 112.56080000021029
     },
     {
       "scenario_id": "UNT-096",
@@ -7748,7 +7748,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.658400003507268
+      "latency_ms": 146.12299999862444
     },
     {
       "scenario_id": "UNT-097",
@@ -7761,7 +7761,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 14.90629999898374
+      "latency_ms": 146.35650000127498
     },
     {
       "scenario_id": "UNT-098",
@@ -7774,7 +7774,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 16.391499993915204
+      "latency_ms": 147.88840000255732
     },
     {
       "scenario_id": "UNT-099",
@@ -7787,7 +7787,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.129199993680231
+      "latency_ms": 123.75369999790564
     },
     {
       "scenario_id": "UNT-100",
@@ -7800,7 +7800,7 @@
       "is_correct": 1,
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
       "first_blocking_stage": "rate_limiter",
-      "latency_ms": 15.972100001818035
+      "latency_ms": 161.1756999991485
     }
   ],
   "metrics": {
@@ -7816,13 +7816,13 @@
     "false_positive_rate": 0.0,
     "false_negative_rate": 0.204,
     "overall_accuracy": 0.83,
-    "latency_mean_ms": 24.491,
-    "latency_median_ms": 23.734,
-    "latency_p95_ms": 33.913,
-    "latency_p99_ms": 43.595,
-    "latency_std_ms": 6.129,
-    "latency_min_ms": 11.013,
-    "latency_max_ms": 79.005,
+    "latency_mean_ms": 141.021,
+    "latency_median_ms": 132.973,
+    "latency_p95_ms": 223.466,
+    "latency_p99_ms": 271.257,
+    "latency_std_ms": 39.841,
+    "latency_min_ms": 73.425,
+    "latency_max_ms": 365.623,
     "by_category": {
       "excessive_calls": {
         "total": 100,

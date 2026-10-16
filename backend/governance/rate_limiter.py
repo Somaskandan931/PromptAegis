@@ -70,8 +70,5 @@ def check_and_increment(agent_id: str, tool_name: str, timestamp: float = None) 
     """
     limit = get_limit(tool_name)
     window = _window_start(timestamp)
-    current = db.get_rate_limit_count(agent_id, tool_name, window)
-    if current >= limit:
-        return False, current, limit
-    new_count = db.increment_rate_limit(agent_id, tool_name, window)
-    return True, new_count, limit
+    allowed, current = db.consume_rate_limit(agent_id, tool_name, window, limit)
+    return allowed, current, limit

@@ -7,7 +7,7 @@
       "limit": 5,
       "decision": "REQUIRE_APPROVAL",
       "reason": "POLICY_TOOL_BASED:execute_sql",
-      "latency_ms": 19.485400000121444
+      "latency_ms": 147.79060000000754
     },
     {
       "test": "saturation_execute_sql",
@@ -16,7 +16,7 @@
       "limit": 5,
       "decision": "REQUIRE_APPROVAL",
       "reason": "POLICY_TOOL_BASED:execute_sql",
-      "latency_ms": 22.342700001900084
+      "latency_ms": 100.8914999983972
     },
     {
       "test": "saturation_execute_sql",
@@ -25,7 +25,7 @@
       "limit": 5,
       "decision": "REQUIRE_APPROVAL",
       "reason": "POLICY_TOOL_BASED:execute_sql",
-      "latency_ms": 20.363499999803025
+      "latency_ms": 248.17929999699118
     },
     {
       "test": "saturation_execute_sql",
@@ -34,7 +34,7 @@
       "limit": 5,
       "decision": "REQUIRE_APPROVAL",
       "reason": "POLICY_TOOL_BASED:execute_sql",
-      "latency_ms": 22.87600000272505
+      "latency_ms": 134.98940000135917
     },
     {
       "test": "saturation_execute_sql",
@@ -43,7 +43,7 @@
       "limit": 5,
       "decision": "REQUIRE_APPROVAL",
       "reason": "POLICY_TOOL_BASED:execute_sql",
-      "latency_ms": 21.613999997498468
+      "latency_ms": 106.15649999817833
     },
     {
       "test": "saturation_execute_sql",
@@ -52,7 +52,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 15.572699994663708
+      "latency_ms": 161.62050000275485
     },
     {
       "test": "saturation_execute_sql",
@@ -61,7 +61,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 12.170599999080878
+      "latency_ms": 122.02260000049137
     },
     {
       "test": "saturation_execute_sql",
@@ -70,7 +70,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 16.885099998035002
+      "latency_ms": 102.07290000107605
     },
     {
       "test": "saturation_execute_sql",
@@ -79,7 +79,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 11.358100004144944
+      "latency_ms": 100.52079999877606
     },
     {
       "test": "saturation_execute_sql",
@@ -88,7 +88,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 15.575100005662534
+      "latency_ms": 100.91479999391595
     },
     {
       "test": "saturation_execute_sql",
@@ -97,7 +97,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 15.08299999841256
+      "latency_ms": 101.4913000035449
     },
     {
       "test": "saturation_execute_sql",
@@ -106,7 +106,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 12.360299995634705
+      "latency_ms": 151.77270000276621
     },
     {
       "test": "saturation_execute_sql",
@@ -115,7 +115,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 11.59909999842057
+      "latency_ms": 471.18599999521393
     },
     {
       "test": "saturation_execute_sql",
@@ -124,7 +124,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 12.076499995600898
+      "latency_ms": 78.50130000588251
     },
     {
       "test": "saturation_execute_sql",
@@ -133,7 +133,7 @@
       "limit": 5,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:5/5_per_60s",
-      "latency_ms": 17.55789999879198
+      "latency_ms": 101.45760000159498
     },
     {
       "test": "saturation_update_customer",
@@ -142,7 +142,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.555400002398528
+      "latency_ms": 124.4686999998521
     },
     {
       "test": "saturation_update_customer",
@@ -151,7 +151,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.329300002136733
+      "latency_ms": 102.79019999870798
     },
     {
       "test": "saturation_update_customer",
@@ -160,7 +160,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.562300000165123
+      "latency_ms": 89.86210000148276
     },
     {
       "test": "saturation_update_customer",
@@ -169,7 +169,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.086400000262074
+      "latency_ms": 146.35200000338955
     },
     {
       "test": "saturation_update_customer",
@@ -178,7 +178,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.680300000705756
+      "latency_ms": 125.44710000656778
     },
     {
       "test": "saturation_update_customer",
@@ -187,7 +187,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.796500000869855
+      "latency_ms": 102.84540000429843
     },
     {
       "test": "saturation_update_customer",
@@ -196,7 +196,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.75899999565445
+      "latency_ms": 84.99360000132583
     },
     {
       "test": "saturation_update_customer",
@@ -205,7 +205,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.13120000285562
+      "latency_ms": 92.40150000550784
     },
     {
       "test": "saturation_update_customer",
@@ -214,7 +214,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.31530000042403
+      "latency_ms": 77.51490000373451
     },
     {
       "test": "saturation_update_customer",
@@ -223,7 +223,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.13100000517443
+      "latency_ms": 75.02689999819268
     },
     {
       "test": "saturation_update_customer",
@@ -232,7 +232,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 18.315700006496627
+      "latency_ms": 97.33580000465736
     },
     {
       "test": "saturation_update_customer",
@@ -241,7 +241,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.57649999653222
+      "latency_ms": 224.34749999956694
     },
     {
       "test": "saturation_update_customer",
@@ -250,7 +250,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.686499996169005
+      "latency_ms": 181.30960000416962
     },
     {
       "test": "saturation_update_customer",
@@ -259,7 +259,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.26359999924898
+      "latency_ms": 179.48379999870667
     },
     {
       "test": "saturation_update_customer",
@@ -268,7 +268,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 18.76740000443533
+      "latency_ms": 147.7565000022878
     },
     {
       "test": "saturation_update_customer",
@@ -277,7 +277,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.684100000944454
+      "latency_ms": 150.28819999861298
     },
     {
       "test": "saturation_update_customer",
@@ -286,7 +286,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.98090000153752
+      "latency_ms": 135.6390000000829
     },
     {
       "test": "saturation_update_customer",
@@ -295,7 +295,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.66839999781223
+      "latency_ms": 134.75840000319295
     },
     {
       "test": "saturation_update_customer",
@@ -304,7 +304,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.0611000044737
+      "latency_ms": 125.78689999645576
     },
     {
       "test": "saturation_update_customer",
@@ -313,7 +313,7 @@
       "limit": 20,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.50969999638619
+      "latency_ms": 189.63329999678535
     },
     {
       "test": "saturation_update_customer",
@@ -322,7 +322,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 16.79189999413211
+      "latency_ms": 134.4591000015498
     },
     {
       "test": "saturation_update_customer",
@@ -331,7 +331,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 15.668100000766572
+      "latency_ms": 113.0129000011948
     },
     {
       "test": "saturation_update_customer",
@@ -340,7 +340,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 16.194800002267584
+      "latency_ms": 101.03049999452196
     },
     {
       "test": "saturation_update_customer",
@@ -349,7 +349,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 13.471299993398134
+      "latency_ms": 101.00729999976465
     },
     {
       "test": "saturation_update_customer",
@@ -358,7 +358,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 16.060299996752292
+      "latency_ms": 100.09249999711756
     },
     {
       "test": "saturation_update_customer",
@@ -367,7 +367,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.167200002702884
+      "latency_ms": 151.64979999826755
     },
     {
       "test": "saturation_update_customer",
@@ -376,7 +376,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 15.274800003680866
+      "latency_ms": 113.0782000036561
     },
     {
       "test": "saturation_update_customer",
@@ -385,7 +385,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 16.236399998888373
+      "latency_ms": 101.77269999985583
     },
     {
       "test": "saturation_update_customer",
@@ -394,7 +394,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 17.77830000355607
+      "latency_ms": 112.01319999963744
     },
     {
       "test": "saturation_update_customer",
@@ -403,7 +403,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.337000000523403
+      "latency_ms": 101.2200999975903
     },
     {
       "test": "saturation_update_customer",
@@ -412,7 +412,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.129000002867542
+      "latency_ms": 124.06110000301851
     },
     {
       "test": "saturation_update_customer",
@@ -421,7 +421,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.196799995261244
+      "latency_ms": 200.29990000330145
     },
     {
       "test": "saturation_update_customer",
@@ -430,7 +430,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.885200005664956
+      "latency_ms": 125.75660000584321
     },
     {
       "test": "saturation_update_customer",
@@ -439,7 +439,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.172600000165403
+      "latency_ms": 113.2452999954694
     },
     {
       "test": "saturation_update_customer",
@@ -448,7 +448,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 10.737700002209749
+      "latency_ms": 111.82320000079926
     },
     {
       "test": "saturation_update_customer",
@@ -457,7 +457,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 14.805000006163027
+      "latency_ms": 89.58319999510422
     },
     {
       "test": "saturation_update_customer",
@@ -466,7 +466,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 16.760700003942475
+      "latency_ms": 113.2930000021588
     },
     {
       "test": "saturation_update_customer",
@@ -475,7 +475,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 12.666700000409037
+      "latency_ms": 129.1399999972782
     },
     {
       "test": "saturation_update_customer",
@@ -484,7 +484,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 15.032800001790747
+      "latency_ms": 123.38589999853866
     },
     {
       "test": "saturation_update_customer",
@@ -493,7 +493,7 @@
       "limit": 20,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:20/20_per_60s",
-      "latency_ms": 15.59599999745842
+      "latency_ms": 112.47050000383751
     },
     {
       "test": "saturation_search_customer",
@@ -502,7 +502,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.52729999559233
+      "latency_ms": 101.49200000159908
     },
     {
       "test": "saturation_search_customer",
@@ -511,7 +511,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.254200005088933
+      "latency_ms": 101.68140000314452
     },
     {
       "test": "saturation_search_customer",
@@ -520,7 +520,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 28.53989999857731
+      "latency_ms": 210.02360000420595
     },
     {
       "test": "saturation_search_customer",
@@ -529,7 +529,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.47179999924265
+      "latency_ms": 102.85550000116928
     },
     {
       "test": "saturation_search_customer",
@@ -538,7 +538,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.70009999908507
+      "latency_ms": 101.03610000078334
     },
     {
       "test": "saturation_search_customer",
@@ -547,7 +547,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.20719999948051
+      "latency_ms": 137.2168000016245
     },
     {
       "test": "saturation_search_customer",
@@ -556,7 +556,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.21649999753572
+      "latency_ms": 134.62019999860786
     },
     {
       "test": "saturation_search_customer",
@@ -565,7 +565,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.711199999321252
+      "latency_ms": 138.9017999972566
     },
     {
       "test": "saturation_search_customer",
@@ -574,7 +574,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.201099997095298
+      "latency_ms": 112.47610000282293
     },
     {
       "test": "saturation_search_customer",
@@ -583,7 +583,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.329000002879184
+      "latency_ms": 159.34220000053756
     },
     {
       "test": "saturation_search_customer",
@@ -592,7 +592,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.751399999426212
+      "latency_ms": 112.87040000024717
     },
     {
       "test": "saturation_search_customer",
@@ -601,7 +601,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.368299996538553
+      "latency_ms": 112.80380000243895
     },
     {
       "test": "saturation_search_customer",
@@ -610,7 +610,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.911200004571583
+      "latency_ms": 227.82299999380484
     },
     {
       "test": "saturation_search_customer",
@@ -619,7 +619,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.788800004287623
+      "latency_ms": 108.2276000015554
     },
     {
       "test": "saturation_search_customer",
@@ -628,7 +628,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.276199997984804
+      "latency_ms": 102.4009999964619
     },
     {
       "test": "saturation_search_customer",
@@ -637,7 +637,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.28399999573594
+      "latency_ms": 168.36969999712892
     },
     {
       "test": "saturation_search_customer",
@@ -646,7 +646,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.00610000040615
+      "latency_ms": 147.21930000087013
     },
     {
       "test": "saturation_search_customer",
@@ -655,7 +655,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.12009999837028
+      "latency_ms": 139.4956000003731
     },
     {
       "test": "saturation_search_customer",
@@ -664,7 +664,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.946499997284263
+      "latency_ms": 112.01850000361446
     },
     {
       "test": "saturation_search_customer",
@@ -673,7 +673,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.03069999854779
+      "latency_ms": 146.2390000015148
     },
     {
       "test": "saturation_search_customer",
@@ -682,7 +682,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.473599997989368
+      "latency_ms": 114.34169999847654
     },
     {
       "test": "saturation_search_customer",
@@ -691,7 +691,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.575099999201484
+      "latency_ms": 157.5098000030266
     },
     {
       "test": "saturation_search_customer",
@@ -700,7 +700,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.01209999778075
+      "latency_ms": 212.38939999602735
     },
     {
       "test": "saturation_search_customer",
@@ -709,7 +709,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.237400004290976
+      "latency_ms": 145.98989999649348
     },
     {
       "test": "saturation_search_customer",
@@ -718,7 +718,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.92599999741651
+      "latency_ms": 135.17110000248067
     },
     {
       "test": "saturation_search_customer",
@@ -727,7 +727,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.64879999711411
+      "latency_ms": 145.55319999635685
     },
     {
       "test": "saturation_search_customer",
@@ -736,7 +736,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.627900001883972
+      "latency_ms": 135.6420000010985
     },
     {
       "test": "saturation_search_customer",
@@ -745,7 +745,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.971800000348594
+      "latency_ms": 117.7495000010822
     },
     {
       "test": "saturation_search_customer",
@@ -754,7 +754,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.183800003607757
+      "latency_ms": 78.89950000389945
     },
     {
       "test": "saturation_search_customer",
@@ -763,7 +763,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.297900002333336
+      "latency_ms": 157.6448000050732
     },
     {
       "test": "saturation_search_customer",
@@ -772,7 +772,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.499899994931184
+      "latency_ms": 156.7099000021699
     },
     {
       "test": "saturation_search_customer",
@@ -781,7 +781,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 18.536399998993147
+      "latency_ms": 125.24900000425987
     },
     {
       "test": "saturation_search_customer",
@@ -790,7 +790,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.557799998437986
+      "latency_ms": 224.7736999997869
     },
     {
       "test": "saturation_search_customer",
@@ -799,7 +799,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 18.18220000131987
+      "latency_ms": 100.69510000175796
     },
     {
       "test": "saturation_search_customer",
@@ -808,7 +808,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.967900000163354
+      "latency_ms": 101.39750000234926
     },
     {
       "test": "saturation_search_customer",
@@ -817,7 +817,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.723400001064874
+      "latency_ms": 112.78339999989839
     },
     {
       "test": "saturation_search_customer",
@@ -826,7 +826,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.85219999612309
+      "latency_ms": 101.29810000216821
     },
     {
       "test": "saturation_search_customer",
@@ -835,7 +835,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.02740000252379
+      "latency_ms": 101.44510000100126
     },
     {
       "test": "saturation_search_customer",
@@ -844,7 +844,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 28.190299999550916
+      "latency_ms": 116.88089999370277
     },
     {
       "test": "saturation_search_customer",
@@ -853,7 +853,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.516900004527997
+      "latency_ms": 102.5484999991022
     },
     {
       "test": "saturation_search_customer",
@@ -862,7 +862,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.04860000044573
+      "latency_ms": 202.54279999790015
     },
     {
       "test": "saturation_search_customer",
@@ -871,7 +871,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.740200005704537
+      "latency_ms": 89.12659999623429
     },
     {
       "test": "saturation_search_customer",
@@ -880,7 +880,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.502299999061506
+      "latency_ms": 228.74159999628318
     },
     {
       "test": "saturation_search_customer",
@@ -889,7 +889,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.476200004457496
+      "latency_ms": 119.85060000006342
     },
     {
       "test": "saturation_search_customer",
@@ -898,7 +898,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 28.122000003349967
+      "latency_ms": 92.39129999332363
     },
     {
       "test": "saturation_search_customer",
@@ -907,7 +907,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.513199998182245
+      "latency_ms": 89.42609999940032
     },
     {
       "test": "saturation_search_customer",
@@ -916,7 +916,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.286800002097152
+      "latency_ms": 112.85309999948367
     },
     {
       "test": "saturation_search_customer",
@@ -925,7 +925,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 29.455100004270207
+      "latency_ms": 157.6952000032179
     },
     {
       "test": "saturation_search_customer",
@@ -934,7 +934,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.88499999587657
+      "latency_ms": 100.94319999916479
     },
     {
       "test": "saturation_search_customer",
@@ -943,7 +943,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.464400005352218
+      "latency_ms": 163.14820000116015
     },
     {
       "test": "saturation_search_customer",
@@ -952,7 +952,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.460999994014855
+      "latency_ms": 101.3565999965067
     },
     {
       "test": "saturation_search_customer",
@@ -961,7 +961,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.64559999841731
+      "latency_ms": 123.27150000055553
     },
     {
       "test": "saturation_search_customer",
@@ -970,7 +970,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.37349999975413
+      "latency_ms": 134.86670000565937
     },
     {
       "test": "saturation_search_customer",
@@ -979,7 +979,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.582099998544436
+      "latency_ms": 179.17250000027707
     },
     {
       "test": "saturation_search_customer",
@@ -988,7 +988,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.12439999554772
+      "latency_ms": 112.53389999910723
     },
     {
       "test": "saturation_search_customer",
@@ -997,7 +997,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.423799997544847
+      "latency_ms": 113.04460000246763
     },
     {
       "test": "saturation_search_customer",
@@ -1006,7 +1006,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.723800001083873
+      "latency_ms": 102.62710000097286
     },
     {
       "test": "saturation_search_customer",
@@ -1015,7 +1015,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.46480000455631
+      "latency_ms": 157.47729999566218
     },
     {
       "test": "saturation_search_customer",
@@ -1024,7 +1024,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.180300001811702
+      "latency_ms": 157.28479999961564
     },
     {
       "test": "saturation_search_customer",
@@ -1033,7 +1033,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.34420000301907
+      "latency_ms": 151.30560000397963
     },
     {
       "test": "saturation_search_customer",
@@ -1042,7 +1042,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.933900000178255
+      "latency_ms": 158.7943999984418
     },
     {
       "test": "saturation_search_customer",
@@ -1051,7 +1051,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.686900003056508
+      "latency_ms": 123.40269999549491
     },
     {
       "test": "saturation_search_customer",
@@ -1060,7 +1060,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.14089999406133
+      "latency_ms": 156.2398000023677
     },
     {
       "test": "saturation_search_customer",
@@ -1069,7 +1069,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 20.70800000365125
+      "latency_ms": 236.86720000114292
     },
     {
       "test": "saturation_search_customer",
@@ -1078,7 +1078,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.9412000013981
+      "latency_ms": 111.11649999656947
     },
     {
       "test": "saturation_search_customer",
@@ -1087,7 +1087,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.181800002523232
+      "latency_ms": 124.70449999818811
     },
     {
       "test": "saturation_search_customer",
@@ -1096,7 +1096,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 19.98920000187354
+      "latency_ms": 113.42810000496684
     },
     {
       "test": "saturation_search_customer",
@@ -1105,7 +1105,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.626699996180832
+      "latency_ms": 101.81710000324529
     },
     {
       "test": "saturation_search_customer",
@@ -1114,7 +1114,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.75429999665357
+      "latency_ms": 123.47410000074888
     },
     {
       "test": "saturation_search_customer",
@@ -1123,7 +1123,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.264599996968172
+      "latency_ms": 105.33150000264868
     },
     {
       "test": "saturation_search_customer",
@@ -1132,7 +1132,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.792799995746464
+      "latency_ms": 135.18569999723695
     },
     {
       "test": "saturation_search_customer",
@@ -1141,7 +1141,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.665799999434967
+      "latency_ms": 147.49810000648722
     },
     {
       "test": "saturation_search_customer",
@@ -1150,7 +1150,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.488300001597963
+      "latency_ms": 112.37090000213357
     },
     {
       "test": "saturation_search_customer",
@@ -1159,7 +1159,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.472000001173
+      "latency_ms": 124.578199996904
     },
     {
       "test": "saturation_search_customer",
@@ -1168,7 +1168,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.21010000014212
+      "latency_ms": 200.3273000009358
     },
     {
       "test": "saturation_search_customer",
@@ -1177,7 +1177,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.75020000222139
+      "latency_ms": 134.2053999978816
     },
     {
       "test": "saturation_search_customer",
@@ -1186,7 +1186,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.490099997317884
+      "latency_ms": 89.77790000062669
     },
     {
       "test": "saturation_search_customer",
@@ -1195,7 +1195,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.333899997349363
+      "latency_ms": 124.92800000472926
     },
     {
       "test": "saturation_search_customer",
@@ -1204,7 +1204,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.516000001924112
+      "latency_ms": 89.71820000442676
     },
     {
       "test": "saturation_search_customer",
@@ -1213,7 +1213,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 28.099000002839603
+      "latency_ms": 114.4198999973014
     },
     {
       "test": "saturation_search_customer",
@@ -1222,7 +1222,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 25.412399998458568
+      "latency_ms": 296.6820000001462
     },
     {
       "test": "saturation_search_customer",
@@ -1231,7 +1231,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 23.682599996391218
+      "latency_ms": 111.15699999936623
     },
     {
       "test": "saturation_search_customer",
@@ -1240,7 +1240,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 22.285599996394012
+      "latency_ms": 148.3509999961825
     },
     {
       "test": "saturation_search_customer",
@@ -1249,7 +1249,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.774200006911997
+      "latency_ms": 212.99720000388334
     },
     {
       "test": "saturation_search_customer",
@@ -1258,7 +1258,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.703900005377363
+      "latency_ms": 113.09389999951236
     },
     {
       "test": "saturation_search_customer",
@@ -1267,7 +1267,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.229399998148438
+      "latency_ms": 123.74519999866607
     },
     {
       "test": "saturation_search_customer",
@@ -1276,7 +1276,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.353199999197386
+      "latency_ms": 101.15929999301443
     },
     {
       "test": "saturation_search_customer",
@@ -1285,7 +1285,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.044699996418785
+      "latency_ms": 100.96150000026682
     },
     {
       "test": "saturation_search_customer",
@@ -1294,7 +1294,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 21.98579999821959
+      "latency_ms": 112.96189999848139
     },
     {
       "test": "saturation_search_customer",
@@ -1303,7 +1303,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.262299998255912
+      "latency_ms": 112.29710000043269
     },
     {
       "test": "saturation_search_customer",
@@ -1312,7 +1312,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.736599993659183
+      "latency_ms": 117.72270000074059
     },
     {
       "test": "saturation_search_customer",
@@ -1321,7 +1321,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.864499999850523
+      "latency_ms": 83.90040000085719
     },
     {
       "test": "saturation_search_customer",
@@ -1330,7 +1330,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.972899999236688
+      "latency_ms": 118.24109999724897
     },
     {
       "test": "saturation_search_customer",
@@ -1339,7 +1339,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 29.879300003813114
+      "latency_ms": 189.64920000144048
     },
     {
       "test": "saturation_search_customer",
@@ -1348,7 +1348,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 27.575899999646936
+      "latency_ms": 203.60249999794178
     },
     {
       "test": "saturation_search_customer",
@@ -1357,7 +1357,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 29.005600001255516
+      "latency_ms": 102.33049999806099
     },
     {
       "test": "saturation_search_customer",
@@ -1366,7 +1366,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 24.24349999637343
+      "latency_ms": 124.12680000124965
     },
     {
       "test": "saturation_search_customer",
@@ -1375,7 +1375,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 26.461000001290813
+      "latency_ms": 101.10659999918425
     },
     {
       "test": "saturation_search_customer",
@@ -1384,7 +1384,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 28.805599999031983
+      "latency_ms": 158.1977999958326
     },
     {
       "test": "saturation_search_customer",
@@ -1393,7 +1393,7 @@
       "limit": 100,
       "decision": "ALLOW",
       "reason": "ALL_CHECKS_PASSED",
-      "latency_ms": 29.331600002478808
+      "latency_ms": 134.532299998682
     },
     {
       "test": "saturation_search_customer",
@@ -1402,7 +1402,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.306800004211254
+      "latency_ms": 140.2730000045267
     },
     {
       "test": "saturation_search_customer",
@@ -1411,7 +1411,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.785800002864562
+      "latency_ms": 124.27179999940563
     },
     {
       "test": "saturation_search_customer",
@@ -1420,7 +1420,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.32519999879878
+      "latency_ms": 100.84399999323068
     },
     {
       "test": "saturation_search_customer",
@@ -1429,7 +1429,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.58200000040233
+      "latency_ms": 114.07820000022184
     },
     {
       "test": "saturation_search_customer",
@@ -1438,7 +1438,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.13529999688035
+      "latency_ms": 122.24059999425663
     },
     {
       "test": "saturation_search_customer",
@@ -1447,7 +1447,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.55359999515349
+      "latency_ms": 135.29779999953462
     },
     {
       "test": "saturation_search_customer",
@@ -1456,7 +1456,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.394900002225768
+      "latency_ms": 201.48329999938142
     },
     {
       "test": "saturation_search_customer",
@@ -1465,7 +1465,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.481700000644196
+      "latency_ms": 102.55010000400944
     },
     {
       "test": "saturation_search_customer",
@@ -1474,7 +1474,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 16.661100002238527
+      "latency_ms": 135.5312000014237
     },
     {
       "test": "saturation_search_customer",
@@ -1483,7 +1483,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 15.70700000593206
+      "latency_ms": 112.21300000033807
     },
     {
       "test": "saturation_search_customer",
@@ -1492,7 +1492,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 15.805400005774572
+      "latency_ms": 123.52760000067065
     },
     {
       "test": "saturation_search_customer",
@@ -1501,7 +1501,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.50410000042757
+      "latency_ms": 207.48140000068815
     },
     {
       "test": "saturation_search_customer",
@@ -1510,7 +1510,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 20.455600002605934
+      "latency_ms": 112.35499999747844
     },
     {
       "test": "saturation_search_customer",
@@ -1519,7 +1519,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 14.924900002370123
+      "latency_ms": 101.21919999801321
     },
     {
       "test": "saturation_search_customer",
@@ -1528,7 +1528,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 20.181799998681527
+      "latency_ms": 121.85019999742508
     },
     {
       "test": "saturation_search_customer",
@@ -1537,7 +1537,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.059599999105558
+      "latency_ms": 113.41030000039609
     },
     {
       "test": "saturation_search_customer",
@@ -1546,7 +1546,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.390399996656924
+      "latency_ms": 123.31020000419812
     },
     {
       "test": "saturation_search_customer",
@@ -1555,7 +1555,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.181099996785633
+      "latency_ms": 190.655099999276
     },
     {
       "test": "saturation_search_customer",
@@ -1564,7 +1564,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 20.9818000002997
+      "latency_ms": 112.58610000368208
     },
     {
       "test": "saturation_search_customer",
@@ -1573,7 +1573,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.271099997742567
+      "latency_ms": 123.22839999978896
     },
     {
       "test": "saturation_search_customer",
@@ -1582,7 +1582,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 20.356900000479072
+      "latency_ms": 91.30489999370184
     },
     {
       "test": "saturation_search_customer",
@@ -1591,7 +1591,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 12.442400002328213
+      "latency_ms": 111.79640000045765
     },
     {
       "test": "saturation_search_customer",
@@ -1600,7 +1600,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 16.624700001557358
+      "latency_ms": 162.3558999999659
     },
     {
       "test": "saturation_search_customer",
@@ -1609,7 +1609,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.63969999976689
+      "latency_ms": 89.34360000421293
     },
     {
       "test": "saturation_search_customer",
@@ -1618,7 +1618,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.980500001111068
+      "latency_ms": 112.73780000192346
     },
     {
       "test": "saturation_search_customer",
@@ -1627,7 +1627,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.304199998965487
+      "latency_ms": 110.52270000072895
     },
     {
       "test": "saturation_search_customer",
@@ -1636,7 +1636,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.076799999107607
+      "latency_ms": 104.94679999828804
     },
     {
       "test": "saturation_search_customer",
@@ -1645,7 +1645,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.566000002261717
+      "latency_ms": 123.09839999943506
     },
     {
       "test": "saturation_search_customer",
@@ -1654,7 +1654,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 26.019700002507307
+      "latency_ms": 134.59709999733604
     },
     {
       "test": "saturation_search_customer",
@@ -1663,7 +1663,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 23.544800002127886
+      "latency_ms": 202.34809999965364
     },
     {
       "test": "saturation_search_customer",
@@ -1672,7 +1672,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.871800002874807
+      "latency_ms": 100.57450000022072
     },
     {
       "test": "saturation_search_customer",
@@ -1681,7 +1681,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 23.039899999275804
+      "latency_ms": 90.16249999694992
     },
     {
       "test": "saturation_search_customer",
@@ -1690,7 +1690,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 21.543700000620447
+      "latency_ms": 100.61270000005607
     },
     {
       "test": "saturation_search_customer",
@@ -1699,7 +1699,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.455800000287127
+      "latency_ms": 90.30820000043605
     },
     {
       "test": "saturation_search_customer",
@@ -1708,7 +1708,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.282699999166653
+      "latency_ms": 151.47569999680854
     },
     {
       "test": "saturation_search_customer",
@@ -1717,7 +1717,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.92619999469025
+      "latency_ms": 91.12859999731882
     },
     {
       "test": "saturation_search_customer",
@@ -1726,7 +1726,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 19.100999998045154
+      "latency_ms": 112.61679999734042
     },
     {
       "test": "saturation_search_customer",
@@ -1735,7 +1735,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.547099996590987
+      "latency_ms": 112.54550000012387
     },
     {
       "test": "saturation_search_customer",
@@ -1744,7 +1744,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 22.51830000022892
+      "latency_ms": 112.15439999796217
     },
     {
       "test": "saturation_search_customer",
@@ -1753,7 +1753,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.127499999536667
+      "latency_ms": 102.27739999390906
     },
     {
       "test": "saturation_search_customer",
@@ -1762,7 +1762,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.549200001871213
+      "latency_ms": 146.7893000008189
     },
     {
       "test": "saturation_search_customer",
@@ -1771,7 +1771,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.927699998836033
+      "latency_ms": 212.5954000002821
     },
     {
       "test": "saturation_search_customer",
@@ -1780,7 +1780,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 16.345000003639143
+      "latency_ms": 101.22319999936735
     },
     {
       "test": "saturation_search_customer",
@@ -1789,7 +1789,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 15.1146999996854
+      "latency_ms": 146.03540000098292
     },
     {
       "test": "saturation_search_customer",
@@ -1798,7 +1798,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 16.25849999982165
+      "latency_ms": 134.83659999474185
     },
     {
       "test": "saturation_search_customer",
@@ -1807,7 +1807,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 22.586900005990174
+      "latency_ms": 208.54880000115372
     },
     {
       "test": "saturation_search_customer",
@@ -1816,7 +1816,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 18.532300004153512
+      "latency_ms": 137.50730000174372
     },
     {
       "test": "saturation_search_customer",
@@ -1825,7 +1825,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 15.90050000231713
+      "latency_ms": 97.70430000207853
     },
     {
       "test": "saturation_search_customer",
@@ -1834,7 +1834,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 17.29930000146851
+      "latency_ms": 124.17049999930896
     },
     {
       "test": "saturation_search_customer",
@@ -1843,7 +1843,7 @@
       "limit": 100,
       "decision": "RATE_LIMIT",
       "reason": "RATE_LIMIT_EXCEEDED:100/100_per_60s",
-      "latency_ms": 16.69930000207387
+      "latency_ms": 145.9478999968269
     }
   ]
 }
