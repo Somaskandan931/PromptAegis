@@ -70,7 +70,7 @@ def git_state() -> Dict[str, Any]:
     try:
         rev = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
                              text=True, check=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True,
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "--", ".", ":(exclude)results"], cwd=ROOT, capture_output=True,
                                     text=True, check=True).stdout.strip())
         return {"git_revision": rev, "git_worktree_dirty": dirty}
     except (OSError, subprocess.CalledProcessError):

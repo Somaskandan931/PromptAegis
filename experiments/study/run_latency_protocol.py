@@ -167,7 +167,7 @@ def run(split: str, configurations: List[str], warmup: int, repetitions: int, se
     try:
         revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True,
                                   check=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True, text=True,
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "--", ".", ":(exclude)results"], cwd=ROOT, capture_output=True, text=True,
                                     check=True).stdout.strip())
     except (OSError, subprocess.CalledProcessError):
         revision, dirty = None, None

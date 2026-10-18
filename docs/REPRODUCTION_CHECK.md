@@ -1,6 +1,6 @@
 # Reproduction check of the canonical development run
 
-Canonical run: `results/study/governance_dev_20261017T182314Z_2a97d190.json` (12 configurations, 106 scenarios,
+Canonical run: `results/study/governance_dev_20261018T072638Z_13a891ae.json` (12 configurations, 106 scenarios,
 100 in scope). It is the only stored run whose recorded gateway, validator, sandbox, scenario and manifest hashes all
 equal the files in this tree at the time of the check. The older four-configuration run
 `governance_dev_20261017T150806Z_056a4792` was produced from earlier gateway, validator and runner files and is kept

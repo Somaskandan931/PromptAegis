@@ -147,7 +147,7 @@ def run(manifest_path: Path, *, provider: str, model: str, configuration: str,
     try:
         revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
                                   text=True, check=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain"], cwd=ROOT,
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "--", ".", ":(exclude)results"], cwd=ROOT,
                                     capture_output=True, text=True, check=True).stdout.strip())
     except (OSError, subprocess.CalledProcessError):
         revision, dirty = None, None

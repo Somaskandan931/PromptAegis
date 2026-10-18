@@ -20,7 +20,7 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-CANONICAL_RUN = "governance_dev_20261017T182314Z_2a97d190"
+CANONICAL_RUN = "governance_dev_20261018T072638Z_13a891ae"
 PILOT_RUN = "llm_20261017T171952Z_9c41232a"
 PRIMARY_CONFIGS = ["baseline", "rbac_only", "policy_only", "full"]
 TWELVE = ["baseline", "rbac_only", "policy_only", "schema_only", "rbac_schema", "rbac_policy", "full",
