@@ -61,7 +61,7 @@ Stages run in a fixed order and the first blocking stage decides. Stage 0 (well-
 
 ## Results
 
-All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls), run `governance_dev_20261018T072638Z_13a891ae` (all twelve configurations; recorded source hashes match this tree, see [reproduction check](docs/REPRODUCTION_CHECK.md)). They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
+All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls), run `governance_dev_20261018T081010Z_9e7d0639` (all twelve configurations; recorded source hashes match this tree, see [reproduction check](docs/REPRODUCTION_CHECK.md)). They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
 
 ### Headline comparison
 
@@ -175,7 +175,7 @@ python experiments\run_research.py analyze results\study\<RUN_ID>.json --iterati
 
 # 3. Regenerate the proposal-metric figures and table.
 #    1st argument: the canonical 12-configuration run (paper\results\ablation_run.json is a byte-identical
-#    copy of results\study\governance_dev_20261018T072638Z_13a891ae.json).
+#    copy of results\study\governance_dev_20261018T081010Z_9e7d0639.json).
 #    2nd argument: the earlier 4-configuration run, used only as the "original run" in the latency figure.
 cd paper
 python make_prd_figures.py results\ablation_run.json ..\results\study\governance_dev_20261017T150806Z_056a4792.json
@@ -186,7 +186,7 @@ python experiments\run_research.py latency --repetitions 10 --warmup 2
 
 # 4. Rebuild the claim registry from the raw run, then test
 cd ..
-python experiments\run_research.py registry --ablation results\study\governance_dev_20261018T072638Z_13a891ae.json --pilot results\study\llm_20261017T171952Z_9c41232a.json
+python experiments\run_research.py registry --ablation results\study\governance_dev_20261018T081010Z_9e7d0639.json --pilot results\study\llm_20261017T171952Z_9c41232a.json
 python -m pytest -q tests
 ```
 
@@ -288,7 +288,7 @@ Run the external prompt-corpus detector study separately:
 python experiments\run_research.py corpora --batch-size 256
 ```
 
-Regenerate the proposal-metric figures and table (security-utility panel, stage attribution, rate-limit effect, latency distributions) from the stored runs. The first argument is the canonical twelve-configuration run (a byte-identical copy of `results/study/governance_dev_20261018T072638Z_13a891ae.json`); the second is the earlier four-configuration run, used only for the original-run latency panel:
+Regenerate the proposal-metric figures and table (security-utility panel, stage attribution, rate-limit effect, latency distributions) from the stored runs. The first argument is the canonical twelve-configuration run (a byte-identical copy of `results/study/governance_dev_20261018T081010Z_9e7d0639.json`); the second is the earlier four-configuration run, used only for the original-run latency panel:
 
 ```powershell
 cd paper

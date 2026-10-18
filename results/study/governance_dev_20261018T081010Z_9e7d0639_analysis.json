@@ -1,0 +1,757 @@
+{
+  "analysis_version": "1.0",
+  "source_run": "results\\study\\governance_dev_20261018T081010Z_9e7d0639.json",
+  "source_run_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16",
+  "scenario_sha256": "119400b9f0f198272f5970356dba646c7372dec131745b52ba94f5d6df80efd3",
+  "run_id": "governance_dev_20261018T081010Z_9e7d0639",
+  "split": "dev",
+  "seed": 20261017,
+  "bootstrap_iterations": 5000,
+  "confirmatory_eligible": false,
+  "configurations": {
+    "baseline": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.5102040816326531,
+        "ci95": [
+          0.23076923076923078,
+          0.8372093023255814
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 25,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 56.408500000000004,
+        "p95": 137.6659,
+        "mean": 73.57168852459016
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "rbac_only": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.2653061224489796,
+        "ci95": [
+          0.05263157894736842,
+          0.5365853658536586
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 13,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 56.584999999999994,
+        "p95": 133.57125,
+        "mean": 70.96442213114754
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "policy_only": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.20408163265306123,
+        "ci95": [
+          0.0,
+          0.4523809523809524
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 10,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 148.793,
+        "p95": 259.21274999999997,
+        "mean": 160.58255327868852
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "schema_only": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.061224489795918366,
+        "ci95": [
+          0.0,
+          0.21951219512195122
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 3,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 47.459999999999994,
+        "p95": 116.61404999999999,
+        "mean": 61.810139344262296
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "rbac_schema": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 57.048,
+        "p95": 142.66484999999997,
+        "mean": 70.75983606557378
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "rbac_policy": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.20408163265306123,
+        "ci95": [
+          0.0,
+          0.4523809523809524
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 10,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 156.02499999999998,
+        "p95": 252.50814999999997,
+        "mean": 165.4702950819672
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 171.326,
+        "p95": 282.98654999999997,
+        "mean": 176.11110655737704
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full_minus_rbac": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 108.414,
+        "p95": 222.98094999999998,
+        "mean": 123.59015573770492
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full_minus_schema": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.20408163265306123,
+        "ci95": [
+          0.0,
+          0.4523809523809524
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 10,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 159.566,
+        "p95": 269.11685,
+        "mean": 168.5579344262295
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full_minus_policy": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 93.4265,
+        "p95": 185.00469999999999,
+        "mean": 102.58929508196721
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full_minus_rate": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 156.4475,
+        "p95": 266.50719999999995,
+        "mean": 163.08387704918033
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    },
+    "full_minus_approval": {
+      "scenario_count_in_scope": 100,
+      "attack_scenarios": 49,
+      "benign_scenarios": 39,
+      "unsafe_effect_rate_asr": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 11,
+        "iterations": 5000,
+        "seed": 20261017
+      },
+      "benign_false_block_scenario_rate": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261019
+      },
+      "benign_call_denial_rate": 0.0,
+      "benign_call_approval_request_rate": 0.0,
+      "benign_call_nonallow_rate": 0.0,
+      "benign_call_denial_count": 0,
+      "benign_call_count": 39,
+      "benign_approval_request_count": 0,
+      "legitimate_task_completion_rate": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "groups": 6,
+        "iterations": 5000,
+        "seed": 20261020
+      },
+      "unsafe_effect_scenarios": 0,
+      "task_checks_passed": 39,
+      "task_check_count": 39,
+      "latency_ms": {
+        "n": 244,
+        "median": 176.1725,
+        "p95": 285.60285,
+        "mean": 178.53476229508198
+      },
+      "interpretation": {
+        "ASR": "attack scenarios with at least one unsafe sandbox effect / in-scope unsafe scenarios",
+        "FNR": "same operational numerator/denominator as effect-based ASR in this suite; report ASR as primary",
+        "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
+        "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
+        "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
+        "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time"
+      }
+    }
+  },
+  "paired_mcnemar": {
+    "baseline_vs_rbac_only_unsafe_effect": {
+      "n": 49,
+      "a_only": 12,
+      "b_only": 0,
+      "exact_p": 0.00048828125,
+      "holm_adjusted_p": 0.00048828125
+    },
+    "baseline_vs_policy_only_unsafe_effect": {
+      "n": 49,
+      "a_only": 15,
+      "b_only": 0,
+      "exact_p": 6.103515625e-05,
+      "holm_adjusted_p": 0.0001220703125
+    },
+    "baseline_vs_full_unsafe_effect": {
+      "n": 49,
+      "a_only": 25,
+      "b_only": 0,
+      "exact_p": 5.960464477539063e-08,
+      "holm_adjusted_p": 1.7881393432617188e-07
+    }
+  },
+  "paired_latency_wilcoxon": {
+    "baseline_vs_rbac_only": {
+      "n": 100,
+      "median_difference_ms": 4.034499999999998,
+      "wilcoxon_statistic": 1511.0,
+      "wilcoxon_p": 0.0004894560285750338,
+      "unit": "paired per-scenario median total latency; scipy required for test"
+    },
+    "baseline_vs_policy_only": {
+      "n": 100,
+      "median_difference_ms": 101.7555,
+      "wilcoxon_statistic": 7.0,
+      "wilcoxon_p": 4.813701823147399e-18,
+      "unit": "paired per-scenario median total latency; scipy required for test"
+    },
+    "baseline_vs_full": {
+      "n": 100,
+      "median_difference_ms": 110.809,
+      "wilcoxon_statistic": 113.0,
+      "wilcoxon_p": 1.1020511023218772e-16,
+      "unit": "paired per-scenario median total latency; scipy required for test"
+    }
+  },
+  "latency_inference_status": "Exploratory only: configurations execute in fixed blocks in the current runner; interleave or randomize paired timing runs before inferential latency claims.",
+  "caveat": "Bootstrap intervals and p-values are descriptive unless this run uses a locked, independently reviewed test split."
+}

@@ -13,9 +13,9 @@
 \makeatother
 
 % Fill these two after the freeze commit (see Data and code availability).
-\newcommand{\repoURL}{https://github.com/Somaskandan931/REPOSITORY-NAME}
-\newcommand{\repoRevision}{COMMIT-HASH-OF-FROZEN-RUN}
-\newcommand{\canonicalRun}{governance\_dev\_20261018T072638Z\_13a891ae}
+\newcommand{\repoURL}{https://github.com/Somaskandan931/PromptAegis}
+\newcommand{\repoRevision}{909a5b128b6f91826d3f68a684c07d4968f6c9c3}
+\newcommand{\canonicalRun}{governance\_dev\_20261018T081010Z\_9e7d0639}
 \newcommand{\pilotModel}{llama3.1:8b}
 \newcommand{\pilotConfig}{full}
 \newcommand{\pilotN}{12}
@@ -171,7 +171,7 @@ The design pursues four objectives: authorization (calls outside permitted roles
 %==============================================================================
 \section{Materials and methods}
 \subsection{Environment and provenance}
-Experiments ran on Python 3.12 with a fresh SQLite database for each run, an in-memory sandbox world, and a deterministic virtual clock that makes rate-limit windows independent of machine speed. The twelve-configuration development run (\texttt{\canonicalRun}) is the single run behind every decision and effect table and figure; only the exploratory latency comparison also uses an earlier four-configuration run. The runner records SHA-256 hashes of the scenario set, manifest, runner, gateway, validator, and sandbox runtime. For the canonical run the scenario, manifest, gateway, validator, and sandbox-runtime hashes equal those of the delivered source. The runner hash does not: after the run the runner gained an option to execute all configurations, a lock against concurrent runs, and an environment record, with no change to the evaluation loop, scenario handling, or metrics. No Git revision was recorded for the canonical run, so it is not yet frozen at a revision (Section~\ref{sec:repro}). The pilot used Ollama with \pilotModel{} at temperature zero and seed zero. Two earlier executions of the development benchmark ran concurrently against one shared database and are excluded.
+Experiments ran on Python 3.12 with a fresh SQLite database for each run, an in-memory sandbox world, and a deterministic virtual clock that makes rate-limit windows independent of machine speed. The twelve-configuration development run (\texttt{\canonicalRun}) is the single run behind every decision and effect table and figure; only the exploratory latency comparison also uses an earlier four-configuration run. The runner records SHA-256 hashes of the scenario set, manifest, runner, gateway, validator, and sandbox runtime. The canonical run was produced from Git revision \texttt{\repoRevision} on a clean worktree (the check excludes the \texttt{results/} output directory), and its recorded scenario, manifest, runner, gateway, validator, and sandbox-runtime hashes equal those of that revision (Section~\ref{sec:repro}). The pilot used Ollama with \pilotModel{} at temperature zero and seed zero. Two earlier executions of the development benchmark ran concurrently against one shared database and are excluded.
 
 \subsection{Benchmark scenarios and oracle}
 The suite (version 2.0.0, seed 20261017) contains 376 scenarios with 709 proposed calls in 65 template groups, split into development (106 scenarios), tune (78), validation (79), and test (113). Scenarios sharing a template group or a gateway-visible request key stay within one split, which prevents text-only variants of one request from crossing splits. Table~\ref{tab:categories} lists the categories. Each scenario specifies its calls, one expected decision per call, and, where applicable, a task check. Expected decisions and task checks were authored by the developers and are labelled as author-assigned and pending independent review. Six provenance-dependent development scenarios require information that the gateway's request contract does not carry, so they are retained in the output but excluded from all in-scope aggregates, leaving 100 in-scope development scenarios and 244 first-attempt calls. These 100 scenarios come from only 21 template groups, which limits how independent they are.
@@ -358,7 +358,7 @@ Figure~\ref{fig:rate} shows the rate limiter on two burst sequences, one with a 
 \end{figure}
 
 \subsection{Reproducibility check}\label{sec:repro}
-We re-executed the delivered runner on a different operating system (Linux, Python 3.12; the canonical run was made on Windows) with the command in the Data and code availability statement, over all twelve configurations. The scenario file hash was identical, and across 1{,}272 scenario-by-configuration pairs (106 scenarios, 12 configurations) there were no differences in per-call decisions, unsafe-effect flags, effect types, state-change flags, task results, or first-blocking stage. This supports reproducibility of the reported counts on the delivered code. A reproduction by the same authors on the same labels is not independent validation, and it does not replace a run frozen at a recorded Git revision on a clean worktree, which should be made before submission.
+We re-executed the delivered runner on a different operating system (Linux, Python 3.12; the canonical run was made on Windows) with the command in the Data and code availability statement, over all twelve configurations. The scenario file hash was identical, and across 1{,}272 scenario-by-configuration pairs (106 scenarios, 12 configurations) there were no differences in per-call decisions, unsafe-effect flags, effect types, state-change flags, task results, or first-blocking stage. This supports reproducibility of the reported counts on the delivered code. A reproduction by the same authors on the same labels is not independent validation. The canonical run itself was made on Windows at Git revision \texttt{\repoRevision} on a clean worktree and reproduces the counts of this earlier execution.
 
 
 \subsection{Per-call latency}
@@ -446,7 +446,7 @@ The main benchmark is a development run over author-labelled synthetic scenarios
 \item Scenarios, contracts, labels, and the oracle were written by the same people; independent annotation of the expected decisions has not been done.
 \item The 100 in-scope scenarios come from 21 template groups, and several categories are a single group, so effective sample size is much smaller than 100 and some per-control conclusions rest on one or two groups.
 \item The development split was used while building the gateway; the result does not establish generalization to unseen scenarios, and validation and test have not been opened.
-\item The canonical run has no recorded Git revision and its recorded runner hash differs from the delivered runner (an option, a lock, and an environment record were added); a re-execution reproduced all scenario-level outcomes, but no run is yet frozen at a revision on a clean worktree.
+\item The canonical run is frozen at a Git revision, but it uses development-split, author-labelled scenarios; no independent label review or held-out run has been made.
 \item The scripted agent does not interpret text, so injection-labelled scenarios test the gateway's handling of a structured call and not model manipulation. Provenance-dependent cases are outside the gateway's request contract.
 \item The 12-task pilot used one open-weight model and produced one structured injected proposal, and it was run once per configuration; it cannot establish gateway efficacy or compare configurations.
 \item Latency was measured on one machine with configurations in fixed blocks and was not profiled.

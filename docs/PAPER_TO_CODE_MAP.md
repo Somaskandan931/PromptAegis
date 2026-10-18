@@ -1,6 +1,6 @@
 # Paper-to-code map
 
-Where each claim in `paper/PromptAegis_Governance_Study.tex` is implemented, tested and recorded. Paths are relative to the repository root. The canonical run is `results/study/governance_dev_20261017T182314Z_2a97d190.json` (12 configurations, 106 scenarios, 100 in scope). All evidence is development-split, author-labelled, and descriptive.
+Where each claim in `paper/PromptAegis_Governance_Study.tex` is implemented, tested and recorded. Paths are relative to the repository root. The canonical run is `results/study/governance_dev_20261018T081010Z_9e7d0639.json` (12 configurations, 106 scenarios, 100 in scope). All evidence is development-split, author-labelled, and descriptive.
 
 ## Enforcement pipeline (paper: Threat model and system)
 

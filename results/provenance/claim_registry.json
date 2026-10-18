@@ -4,9 +4,9 @@
   "label_status": "author_labeled_pending_independent_review",
   "confirmatory": false,
   "canonical_run": {
-    "run_id": "governance_dev_20261018T072638Z_13a891ae",
-    "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-    "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260",
+    "run_id": "governance_dev_20261018T081010Z_9e7d0639",
+    "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+    "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16",
     "configuration_order": [
       "baseline",
       "rbac_only",
@@ -21,13 +21,13 @@
       "full_minus_rate",
       "full_minus_approval"
     ],
-    "run_git_revision": "347a4ed9c60b76ba4b3b915842b6ef614ea976d4",
-    "run_git_worktree_dirty": true
+    "run_git_revision": "909a5b128b6f91826d3f68a684c07d4968f6c9c3",
+    "run_git_worktree_dirty": false
   },
   "source_hashes_recorded_by_run": {
     "gateway_sha256": "2a6051d7ac17dcd9103b26c08de1fea40105b5b6244a864d9048480643db7eb6",
     "validator_sha256": "7ed94882d66545e270cc2ebcfbbbeb088f65a4c91a7236fdc3fe82d499960fd4",
-    "runner_sha256": "168c368b8652643b60950b1c7ed2e79882fb75fb55f87dc51c53daa4ea5126e5",
+    "runner_sha256": "d8b5eebb96d4d919bcad0fe866bc4e252a5aba5fe171772f0e9079470f7f3375",
     "sandbox_runtime_sha256": "d755a7b3bc4747b45f09ad0d89211fe3634a85df7716d035da8adcd65f846aad",
     "scenario_sha256": "119400b9f0f198272f5970356dba646c7372dec131745b52ba94f5d6df80efd3",
     "manifest_sha256": "24535390c5fbf3b4be45a23c60f0cccba107e7189fca15d6978a309de973c865"
@@ -35,7 +35,7 @@
   "source_hashes_at_registry_build": {
     "gateway_sha256": "2a6051d7ac17dcd9103b26c08de1fea40105b5b6244a864d9048480643db7eb6",
     "validator_sha256": "7ed94882d66545e270cc2ebcfbbbeb088f65a4c91a7236fdc3fe82d499960fd4",
-    "runner_sha256": "168c368b8652643b60950b1c7ed2e79882fb75fb55f87dc51c53daa4ea5126e5",
+    "runner_sha256": "d8b5eebb96d4d919bcad0fe866bc4e252a5aba5fe171772f0e9079470f7f3375",
     "sandbox_runtime_sha256": "d755a7b3bc4747b45f09ad0d89211fe3634a85df7716d035da8adcd65f846aad",
     "scenario_sha256": "119400b9f0f198272f5970356dba646c7372dec131745b52ba94f5d6df80efd3",
     "manifest_sha256": "24535390c5fbf3b4be45a23c60f0cccba107e7189fca15d6978a309de973c865"
@@ -49,8 +49,8 @@
     "manifest_sha256": true
   },
   "registry_build_state": {
-    "git_revision": "347a4ed9c60b76ba4b3b915842b6ef614ea976d4",
-    "git_worktree_dirty": true
+    "git_revision": "909a5b128b6f91826d3f68a684c07d4968f6c9c3",
+    "git_worktree_dirty": false
   },
   "notes": [
     "Calls are first-attempt calls in in-scope scenarios (244). The raw call_count is 248 for configurations with the approval stage because four scenarios retry once after a simulated approval.",
@@ -65,8 +65,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-EXACT_DECISION_AGREEMENT",
@@ -75,8 +75,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 39,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-UNSAFE_EFFECT_SCENARIOS",
@@ -85,8 +85,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 29,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-ATTACK_SUCCESS_UNSAFE",
@@ -95,8 +95,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 25,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-APPROVAL_BYPASS_UNSAFE",
@@ -105,8 +105,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-BENIGN_FALSE_BLOCK",
@@ -115,8 +115,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-TASK_CHECKS_PASSED",
@@ -125,8 +125,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-EXECUTED_CALLS",
@@ -135,8 +135,8 @@
       "metric": "executed_calls",
       "numerator": 238,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-AUDIT_COMPLETE_SCENARIOS",
@@ -145,8 +145,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-BASELINE-AUDIT_CHAIN_VALID",
@@ -154,10 +154,10 @@
       "configuration": "baseline",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_baseline.jsonl",
-      "audit_chain_head_sha256": "1f485e6396f60add61d09ef81812b2aa774c2c3544aa416d38b8ffb45b424611",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_baseline.jsonl",
+      "audit_chain_head_sha256": "7d094455e74f05212fb60f9d6bafadfef71429fec60a5cb81966ec0b318341de",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-IN_SCOPE_SCENARIOS",
@@ -166,8 +166,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-EXACT_DECISION_AGREEMENT",
@@ -176,8 +176,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 51,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-UNSAFE_EFFECT_SCENARIOS",
@@ -186,8 +186,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 17,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-ATTACK_SUCCESS_UNSAFE",
@@ -196,8 +196,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 13,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-APPROVAL_BYPASS_UNSAFE",
@@ -206,8 +206,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-BENIGN_FALSE_BLOCK",
@@ -216,8 +216,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-TASK_CHECKS_PASSED",
@@ -226,8 +226,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-EXECUTED_CALLS",
@@ -236,8 +236,8 @@
       "metric": "executed_calls",
       "numerator": 226,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-AUDIT_COMPLETE_SCENARIOS",
@@ -246,8 +246,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_ONLY-AUDIT_CHAIN_VALID",
@@ -255,10 +255,10 @@
       "configuration": "rbac_only",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_rbac_only.jsonl",
-      "audit_chain_head_sha256": "49a31f63e73b25ccec34f8be3bc809c758f74f0efa8177d1138e487233f34df2",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_rbac_only.jsonl",
+      "audit_chain_head_sha256": "ace9f25a609e63790b43d3f7267eed05fb0c025ac6903adc391377ff34096030",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-IN_SCOPE_SCENARIOS",
@@ -267,8 +267,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-EXACT_DECISION_AGREEMENT",
@@ -277,8 +277,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 53,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-UNSAFE_EFFECT_SCENARIOS",
@@ -287,8 +287,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 14,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-ATTACK_SUCCESS_UNSAFE",
@@ -297,8 +297,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 10,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-APPROVAL_BYPASS_UNSAFE",
@@ -307,8 +307,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-BENIGN_FALSE_BLOCK",
@@ -317,8 +317,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-TASK_CHECKS_PASSED",
@@ -327,8 +327,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-EXECUTED_CALLS",
@@ -337,8 +337,8 @@
       "metric": "executed_calls",
       "numerator": 215,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-AUDIT_COMPLETE_SCENARIOS",
@@ -347,8 +347,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-POLICY_ONLY-AUDIT_CHAIN_VALID",
@@ -356,10 +356,10 @@
       "configuration": "policy_only",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_policy_only.jsonl",
-      "audit_chain_head_sha256": "69746421e3bc82a87db3c37b0cdd3d3ae8124a090aa568e093762c93250def65",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_policy_only.jsonl",
+      "audit_chain_head_sha256": "7dbeca448d5692ee94de92faa7f64d5039f78ff3dcad03bb334a1b16476f5c8f",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-IN_SCOPE_SCENARIOS",
@@ -368,8 +368,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-EXACT_DECISION_AGREEMENT",
@@ -378,8 +378,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 77,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-UNSAFE_EFFECT_SCENARIOS",
@@ -388,8 +388,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 7,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-ATTACK_SUCCESS_UNSAFE",
@@ -398,8 +398,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 3,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-APPROVAL_BYPASS_UNSAFE",
@@ -408,8 +408,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-BENIGN_FALSE_BLOCK",
@@ -418,8 +418,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-TASK_CHECKS_PASSED",
@@ -428,8 +428,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-EXECUTED_CALLS",
@@ -438,8 +438,8 @@
       "metric": "executed_calls",
       "numerator": 206,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-AUDIT_COMPLETE_SCENARIOS",
@@ -448,8 +448,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-SCHEMA_ONLY-AUDIT_CHAIN_VALID",
@@ -457,10 +457,10 @@
       "configuration": "schema_only",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_schema_only.jsonl",
-      "audit_chain_head_sha256": "d7374ba94adf3abf3ffa794532ad48d5127141412658e0f8b007c382d8ecc941",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_schema_only.jsonl",
+      "audit_chain_head_sha256": "ada9edc0d580d5a0fd360201d5177ee7aff52b06feebd2205e879c4c53edb2a9",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-IN_SCOPE_SCENARIOS",
@@ -469,8 +469,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-EXACT_DECISION_AGREEMENT",
@@ -479,8 +479,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 80,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-UNSAFE_EFFECT_SCENARIOS",
@@ -489,8 +489,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 4,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-ATTACK_SUCCESS_UNSAFE",
@@ -499,8 +499,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-APPROVAL_BYPASS_UNSAFE",
@@ -509,8 +509,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-BENIGN_FALSE_BLOCK",
@@ -519,8 +519,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-TASK_CHECKS_PASSED",
@@ -529,8 +529,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-EXECUTED_CALLS",
@@ -539,8 +539,8 @@
       "metric": "executed_calls",
       "numerator": 203,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-AUDIT_COMPLETE_SCENARIOS",
@@ -549,8 +549,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_SCHEMA-AUDIT_CHAIN_VALID",
@@ -558,10 +558,10 @@
       "configuration": "rbac_schema",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_rbac_schema.jsonl",
-      "audit_chain_head_sha256": "d2f51486e843605baea6f69e2d8455fa5452e232dfa5aca431650a04b784259f",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_rbac_schema.jsonl",
+      "audit_chain_head_sha256": "bee42058c74ce1c064fc00812a083ac32b09a7d059ff3ffe99960e56b9d5ba02",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-IN_SCOPE_SCENARIOS",
@@ -570,8 +570,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-EXACT_DECISION_AGREEMENT",
@@ -580,8 +580,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 62,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-UNSAFE_EFFECT_SCENARIOS",
@@ -590,8 +590,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 14,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-ATTACK_SUCCESS_UNSAFE",
@@ -600,8 +600,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 10,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-APPROVAL_BYPASS_UNSAFE",
@@ -610,8 +610,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-BENIGN_FALSE_BLOCK",
@@ -620,8 +620,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-TASK_CHECKS_PASSED",
@@ -630,8 +630,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-EXECUTED_CALLS",
@@ -640,8 +640,8 @@
       "metric": "executed_calls",
       "numerator": 215,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-AUDIT_COMPLETE_SCENARIOS",
@@ -650,8 +650,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-RBAC_POLICY-AUDIT_CHAIN_VALID",
@@ -659,10 +659,10 @@
       "configuration": "rbac_policy",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_rbac_policy.jsonl",
-      "audit_chain_head_sha256": "560e9f1a8a6c2145abc1fd151550464e87d6bfc1b2913c5a44a77fff5467324d",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_rbac_policy.jsonl",
+      "audit_chain_head_sha256": "304df7d97d843c4a552562b32cbc1c602135032c3236ac84006a7aa7cd75653e",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-IN_SCOPE_SCENARIOS",
@@ -671,8 +671,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-EXACT_DECISION_AGREEMENT",
@@ -681,8 +681,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-UNSAFE_EFFECT_SCENARIOS",
@@ -691,8 +691,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 0,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-ATTACK_SUCCESS_UNSAFE",
@@ -701,8 +701,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-APPROVAL_BYPASS_UNSAFE",
@@ -711,8 +711,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 0,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-BENIGN_FALSE_BLOCK",
@@ -721,8 +721,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-TASK_CHECKS_PASSED",
@@ -731,8 +731,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-EXECUTED_CALLS",
@@ -741,8 +741,8 @@
       "metric": "executed_calls",
       "numerator": 114,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-AUDIT_COMPLETE_SCENARIOS",
@@ -751,8 +751,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL-AUDIT_CHAIN_VALID",
@@ -760,10 +760,10 @@
       "configuration": "full",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full.jsonl",
-      "audit_chain_head_sha256": "62be56338d988ce50277f32c8720c9e8e79f2e852c8cb3fe6c99683ee44100a1",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full.jsonl",
+      "audit_chain_head_sha256": "a479edf38a1d2bf05071199c3a76095c0802b8593b6ee8eb728b4622db48ae2b",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-IN_SCOPE_SCENARIOS",
@@ -772,8 +772,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-EXACT_DECISION_AGREEMENT",
@@ -782,8 +782,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-UNSAFE_EFFECT_SCENARIOS",
@@ -792,8 +792,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 0,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-ATTACK_SUCCESS_UNSAFE",
@@ -802,8 +802,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-APPROVAL_BYPASS_UNSAFE",
@@ -812,8 +812,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 0,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-BENIGN_FALSE_BLOCK",
@@ -822,8 +822,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-TASK_CHECKS_PASSED",
@@ -832,8 +832,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-EXECUTED_CALLS",
@@ -842,8 +842,8 @@
       "metric": "executed_calls",
       "numerator": 114,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-AUDIT_COMPLETE_SCENARIOS",
@@ -852,8 +852,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RBAC-AUDIT_CHAIN_VALID",
@@ -861,10 +861,10 @@
       "configuration": "full_minus_rbac",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full_minus_rbac.jsonl",
-      "audit_chain_head_sha256": "4df4ca8ffcfac273cfd7591fb22814bd7ad77d958f8a81885743f982dcd41ee6",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full_minus_rbac.jsonl",
+      "audit_chain_head_sha256": "a6b1689d2da8e4d0e2ede5bb16a3b838de31d9266bf80dc6623f166f41b8e71b",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-IN_SCOPE_SCENARIOS",
@@ -873,8 +873,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-EXACT_DECISION_AGREEMENT",
@@ -883,8 +883,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 74,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-UNSAFE_EFFECT_SCENARIOS",
@@ -893,8 +893,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 10,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-ATTACK_SUCCESS_UNSAFE",
@@ -903,8 +903,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 10,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-APPROVAL_BYPASS_UNSAFE",
@@ -913,8 +913,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 0,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-BENIGN_FALSE_BLOCK",
@@ -923,8 +923,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-TASK_CHECKS_PASSED",
@@ -933,8 +933,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-EXECUTED_CALLS",
@@ -943,8 +943,8 @@
       "metric": "executed_calls",
       "numerator": 134,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-AUDIT_COMPLETE_SCENARIOS",
@@ -953,8 +953,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_SCHEMA-AUDIT_CHAIN_VALID",
@@ -962,10 +962,10 @@
       "configuration": "full_minus_schema",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full_minus_schema.jsonl",
-      "audit_chain_head_sha256": "bd21335864753d67ae5d322d5441d87ef272bc5ce22a15abe31d44863a2d7e58",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full_minus_schema.jsonl",
+      "audit_chain_head_sha256": "49af013f4d4137a7d377e8c9c6eeb6af4faf750f18203c3e83edfdb339373f77",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-IN_SCOPE_SCENARIOS",
@@ -974,8 +974,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-EXACT_DECISION_AGREEMENT",
@@ -984,8 +984,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 92,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-UNSAFE_EFFECT_SCENARIOS",
@@ -994,8 +994,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 0,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-ATTACK_SUCCESS_UNSAFE",
@@ -1004,8 +1004,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-APPROVAL_BYPASS_UNSAFE",
@@ -1014,8 +1014,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 0,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-BENIGN_FALSE_BLOCK",
@@ -1024,8 +1024,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-TASK_CHECKS_PASSED",
@@ -1034,8 +1034,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-EXECUTED_CALLS",
@@ -1044,8 +1044,8 @@
       "metric": "executed_calls",
       "numerator": 122,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-AUDIT_COMPLETE_SCENARIOS",
@@ -1054,8 +1054,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_POLICY-AUDIT_CHAIN_VALID",
@@ -1063,10 +1063,10 @@
       "configuration": "full_minus_policy",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full_minus_policy.jsonl",
-      "audit_chain_head_sha256": "8e655cff074f9cdcac485ebfcdd993bb9f31502f51cc5b2324a30101952de920",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full_minus_policy.jsonl",
+      "audit_chain_head_sha256": "8f9a13cb4d1a7d7599986b557f4d9154c6d8b57162df145714432d795a908d23",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-IN_SCOPE_SCENARIOS",
@@ -1075,8 +1075,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-EXACT_DECISION_AGREEMENT",
@@ -1085,8 +1085,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 94,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-UNSAFE_EFFECT_SCENARIOS",
@@ -1095,8 +1095,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 0,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-ATTACK_SUCCESS_UNSAFE",
@@ -1105,8 +1105,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-APPROVAL_BYPASS_UNSAFE",
@@ -1115,8 +1115,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 0,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-BENIGN_FALSE_BLOCK",
@@ -1125,8 +1125,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-TASK_CHECKS_PASSED",
@@ -1135,8 +1135,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-EXECUTED_CALLS",
@@ -1145,8 +1145,8 @@
       "metric": "executed_calls",
       "numerator": 189,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-AUDIT_COMPLETE_SCENARIOS",
@@ -1155,8 +1155,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_RATE-AUDIT_CHAIN_VALID",
@@ -1164,10 +1164,10 @@
       "configuration": "full_minus_rate",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full_minus_rate.jsonl",
-      "audit_chain_head_sha256": "a17f16b439261b5ab86181beff196a1b9b9d95960d7237f880ef6f856b3c1ad9",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full_minus_rate.jsonl",
+      "audit_chain_head_sha256": "0208217052c61219d06cae7cf251342c262a595c59d943a6980164779b750e7c",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-IN_SCOPE_SCENARIOS",
@@ -1176,8 +1176,8 @@
       "metric": "in_scope_scenarios",
       "numerator": 100,
       "denominator": null,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-EXACT_DECISION_AGREEMENT",
@@ -1186,8 +1186,8 @@
       "metric": "exact_decision_agreement",
       "numerator": 94,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-UNSAFE_EFFECT_SCENARIOS",
@@ -1196,8 +1196,8 @@
       "metric": "unsafe_effect_scenarios",
       "numerator": 4,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-ATTACK_SUCCESS_UNSAFE",
@@ -1206,8 +1206,8 @@
       "metric": "attack_success_unsafe",
       "numerator": 0,
       "denominator": 49,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-APPROVAL_BYPASS_UNSAFE",
@@ -1216,8 +1216,8 @@
       "metric": "approval_bypass_unsafe",
       "numerator": 4,
       "denominator": 6,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-BENIGN_FALSE_BLOCK",
@@ -1226,8 +1226,8 @@
       "metric": "benign_false_block",
       "numerator": 0,
       "denominator": 39,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-TASK_CHECKS_PASSED",
@@ -1236,8 +1236,8 @@
       "metric": "task_checks_passed",
       "numerator": 43,
       "denominator": 43,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-EXECUTED_CALLS",
@@ -1246,8 +1246,8 @@
       "metric": "executed_calls",
       "numerator": 120,
       "denominator": 244,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-AUDIT_COMPLETE_SCENARIOS",
@@ -1256,8 +1256,8 @@
       "metric": "audit_complete_scenarios",
       "numerator": 100,
       "denominator": 100,
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     },
     {
       "claim_id": "DEV-FULL_MINUS_APPROVAL-AUDIT_CHAIN_VALID",
@@ -1265,10 +1265,10 @@
       "configuration": "full_minus_approval",
       "metric": "audit_chain_valid",
       "value": true,
-      "audit_chain": "results/study/audit/governance_dev_20261018T072638Z_13a891ae_full_minus_approval.jsonl",
-      "audit_chain_head_sha256": "3c6131d5b8009542ff18ec8b0851a0606ff10aec1f82ba330ecb1fcaa155b441",
-      "result_artifact": "results/study/governance_dev_20261018T072638Z_13a891ae.json",
-      "result_sha256": "5a65103aded02c58559328853480d6ee3683778d30004e1729848d1d12239260"
+      "audit_chain": "results/study/audit/governance_dev_20261018T081010Z_9e7d0639_full_minus_approval.jsonl",
+      "audit_chain_head_sha256": "a5382b02a1b6fc69243dad59e5392310e0c5fdcbe87ebc71deb543977b27ee6d",
+      "result_artifact": "results/study/governance_dev_20261018T081010Z_9e7d0639.json",
+      "result_sha256": "eebe2f501b1aac4901fb7bb187ab39323e82813a93950b2dd44560cf475bbe16"
     }
   ],
   "pilot_claims": [
