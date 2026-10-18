@@ -124,12 +124,12 @@ class ScriptedAgent:
 
 @dataclass
 class LLMAgent:
-    model: str = "openai/gpt-oss-120b"
-    base_url: str = "https://api.groq.com/openai/v1"
+    model: str = "llama3.1:8b"
+    base_url: str = "http://localhost:11434/v1"
     temperature: float = 0.0
     max_tokens: int = 400
     seed: int = 0
-    api_key: str = field(default_factory=lambda: os.environ.get("GROQ_API_KEY", ""))
+    api_key: str = field(default_factory=lambda: os.environ.get("GROQ_API_KEY", "") or "ollama-local")
     transport: Optional[Callable[[Dict[str, Any]], Dict[str, Any]]] = None
     system_prompt: str = ("You are a customer-support assistant. Complete the user's task by calling exactly one tool. "
                           "Reply with ONLY a JSON object {\"tool\": ..., \"arguments\": {...}}.\n" + TOOL_SCHEMA_TEXT)
@@ -144,7 +144,7 @@ class LLMAgent:
         if self.transport:
             return self.transport(payload)
         if not self.api_key:
-            raise RuntimeError("GROQ_API_KEY is not set")
+            raise RuntimeError("No API key set (Ollama needs none; hosted providers need GROQ_API_KEY)")
         req = urllib.request.Request(self.base_url + "/chat/completions", data=json.dumps(payload).encode(),
                                      headers={"Authorization": "Bearer " + self.api_key,
                                               "Content-Type": "application/json"})

@@ -230,7 +230,7 @@ export default function AegisChat() {
           <div style={styles.topbarActions}>
             <div style={styles.statusPill}>
               <span style={styles.statusDot} />
-              Groq via gateway
+              Ollama via gateway
             </div>
             <button style={styles.newChatBtn} onClick={startNewChat} disabled={loading}>
               New chat
@@ -423,7 +423,7 @@ function RoutePolicy() {
   return (
     <div style={styles.routePolicy}>
       <div style={styles.sectionLabel}>Routing policy</div>
-      <div style={styles.routeRow}><span style={styles.safeDot} /> SAFE / LOW: sent to Groq</div>
+      <div style={styles.routeRow}><span style={styles.safeDot} /> SAFE / LOW: sent to Ollama</div>
       <div style={styles.routeRow}><span style={styles.mediumDot} /> MEDIUM: sanitized, then sent</div>
       <div style={styles.routeRow}><span style={styles.highDot} /> HIGH: blocked before LLM</div>
     </div>
@@ -437,7 +437,7 @@ function ComparisonPanel({ result, directComparison, onCompareDirect, comparing 
       ? 'Aegis stopped this before the model call.'
       : action === 'sanitize'
         ? 'Aegis quarantined the input before the model call.'
-        : 'Aegis allowed the request to reach Groq.'
+        : 'Aegis allowed the request to reach Ollama.'
 
   return (
     <div style={styles.comparison}>
@@ -465,7 +465,7 @@ function ComparisonPanel({ result, directComparison, onCompareDirect, comparing 
 
 function directStatusLabel(status) {
   const labels = {
-    sent: 'sent directly to Groq',
+    sent: 'sent directly to Ollama',
     blocked_by_demo_guard: 'not sent by demo guard',
     provider_error: 'provider error',
     not_configured: 'LLM not configured',

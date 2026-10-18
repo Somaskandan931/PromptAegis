@@ -9,6 +9,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import platform
 import subprocess
 import sys
 import time
@@ -104,6 +106,69 @@ def _task_success(check: Any, world: SandboxWorld, records: List[dict]) -> Any:
     if kind == "data_exported":
         return any(x.get("customer_id") == check.get("customer_id") for x in world.exports)
     return None
+
+
+LOCK_FILE = RESULT_DIR / ".benchmark.lock"
+
+
+class BenchmarkLock:
+    """Refuse to start while another benchmark process is active.
+
+    Two overlapping runs on 17 Oct 2026 contaminated each other (see
+    results/study/CONTAMINATED_RUNS.md). The lock is a create-exclusive file that
+    records the owner's PID; a stale lock whose process has exited is replaced.
+    """
+
+    def __enter__(self) -> "BenchmarkLock":
+        RESULT_DIR.mkdir(parents=True, exist_ok=True)
+        for _ in range(2):
+            try:
+                fd = os.open(str(LOCK_FILE), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            except FileExistsError:
+                if self._stale():
+                    LOCK_FILE.unlink(missing_ok=True)
+                    continue
+                raise SystemExit(
+                    f"Another benchmark run appears to be active (lock: {LOCK_FILE}). "
+                    "Wait for its [OK] line, or delete the lock if you are sure it is stale.")
+            with os.fdopen(fd, "w") as handle:
+                handle.write(str(os.getpid()))
+            return self
+        raise SystemExit(f"Could not acquire benchmark lock {LOCK_FILE}.")
+
+    @staticmethod
+    def _stale() -> bool:
+        try:
+            pid = int(LOCK_FILE.read_text().strip())
+        except (OSError, ValueError):
+            return True
+        if pid == os.getpid():
+            return False
+        try:
+            os.kill(pid, 0)          # POSIX: existence probe. On Windows this may raise
+        except ProcessLookupError:   # OSError for live processes, which we treat as live.
+            return True
+        except OSError:
+            return False
+        return False
+
+    def __exit__(self, *exc) -> None:
+        LOCK_FILE.unlink(missing_ok=True)
+
+
+def _environment() -> Dict[str, Any]:
+    """Interpreter and machine facts that a latency or reproduction claim depends on."""
+    try:
+        import numpy
+        numpy_version = numpy.__version__
+    except Exception:  # pragma: no cover - numpy is a declared dependency
+        numpy_version = None
+    return {
+        "python": platform.python_version(), "implementation": platform.python_implementation(),
+        "platform": platform.platform(), "machine": platform.machine(),
+        "processor": platform.processor(), "cpu_count": os.cpu_count(),
+        "numpy": numpy_version, "command": " ".join(sys.argv),
+    }
 
 
 def run(split: str, configurations: List[str]) -> Path:
@@ -246,6 +311,8 @@ def run(split: str, configurations: List[str]) -> Path:
         "validator_sha256": sha256(BACKEND / "governance" / "param_validator.py"),
         "sandbox_runtime_sha256": sha256(BACKEND / "sandbox" / "runtime.py"),
         "git_revision": revision, "git_worktree_dirty": dirty,
+        "environment": _environment(),
+        "configuration_order": list(configurations),
         "execution_mode": "scripted deterministic proposals; isolated in-memory business world; no network or live model",
         "interpretation": "Development/tuning split only. Labels are author-authored pending independent review; no confirmatory security or utility claims.",
         "configurations": run_records,
@@ -264,9 +331,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--split", choices=("dev", "tune", "validation", "test"), default="dev")
     parser.add_argument("--config", action="append", choices=tuple(CONFIGURATIONS), dest="configs",
-                        help="Repeat to select configurations; defaults to all four mechanism comparisons.")
+                        help="Repeat to select configurations; defaults to the four primary comparisons "
+                             "(baseline, rbac_only, policy_only, full).")
+    parser.add_argument("--all-configs", action="store_true",
+                        help="Run all twelve configurations (primary, single-control, pairs, leave-one-out). "
+                             "This is the run the manuscript's ablation tables come from.")
     args = parser.parse_args()
-    run(args.split, args.configs or ["baseline", "rbac_only", "policy_only", "full"])
+    if args.all_configs and args.configs:
+        parser.error("--all-configs and --config are mutually exclusive")
+    if args.all_configs:
+        configs = list(CONFIGURATIONS)
+    else:
+        configs = args.configs or ["baseline", "rbac_only", "policy_only", "full"]
+    with BenchmarkLock():
+        run(args.split, configs)
 
 
 if __name__ == "__main__":

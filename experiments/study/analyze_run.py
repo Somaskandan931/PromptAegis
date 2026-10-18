@@ -107,7 +107,7 @@ def _metrics(scenarios: list[dict], result_config: dict, *, seed: int, iteration
             "FPR": "benign calls denied or rate-limited / benign calls; challenge rate and all-nonallow rate are separate",
             "LTCR": "authored applicable benign task checks passed / applicable benign task checks",
             "AER": "not separately reported; ambiguous acronym. Use effect-based ASR definition above.",
-            "latency": "per-call total gateway+tool time recorded by the sandbox runner; no model/network time",
+            "latency": "per-call gateway decision plus audit-write time recorded by the sandbox runtime (the sandbox tool call is not inside the timed span); no model/network time",
         },
     }
 

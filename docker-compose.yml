@@ -10,6 +10,11 @@ services:
     command: uvicorn app:app --host 0.0.0.0 --port 8000
     environment:
       - PYTHONUNBUFFERED=1
+      # Ollama runs on the host; the container reaches it through host.docker.internal.
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434/v1}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.1:8b}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   frontend:
     build:

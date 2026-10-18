@@ -12,6 +12,10 @@
 \def\ps@pprintTitle{\let\@oddhead\@empty\let\@evenhead\@empty\def\@oddfoot{}\let\@evenfoot\@oddfoot}
 \makeatother
 
+% Fill these two after the freeze commit (see Data and code availability).
+\newcommand{\repoURL}{https://github.com/Somaskandan931/REPOSITORY-NAME}
+\newcommand{\repoRevision}{COMMIT-HASH-OF-FROZEN-RUN}
+\newcommand{\canonicalRun}{governance\_dev\_20261017T182314Z\_2a97d190}
 \newcommand{\pilotModel}{llama3.1:8b}
 \newcommand{\pilotConfig}{full}
 \newcommand{\pilotN}{12}
@@ -33,8 +37,9 @@
 \begin{document}
 \begin{frontmatter}
 \title{PromptAegis: Design and Experimental Evaluation of a Deterministic Policy-Enforcement Gateway for Tool-Using AI Agents}
-\author[inst1]{Author details to be completed}
-\address[inst1]{Department and institution to be completed}
+\author[inst1]{Rajagopal Somaskandan}
+\ead{somaskandan931@gmail.com}
+\address[inst1]{M.Sc.\ Computer Science (AI/ML), Sathyabama Institute of Science and Technology, Chennai, India}
 
 \begin{abstract}
 Tool-using AI agents turn model output into actions that modify records, send messages, export data, or delete files. Application-level authorization should therefore not depend on the model interpreting instructions correctly. PromptAegis is a research prototype that places a deterministic governance gateway between an agent's proposed tool call and the tool that would execute it. The gateway composes role-based access control (RBAC), allowlist argument contracts, policy rules, rate limits, and approval gating, and writes a hash-chained audit record for every decision. An execution adapter runs permitted calls in an in-memory business sandbox and uses an effect oracle to measure unsafe state changes separately from gateway decisions. We evaluate the prototype on a project-authored suite of 376 scenarios (709 proposed calls); only the development split is opened, because validation and test remain locked pending independent label review. On the 100 in-scope development scenarios, baseline, RBAC-only, policy-only, and full configurations reached 39\%, 51\%, 53\%, and 100\% exact agreement with the authored decisions and produced 29, 17, 14, and 0 unsafe-effect scenarios, while all 43 applicable task checks passed in every configuration. Eight further single-control and leave-one-out configurations show that the schema stage is the most load-bearing control in this suite and that RBAC is redundant with the policy set. A separate 12-task closed-loop pilot with a local \pilotModel{} model produced a structured call for only \pilotAttackProposals{} of \pilotAttackN{} injected tasks, so it does not measure gateway efficacy against valid malicious calls. All results are descriptive development observations on author-labelled cases and do not estimate real-world attack resistance.
@@ -166,7 +171,7 @@ The design pursues four objectives: authorization (calls outside permitted roles
 %==============================================================================
 \section{Materials and methods}
 \subsection{Environment and provenance}
-Experiments ran on Python 3.12 with a fresh SQLite database for each run, an in-memory sandbox world, and a deterministic virtual clock that makes rate-limit windows independent of machine speed. The main development run was executed at a recorded source revision with an uncommitted worktree. The runner records SHA-256 hashes of the scenario set, runner, gateway, validator, and sandbox runtime. The scenario and sandbox-runtime hashes match the delivered versions. The recorded gateway, validator, and runner hashes do \emph{not} match the delivered versions of those three components, which were edited after the run finished. We therefore re-executed the runner on the delivered source (Section~\ref{sec:repro}); that re-execution reproduced every scenario-level decision and unsafe-effect flag of the four main configurations. Table~\ref{tab:dev} and the per-category analysis are taken from the original run, and the twelve-configuration comparison from the re-execution. The pilot used Ollama with \pilotModel{} at temperature zero and seed zero. Two earlier executions of the development benchmark ran concurrently against one shared database and are excluded.
+Experiments ran on Python 3.12 with a fresh SQLite database for each run, an in-memory sandbox world, and a deterministic virtual clock that makes rate-limit windows independent of machine speed. The twelve-configuration development run (\texttt{\canonicalRun}) is the single run behind every decision and effect table and figure; only the exploratory latency comparison also uses an earlier four-configuration run. The runner records SHA-256 hashes of the scenario set, manifest, runner, gateway, validator, and sandbox runtime. For the canonical run the scenario, manifest, gateway, validator, and sandbox-runtime hashes equal those of the delivered source. The runner hash does not: after the run the runner gained an option to execute all configurations, a lock against concurrent runs, and an environment record, with no change to the evaluation loop, scenario handling, or metrics. No Git revision was recorded for the canonical run, so it is not yet frozen at a revision (Section~\ref{sec:repro}). The pilot used Ollama with \pilotModel{} at temperature zero and seed zero. Two earlier executions of the development benchmark ran concurrently against one shared database and are excluded.
 
 \subsection{Benchmark scenarios and oracle}
 The suite (version 2.0.0, seed 20261017) contains 376 scenarios with 709 proposed calls in 65 template groups, split into development (106 scenarios), tune (78), validation (79), and test (113). Scenarios sharing a template group or a gateway-visible request key stay within one split, which prevents text-only variants of one request from crossing splits. Table~\ref{tab:categories} lists the categories. Each scenario specifies its calls, one expected decision per call, and, where applicable, a task check. Expected decisions and task checks were authored by the developers and are labelled as author-assigned and pending independent review. Six provenance-dependent development scenarios require information that the gateway's request contract does not carry, so they are retained in the output but excluded from all in-scope aggregates, leaving 100 in-scope development scenarios and 244 first-attempt calls. These 100 scenarios come from only 21 template groups, which limits how independent they are.
@@ -353,15 +358,15 @@ Figure~\ref{fig:rate} shows the rate limiter on two burst sequences, one with a 
 \end{figure}
 
 \subsection{Reproducibility check}\label{sec:repro}
-Because the gateway, validator, and runner files changed after the main run, we re-executed the runner on the delivered source with the command in the Data availability statement. The re-execution used the same scenario file (identical hash) and produced the same decisions and unsafe-effect flags in all 100 in-scope scenarios of the four primary configurations (zero scenario-level differences). This supports reproducibility of the reported counts on the delivered code. It does not replace a run frozen at a recorded revision on a clean worktree, which should be made before submission.
+We re-executed the delivered runner on a different operating system (Linux, Python 3.12; the canonical run was made on Windows) with the command in the Data and code availability statement, over all twelve configurations. The scenario file hash was identical, and across 1{,}272 scenario-by-configuration pairs (106 scenarios, 12 configurations) there were no differences in per-call decisions, unsafe-effect flags, effect types, state-change flags, task results, or first-blocking stage. This supports reproducibility of the reported counts on the delivered code. A reproduction by the same authors on the same labels is not independent validation, and it does not replace a run frozen at a recorded Git revision on a clean worktree, which should be made before submission.
 
 
 \subsection{Per-call latency}
-Table~\ref{tab:lat} reports the wall-clock time per first-attempt call recorded by the runner (gateway plus sandbox tool, no model or network time) for the original run. Per-call time rises from a median of 66\,ms for the baseline to 190\,ms for the full gateway. The baseline's cost is not zero because it still performs registration lookups, auditing, and the sandbox call. These timings come from one machine, configurations ran in fixed blocks in the order shown, and we did not profile where the time is spent, so differences between configurations may partly reflect run order or database growth. The re-execution of the same four configurations on the delivered source (Fig.~\ref{fig:lat}, right) gives the same ordering but medians of only 4.1, 4.7, 7.1, and 9.7\,ms, more than an order of magnitude lower. The code, scenarios, and proposals were the same, so the absolute figures depend on the machine and its load at the time of the run, and only the ordering should be treated as a finding. They do not constitute an estimate of deployment overhead, and the 7.85\,s mean model response time in the pilot should not be attributed to the gateway.
+Table~\ref{tab:lat} reports the wall-clock time per first-attempt call recorded by the runner for the original run. The timed span is the gateway decision plus its audit writes; the sandbox tool call is not inside it, and no model or network time is included. Per-call time rises from a median of 66\,ms for the baseline to 190\,ms for the full gateway. The baseline's cost is not zero because it still performs registration lookups, auditing, and the sandbox call. These timings come from one machine, configurations ran in fixed blocks in the order shown, and we did not profile where the time is spent, so differences between configurations may partly reflect run order or database growth. The re-execution of the same four configurations on the delivered source (Fig.~\ref{fig:lat}, right) gives the same ordering but medians of only 4.1, 4.7, 7.1, and 9.7\,ms, more than an order of magnitude lower. The code, scenarios, and proposals were the same, so the absolute figures depend on the machine and its load at the time of the run, and only the ordering should be treated as a finding. They do not constitute an estimate of deployment overhead, and the 7.85\,s mean model response time in the pilot should not be attributed to the gateway.
 
 \begin{table}[!tb]
 \centering
-\caption{Per-call wall-clock time in ms (gateway plus sandbox tool; $n=244$ first-attempt calls per configuration, one machine, fixed run order). Exploratory.}
+\caption{Per-call wall-clock time in ms (gateway decision plus audit writes, excluding the sandbox tool call; $n=244$ first-attempt calls per configuration, one machine, fixed run order). Exploratory.}
 \label{tab:lat}
 \footnotesize
 \begin{tabular}{lrrrr}
@@ -379,7 +384,7 @@ Full & 190.4 & 187.3 & 281.8 & 312.8 \\
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=0.85\textwidth]{figures/fig_latency.pdf}
-\caption{Per-call time (gateway plus sandbox tool) for the four primary configurations in two executions of the same code and scenarios (boxes: quartiles; whiskers: 5th and 95th percentiles; $n=244$ calls each). The two panels use different vertical scales; the ordering agrees, the magnitudes do not.}
+\caption{Per-call time (gateway decision plus audit writes) for the four primary configurations in two executions of the same code and scenarios (boxes: quartiles; whiskers: 5th and 95th percentiles; $n=244$ calls each). The two panels use different vertical scales; the ordering agrees, the magnitudes do not.}
 \label{fig:lat}
 \end{figure*}
 
@@ -441,7 +446,7 @@ The main benchmark is a development run over author-labelled synthetic scenarios
 \item Scenarios, contracts, labels, and the oracle were written by the same people; independent annotation of the expected decisions has not been done.
 \item The 100 in-scope scenarios come from 21 template groups, and several categories are a single group, so effective sample size is much smaller than 100 and some per-control conclusions rest on one or two groups.
 \item The development split was used while building the gateway; the result does not establish generalization to unseen scenarios, and validation and test have not been opened.
-\item The source files for the gateway, validator, and runner changed after the main run; a re-execution reproduced all scenario-level outcomes, but no run is yet frozen at a recorded revision on a clean worktree.
+\item The canonical run has no recorded Git revision and its recorded runner hash differs from the delivered runner (an option, a lock, and an environment record were added); a re-execution reproduced all scenario-level outcomes, but no run is yet frozen at a revision on a clean worktree.
 \item The scripted agent does not interpret text, so injection-labelled scenarios test the gateway's handling of a structured call and not model manipulation. Provenance-dependent cases are outside the gateway's request contract.
 \item The 12-task pilot used one open-weight model and produced one structured injected proposal, and it was run once per configuration; it cannot establish gateway efficacy or compare configurations.
 \item Latency was measured on one machine with configurations in fixed blocks and was not profiled.
@@ -457,6 +462,12 @@ Confirmatory claims require the following steps. Two independent reviewers shoul
 PromptAegis implements a sandboxed tool-governance path that combines RBAC, argument contracts, policy rules, rate limits, approval, and tamper-evident audit records, and an execution adapter that measures decisions and unsafe effects separately. On the development suite the full gateway matched all 100 authored decisions with no oracle-detected unsafe effects, against 39\% agreement and 29 unsafe scenarios for the baseline, and a twelve-configuration comparison shows that the argument contract and the approval stage carry the unsafe-effect reduction in this suite while RBAC is redundant with the policy set. A small closed-loop pilot kept model refusals and gateway decisions apart and did not exercise the gateway against valid malicious calls.
 
 These findings support the feasibility of the approach in the tested environment and nothing more. The suite is synthetic, author-labelled, and used during development. Independent label review and a single frozen held-out evaluation are required before drawing conclusions about security effectiveness or generalization.
+
+%==============================================================================
+\section*{Data and code availability}
+\begingroup\raggedright\sloppy
+The code, scenario set and manifest, raw result files, analysis outputs, claim registry, and figure scripts are in the repository at \url{\repoURL}, revision \texttt{\repoRevision}. The scenario file and manifest are hash-checked by the runner. The decision and effect results are in \texttt{results/study/\allowbreak\canonicalRun.json} (a byte-identical copy is \texttt{paper/results/\allowbreak ablation\_run.json}) with its analysis beside it, and \texttt{results/provenance/\allowbreak claim\_registry.json} links each reported number to its source. The development benchmark is regenerated from a clean checkout with \texttt{python experiments/\allowbreak run\_research.py benchmark --split dev --all-configs}. The closed-loop pilot (Ollama, \pilotModel) is run with \texttt{python experiments/\allowbreak run\_research.py llm backend/data/\allowbreak governance\_benchmark/\allowbreak llm\_pilot\_tasks.jsonl --provider ollama --model \pilotModel\ --configuration full}. Validation and test splits are locked and not released. No API key or credential is needed to reproduce any reported result.
+\endgroup
 
 \bibliographystyle{elsarticle-num}
 \bibliography{references}

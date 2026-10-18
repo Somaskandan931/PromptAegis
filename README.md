@@ -61,7 +61,7 @@ Stages run in a fixed order and the first blocking stage decides. Stage 0 (well-
 
 ## Results
 
-All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls). They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
+All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls), run `governance_dev_20261017T182314Z_2a97d190` (all twelve configurations; recorded source hashes match this tree, see [reproduction check](docs/REPRODUCTION_CHECK.md)). They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
 
 ### Headline comparison
 
@@ -152,27 +152,45 @@ npm ci
 npm run dev
 ```
 
+The demo chat page calls a local **Ollama** server by default and needs no API key:
+
+```powershell
+ollama pull llama3.1:8b
+ollama serve          # leave running; backend/.env.example lists OLLAMA_BASE_URL and OLLAMA_MODEL
+```
+
+Copy `backend\.env.example` to `backend\.env` if you want to change the model. To use Groq instead, set `LLM_PROVIDER=groq` and `GROQ_API_KEY` there; `.env` is gitignored, never commit it. Inside Docker the backend reaches the host's Ollama at `http://host.docker.internal:11434/v1` (already set in `docker-compose.yml`).
+
 Or with Docker: `docker compose up --build` (backend on `${BACKEND_PORT:-8001}`, UI on `${FRONTEND_PORT:-5173}`).
 
 ## Reproducing the study
 
 ```powershell
-# 1. Development benchmark, all configurations (no LLM, no network)
-python experiments\run_research.py benchmark --split dev
+# 1. Development benchmark, all twelve configurations (no LLM, no network).
+#    Without --all-configs only the four primary configurations run.
+python experiments\run_research.py benchmark --split dev --all-configs
 
 # 2. Analyze the exact result file the runner printed
 python experiments\run_research.py analyze results\study\<RUN_ID>.json --iterations 5000
 
-# 3. Regenerate the proposal-metric figures and table
+# 3. Regenerate the proposal-metric figures and table.
+#    1st argument: the canonical 12-configuration run (paper\results\ablation_run.json is a byte-identical
+#    copy of results\study\governance_dev_20261017T182314Z_2a97d190.json).
+#    2nd argument: the earlier 4-configuration run, used only as the "original run" in the latency figure.
 cd paper
 python make_prd_figures.py results\ablation_run.json ..\results\study\governance_dev_20261017T150806Z_056a4792.json
 
-# 4. Tests
+# 3b. Optional, exploratory: latency under the randomized, warmed-up, repeated protocol.
+#     Writes raw per-call timings to results\study\latency_*.json. Do not run anything else at the same time.
+python experiments\run_research.py latency --repetitions 10 --warmup 2
+
+# 4. Rebuild the claim registry from the raw run, then test
 cd ..
+python experiments\run_research.py registry --ablation results\study\governance_dev_20261017T182314Z_2a97d190.json --pilot results\study\llm_20261017T171952Z_9c41232a.json
 python -m pytest -q tests
 ```
 
-Run only one benchmark process at a time: concurrent runs share local database state and invalidate the evidence. Validation and test splits stay locked until an independent label-review record is bound to the dataset hash.
+The runner refuses to start while another benchmark is active (a lock file under `results/study/`); concurrent runs on 17 Oct 2026 contaminated each other, see `results/study/CONTAMINATED_RUNS.md`. To cite a run in a paper, commit first and run from a clean checkout so the run records a Git revision. Validation and test splits stay locked until an independent label-review record is bound to the dataset hash.
 
 ## Repository map
 
@@ -190,7 +208,7 @@ docs/           protocol, threat model, status, PRD matrix, audits
 tests/          pytest suite
 ```
 
-Key documents: [Experiment protocol](docs/research/EXPERIMENT_PROTOCOL.md) · [Threat model](docs/research/THREAT_MODEL.md) · [Independent label review](docs/research/INDEPENDENT_LABEL_REVIEW.md) · [Status](docs/research/STATUS.md) · [PRD implementation matrix](docs/PRD_IMPLEMENTATION_MATRIX.md) · [Manuscript](paper/PromptAegis_Governance_Study.tex)
+Key documents: [Experiment protocol](docs/research/EXPERIMENT_PROTOCOL.md) · [Threat model](docs/research/THREAT_MODEL.md) · [Independent label review](docs/research/INDEPENDENT_LABEL_REVIEW.md) · [Status](docs/research/STATUS.md) · [PRD implementation matrix](docs/PRD_IMPLEMENTATION_MATRIX.md) · [Paper-to-code map](docs/PAPER_TO_CODE_MAP.md) · [Reproduction check](docs/REPRODUCTION_CHECK.md) · [Manuscript](paper/PromptAegis_Governance_Study.tex)
 
 ## More detail
 
@@ -245,7 +263,7 @@ Run just one ablation configuration:
 python experiments\run_research.py benchmark --split dev --config full
 ```
 
-The benchmark writes a JSON result and per-configuration JSONL audit chains under `results\study\`. Run only one benchmark process at a time: simultaneous runs share local database state and invalidate the evidence. The runner verifies the scenario manifest hash and grouped-split integrity. Do not open validation or test unless independent label review is genuinely complete and recorded as described in [docs/research/EXPERIMENT_PROTOCOL.md](docs/research/EXPERIMENT_PROTOCOL.md).
+The benchmark writes a JSON result and per-configuration JSONL audit chains under `results\study\`. Add `--all-configs` for the twelve configurations behind the manuscript's ablation tables. A lock file stops a second benchmark from starting while one is active. The runner verifies the scenario manifest hash and grouped-split integrity. Do not open validation or test unless independent label review is genuinely complete and recorded as described in [docs/research/EXPERIMENT_PROTOCOL.md](docs/research/EXPERIMENT_PROTOCOL.md).
 
 Analyze a specific completed run (use the exact result file printed by the runner):
 
@@ -270,7 +288,7 @@ Run the external prompt-corpus detector study separately:
 python experiments\run_research.py corpora --batch-size 256
 ```
 
-Regenerate the proposal-metric figures and table (security-utility panel, stage attribution, rate-limit effect, latency distributions) from the stored runs:
+Regenerate the proposal-metric figures and table (security-utility panel, stage attribution, rate-limit effect, latency distributions) from the stored runs. The first argument is the canonical twelve-configuration run (a byte-identical copy of `results/study/governance_dev_20261017T182314Z_2a97d190.json`); the second is the earlier four-configuration run, used only for the original-run latency panel:
 
 ```powershell
 cd paper
@@ -318,11 +336,11 @@ ollama serve
 python experiments\run_research.py llm backend\data\governance_benchmark\llm_pilot_tasks.jsonl --provider ollama --model llama3.1:8b --configuration full
 ```
 
-Groq example (keep the key in the current PowerShell session):
+Hosted alternative (optional; none of the reported results use it). Groq model IDs are retired from time to time, so check the current ID in the Groq console first. Keep the key in the current PowerShell session only:
 
 ```powershell
 $env:GROQ_API_KEY = "your-key"
-python experiments\run_research.py llm backend\data\governance_benchmark\llm_pilot_tasks.jsonl --provider groq --model llama-3.3-70b-versatile --configuration full
+python experiments\run_research.py llm backend\data\governance_benchmark\llm_pilot_tasks.jsonl --provider groq --model openai/gpt-oss-120b --configuration full
 Remove-Item Env:GROQ_API_KEY
 ```
 
@@ -360,14 +378,14 @@ Use Elsevier `elsarticle` as a working format unless the supervisor or target ve
 
 ### Repository hygiene
 
-Keep source, benchmark definitions, manifests, cited raw results, audit chains, references, and paper figures. Ignore local environments, databases, secrets, caches, build output, and downloaded large datasets. Preserve historical results with their original provenance. The audit notes that `backend/database/credentials.json` is tracked; to stop tracking that local file while retaining it on disk, review and run:
+Keep source, benchmark definitions, manifests, cited raw results, audit chains, references, and paper figures. Ignore local environments, databases, secrets, caches, build output, and downloaded large datasets. Preserve historical results with their original provenance. `backend/database/credentials.json` and every `.env` file are listed in `.gitignore`, but ignore rules do not untrack a file that was committed earlier. Check with `git ls-files backend/database/credentials.json backend/.env`; if either is listed, stop tracking it while retaining it on disk:
 
 ```powershell
 git rm --cached -- backend/database/credentials.json
 git status --short
 ```
 
-If the tracked file ever held a real key, rotate it; removing it from the latest commit does not erase Git history.
+If a tracked file ever held a real key, rotate the key; removing the file from the latest commit does not erase Git history. Do not put `.env` files in archives you share: `tests/test_provenance_and_reproducibility.py::test_secret_scan` fails when a key-shaped string is present in a scanned file.
 
 </details>
 

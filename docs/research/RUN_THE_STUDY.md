@@ -50,11 +50,11 @@ $env:OLLAMA_BASE_URL = "http://localhost:11434/v1"
 python experiments/run_research.py llm path\to\reviewed_tasks.jsonl --provider ollama --model llama3.1:8b --configuration full
 ```
 
-For Groq:
+For Groq (optional; check the current model ID in the Groq console, retired IDs return HTTP 404):
 
 ```powershell
 $env:GROQ_API_KEY = "<your key>"
-python experiments/run_research.py llm path\to\reviewed_tasks.jsonl --provider groq --model llama-3.3-70b-versatile --configuration full
+python experiments/run_research.py llm path\to\reviewed_tasks.jsonl --provider groq --model openai/gpt-oss-120b --configuration full
 Remove-Item Env:GROQ_API_KEY
 ```
 

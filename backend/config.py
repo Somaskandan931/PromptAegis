@@ -148,7 +148,11 @@ def resolve_groq_model(model: str) -> str:
     return model
 
 
+# Provider selection: Ollama (local, keyless) is the default; Groq is optional.
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama").strip().lower()
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1:8b")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL = resolve_groq_model(os.getenv("GROQ_MODEL", DEFAULT_GROQ_MODEL))
 GROQ_BASE_URL = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
-LLM_TIMEOUT_SECONDS = float(os.getenv("LLM_TIMEOUT_SECONDS", "45"))
+LLM_TIMEOUT_SECONDS = float(os.getenv("LLM_TIMEOUT_SECONDS", "120" if LLM_PROVIDER == "ollama" else "45"))

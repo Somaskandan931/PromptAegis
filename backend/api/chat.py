@@ -11,7 +11,8 @@ from fastapi import APIRouter
 from pydantic import BaseModel, Field
 
 from api.detect import DetectResponse, _to_response
-from core.llm_client import LLMConfigurationError, LLMMessage, LLMProviderError, call_groq
+import config
+from core.llm_client import LLMConfigurationError, LLMMessage, LLMProviderError, call_llm
 from core.pipeline import DetectionResult, detect
 from core.rule_engine import match_rules
 from database import db
@@ -43,7 +44,7 @@ class ChatResponse(BaseModel):
 
 class DirectChatResponse(BaseModel):
     status: Literal["sent", "blocked_by_demo_guard", "provider_error", "not_configured"]
-    provider: str = "groq"
+    provider: str = "ollama"
     model: Optional[str] = None
     sent_prompt: Optional[str] = None
     response: Optional[str] = None
@@ -115,7 +116,7 @@ def protected_chat(payload: ChatRequest):
             prompt=payload.prompt,
             gateway=gateway,
             llm_status="blocked",
-            provider="groq",
+            provider=config.LLM_PROVIDER,
             model=None,
             response="Aegis blocked this message before it reached the LLM.",
         )
@@ -126,13 +127,13 @@ def protected_chat(payload: ChatRequest):
     messages = _build_llm_messages(payload.history, effective_prompt)
 
     try:
-        llm_result = call_groq(messages)
+        llm_result = call_llm(messages)
     except LLMConfigurationError as exc:
         return ChatResponse(
             prompt=payload.prompt,
             gateway=gateway,
             llm_status="not_configured",
-            provider="groq",
+            provider=config.LLM_PROVIDER,
             sent_prompt=effective_prompt,
             error=str(exc),
         )
@@ -141,7 +142,7 @@ def protected_chat(payload: ChatRequest):
             prompt=payload.prompt,
             gateway=gateway,
             llm_status="provider_error",
-            provider="groq",
+            provider=config.LLM_PROVIDER,
             sent_prompt=effective_prompt,
             error=str(exc),
         )
@@ -173,7 +174,7 @@ def direct_chat(payload: ChatRequest):
         )
 
     try:
-        llm_result = call_groq(_build_direct_messages(payload.history, payload.prompt))
+        llm_result = call_llm(_build_direct_messages(payload.history, payload.prompt))
     except LLMConfigurationError as exc:
         return DirectChatResponse(
             status="not_configured",
