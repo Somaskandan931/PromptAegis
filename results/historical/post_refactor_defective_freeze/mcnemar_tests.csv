@@ -1,5 +1,0 @@
-comparison,n,a_both_correct,b_base_correct_only,c_target_correct_only,d_both_incorrect,chi2_edwards,p_value_edwards,chi2_uncorrected,p_value_uncorrected
-baseline_vs_permission,600,100,0,300,200,298.00333,8.969795738121836e-67,300.0,3.2943623833139784e-67
-baseline_vs_policy,600,100,0,370,130,368.0027,5.094138812775622e-82,370.0,1.8715184186364012e-82
-baseline_vs_full,600,100,0,370,130,368.0027,5.094138812775622e-82,370.0,1.8715184186364012e-82
-baseline_vs_hardened,600,100,0,370,130,368.0027,5.094138812775622e-82,370.0,1.8715184186364012e-82

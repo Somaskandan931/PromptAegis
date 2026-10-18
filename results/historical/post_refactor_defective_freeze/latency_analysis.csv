@@ -1,5 +1,0 @@
-comparison,n,baseline_median_ms,target_median_ms,median_paired_diff_ms,mean_paired_diff_ms,std_paired_diff_ms,wilcoxon_stat,wilcoxon_p_value
-baseline_vs_permission,600,5.849,6.016,0.16,0.225,1.477,73224.0,6.7617740161451e-05
-baseline_vs_policy,600,5.849,11.167,4.546,5.605,6.031,8565.0,3.3121897874923763e-82
-baseline_vs_full,600,5.849,9.095,3.307,4.207,4.434,11638.5,2.870307290146936e-76
-baseline_vs_hardened,600,5.849,7.792,2.093,4.23,5.247,22434.0,3.296277213333646e-57

@@ -1,55 +1,35 @@
-# Research Alignment and Paper Plan
+# Research scope and reporting plan
 
-## Purpose
+## Primary study: tool-call governance
 
-This note aligns the current PromptAegis repository with the research proposal *Security and Governance Mechanisms for Tool-Using AI Agents* and the supplied sample papers. The proposal and samples are reference material; they do not override repository evidence or authorize deleting project artifacts.
+The proposal's central question concerns whether a separate gateway can reduce unsafe tool requests while preserving useful allowed behavior. The primary experiment therefore compares `baseline`, `rbac_only`, `policy_only`, and `full` on six controlled categories: legitimate requests, unauthorized tools, parameter manipulation, prompt injection, privilege escalation, and excessive calls.
 
-## Scope alignment
+The current 600-case suite is researcher-defined and sandbox-oriented. It is not a naturally collected real-world dataset. It supports deterministic checks of gateway policy behavior, but not attack-prevalence claims. Per run, 480 cases are expected unsafe and 120 expected allowed; burst labels allow the first ten calls per tool and rate-limit subsequent calls.
 
-The repository already implements the proposal's central idea: an external gateway mediates structured tool calls. Its implemented controls include tool permissions, parameter policies, risk-based approval, rate limiting, audit records, sandbox-style benchmark tools, and experiment runners. The project is therefore a concrete prototype and evaluation of tool-use governance.
+## Current measured scope
 
-The current repository also includes prompt-injection detection and broader application/UI work. For the paper, keep the research claim narrow: evaluate post-generation governance of tool invocations. Describe prompt-injection detection only where it provides context or is explicitly part of a measured experiment. Do not imply that the gateway prevents prompt injection or secures tools that bypass the gateway.
+`experiments/run_governance_benchmark.py` invokes the gateway interceptor directly. It does not invoke an LLM, call external systems, execute mock tools, or observe user-task completion. Therefore:
 
-The proposal is a plan, not evidence. Its suggested 600-case dataset, component list, thresholds, and expected behaviors must not be reported as completed results unless supported by the checked-in benchmark, runner, raw events, and derived metrics. The manuscript's numerical claims must be reconciled against the canonical claim registry and current artifact provenance before submission.
+- Use **unsafe-call allow rate**, not realized attack success rate (ASR).
+- Use **legitimate-call allow rate**, not legitimate task completion rate (LTCR).
+- Interpret false rejection as expected-allow proposals rejected by the gateway.
+- Report latency as local gateway decision latency; it is not end-to-end agent latency.
+- Report audit coverage from observed audit-record count, not a hard-coded value.
+- State that three repeated executions produced identical decision counts; they are fixed-suite repeats, not independent samples, so they do not support population-level confidence intervals.
 
-## Recommended paper structure
+The latest replay is `results/governance/governance_benchmark_20261017T061036Z.json`; its repeats are `results/governance/governance_benchmark_20261017T060058Z.json` and `results/governance/governance_benchmark_20261017T055353Z.json`. All three record source and fixture hashes and identical decision counts. The latest artifact also records and verifies actual principal counts from the audit log. A read-only audit of the original frozen run also confirmed 600/600 calls per configuration used `CustomerSupportAgent`; the claim that it selected `EmailAssistant` was not supported by the run's source hash or audit rows. The current runner now refuses to fall back when an explicitly named principal is missing. Do not combine governance metrics with prompt-detector metrics.
 
-The supplied empirical papers generally lead with a focused title, abstract, keywords, and introduction; establish prior work and a conceptual or theoretical frame; explain the research design and data; present results; then discuss implications, limitations, and conclusions. The engineering samples also make system architecture and implementation explicit. Use that pattern, adapted to this experimental computer-security study:
+In all three runs, the full configuration allowed 50/480 expected-unsafe calls, all from parameter manipulation (30 SQL-like search strings and 20 update requests containing injection-like values). Policy-only produced `REQUIRE_APPROVAL` for 115 expected-unsafe cases. Count these as not directly allowed, but do not equate a pending approval with a definitive denial. Three adversarial categories target tools already denied to the support agent, so they test authorization rather than prompt-injection detection. SQL/XSS-like labels also lack matching general validation policies. The 20-prompt live-model pilot and older rate-limit/statistical outputs are kept separate because they use different protocols.
 
-1. Title, abstract, and keywords
-2. Introduction and research questions
-3. Background and related work
-4. Threat model and problem formulation
-5. System architecture and governance policies
-6. Benchmark, experimental design, configurations, and metrics
-7. Results (with sample sizes, denominators, uncertainty, and latency distributions)
-8. Discussion and mechanism attribution
-9. Threats to validity and limitations
-10. Conclusion and artifact/reproducibility statement
-11. References and supplementary material
+## Separate prompt-screening experiment
 
-Keep the abstract self-contained: motivation, gap, approach, benchmark/design, principal measured results, and bounded conclusion. Avoid listing all implementation features there. Use tables and figures to make the experimental groups and results easy to compare. Match the final citation style and formatting to the target venue once selected; the sample papers are examples of scholarly organization, not a license to copy their text, figures, or exact layout.
+`experiments/run_real_data_evaluation.py` evaluates the classifier on held-out HackAPrompt and ToxicChat subsets. ToxicChat is a real-user benign proxy labelled non-toxic and non-jailbreak, not a verified injection-free dataset. That experiment may be cited as a separate component or removed from a governance-only submission; it is not evidence of tool authorization or task utility.
 
-## Evidence and manuscript corrections required
+## Before final submission
 
-- Select one primary research question centered on security-utility trade-offs for mediated tool calls. Treat the existing subquestions as secondary only if the data support them.
-- State exactly which evaluations are deterministic gateway replay, synthetic benchmark, or live-model pilot. Do not conflate them.
-- Present isolated-control results separately from compound/full-pipeline results so rate limiting is not credited with semantic-policy effects.
-- Report denominators and raw counts beside percentages, plus confidence intervals where available. Treat repeated templates as clustered observations when interpreting inferential tests.
-- Describe policy calibration and benchmark construction, including overlap between rule development and evaluation. Do not claim out-of-sample generalization without a held-out set.
-- Distinguish tool-call interception from completed task utility. A decision-level benchmark alone does not establish end-to-end agent task success.
-- Verify each manuscript result against `results/provenance/claim_registry.json`, raw events, derived metrics, and the experiment scripts. Resolve any stale commit hashes, absolute paths, or mismatched result values before submission.
-- Retain negative findings, bypass conditions, and semantic parameter-smuggling examples. These define the boundary of the contribution rather than detract from it.
-
-## Document and artifact disposition
-
-Keep the root README, active experiment reports, source code, benchmark inputs, raw and derived results, claim registry, and both manuscript variants. The master and anonymous submissions serve different publication workflows. Historical audits and superseded results are already grouped under `docs/archive/` and `results/historical/`; they document provenance and should not be removed as “unnecessary.” The sample PDFs remain external reference material and should not be copied into this repository.
-
-No project files were deleted as part of this alignment pass. A future cleanup should remove only demonstrably generated duplicates after their source and reproducibility role are documented.
-
-## Next paper-preparation steps
-
-1. Freeze the research question, threat boundary, and target venue with the supervisor.
-2. Reconcile the manuscript's claims and citation records with the canonical evidence files.
-3. Revise the manuscript into the structure above and remove unsupported or overbroad claims.
-4. Run the documented clean reproduction and preserve the resulting manifest before submission.
+1. Have the supervisor approve the final research question, threat model, scenario labels, and target paper template.
+2. Have an independent reviewer validate expected decisions and identify duplicate or policy-leaking scenarios.
+3. Add sandbox tool executors and measure completed legitimate tasks and blocked unsafe side effects.
+4. Repeat each configuration, report environment/version metadata, and estimate uncertainty for latency and outcome rates.
+5. Keep human-authored controlled cases distinct from external real-world prompt datasets and disclose their origin.
+6. Replace author placeholders, verify citations and dataset terms, and compile the final venue-format manuscript.

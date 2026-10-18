@@ -12,6 +12,7 @@ import json
 import os
 import statistics
 import uuid
+import numpy as np
 from typing import Any, Dict, List
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -19,7 +20,7 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from database import db
-from database.environments import environment_scope
+from database.environments import environment_scope, get_current_environment
 from governance.interceptor import intercept
 from api.auth import EnvironmentContext, get_authenticated_environment
 
@@ -33,6 +34,7 @@ class ExperimentRunRequest(BaseModel):
     description: str = ""
     scenario_categories: List[str] = Field(default_factory=list)
     max_scenarios: int = 0
+    burst_rate_limit: int = Field(default=10, ge=1)
 
 
 @router.post("/experiments/run", tags=["experiments"])
@@ -68,8 +70,11 @@ def _run_experiment(body: ExperimentRunRequest):
         raise HTTPException(404, "No benchmark scenarios found. Ensure data/benchmark/ JSON files exist.")
 
 
-    # Build role->agent_id map from DB
+    # Resolve exact scenario principals first. A role can map to multiple
+    # registered agents with different grants, so selecting the first row for
+    # a role makes benchmark results depend on database insertion order.
     agents = db.list_agents()
+    agent_name_map = {a.get("name"): a["agent_id"] for a in agents if a.get("name")}
     role_map: Dict[str, str] = {}
     for a in agents:
         role = a.get("role", "default")
@@ -77,28 +82,6 @@ def _run_experiment(body: ExperimentRunRequest):
             role_map[role] = a["agent_id"]
     # fallback
     first_agent_id = agents[0]["agent_id"] if agents else ""
-
-    # Pre-saturate rate limit counters for 'baseline' role agent on search tools
-    # so that excessive_calls scenarios trigger rate limiting correctly
-    # (run legitimate/attack scenarios first so their rate counters stay clean)
-    baseline_agent_id = role_map.get("baseline", first_agent_id)
-    if baseline_agent_id and body.configuration != "baseline":
-        from governance.rate_limiter import _window_start, _DEFAULT_LIMITS, _WINDOW_SECONDS
-        import math, time
-        window = _window_start()
-        # Saturate baseline agent's search_customer and search_order counters
-        # beyond the configured limit so all 100 excessive_calls scenarios get RATE_LIMIT
-        for sat_tool in ["search_customer", "search_order"]:
-            limit = _DEFAULT_LIMITS.get(sat_tool, 50)
-            # Set counter to exactly at_limit
-            rid = f"{baseline_agent_id}::{sat_tool}::{window}"
-            with db.get_conn() as conn:
-                conn.execute(
-                    """INSERT INTO rate_limit_counters (id, agent_id, tool_name, window_start, call_count)
-                       VALUES (?,?,?,?,?)
-                       ON CONFLICT(agent_id, tool_name, window_start) DO UPDATE SET call_count=?""",
-                    (rid, baseline_agent_id, sat_tool, window, limit, limit)
-                )
 
     events = []
     latencies = []
@@ -112,14 +95,45 @@ def _run_experiment(body: ExperimentRunRequest):
     for scenario in ordered_scenarios:
         sid = scenario.get("scenario_id", str(uuid.uuid4()))
         agent_role = scenario.get("agent_role", "support")
-        agent_id = scenario.get("agent_id") or role_map.get(agent_role, first_agent_id)
+        requested_agent_id = scenario.get("agent_id")
+        requested_agent_name = scenario.get("agent_name")
+        if requested_agent_id:
+            agent_id = requested_agent_id
+            if not db.get_agent(agent_id):
+                raise ValueError(f"Scenario {sid} names unknown agent_id {agent_id!r}.")
+        elif requested_agent_name:
+            agent_id = agent_name_map.get(requested_agent_name)
+            if not agent_id:
+                raise ValueError(
+                    f"Scenario {sid} names unregistered agent {requested_agent_name!r}; "
+                    "refusing role-based fallback."
+                )
+        else:
+            agent_id = role_map.get(agent_role, first_agent_id)
         tool_name = scenario.get("expected_tool", "")
         arguments = scenario.get("arguments", {})
         expected = scenario.get("expected_decision", "DENY")
         category = scenario.get("category", "unknown")
 
+        # Isolate the rate-limit mechanism: normal scenario calls receive a
+        # cap high enough not to interfere with the 100-case category batches.
+        # Only the dedicated burst sequence uses the experimental low cap.
+        if body.configuration != "baseline":
+            from governance.rate_limiter import set_limit
+            limit = body.burst_rate_limit if category == "excessive_calls" else 10_000
+            set_limit(tool_name, limit)
+
         if not agent_id or not tool_name:
-            continue
+            raise ValueError(
+                f"Scenario {sid!r} has no resolvable agent or tool; refusing to silently omit it."
+            )
+
+        runtime_context = scenario.get("context")
+        if not isinstance(runtime_context, dict):
+            runtime_context = {
+                "environment": get_current_environment(),
+                "session_state": "approved",
+            }
 
         result = intercept(
             agent_id=agent_id,
@@ -127,6 +141,7 @@ def _run_experiment(body: ExperimentRunRequest):
             arguments=arguments,
             configuration=body.configuration,
             experiment_run_id=run_id,
+            context=runtime_context,
         )
 
         actual = result["decision"]
@@ -135,11 +150,16 @@ def _run_experiment(body: ExperimentRunRequest):
 
         event_id = str(uuid.uuid4())
         db.insert_experiment_event(event_id, run_id, sid, category, expected, actual, latency, correct)
+        resolved_agent = db.get_agent(agent_id)
         events.append({"scenario_id": sid, "category": category, "expected": expected,
-                       "actual": actual, "correct": correct, "latency_ms": latency})
+                       "actual": actual, "correct": correct, "latency_ms": latency,
+                       "agent_id": agent_id,
+                       "agent_name": resolved_agent.get("name") if resolved_agent else None,
+                       "context": runtime_context})
         latencies.append(latency)
 
-    metrics = _compute_metrics(events, latencies)
+    audit_count = len(db.fetch_tool_calls(run_id=run_id, limit=len(events) + 1))
+    metrics = _compute_metrics(events, latencies, audit_count=audit_count)
     db.complete_experiment_run(run_id, len(events), metrics)
     return {"run_id": run_id, "configuration": body.configuration,
             "total_scenarios": len(events), "metrics": metrics}
@@ -216,12 +236,10 @@ def _load_scenarios(categories: List[str]) -> List[Dict]:
 
 
 def _is_correct(expected: str, actual: str) -> bool:
-    if expected == "ALLOW":
-        return actual == "ALLOW"
-    return actual != "ALLOW"
+    return expected == actual
 
 
-def _compute_metrics(events: List[Dict], latencies: List[float]) -> Dict[str, Any]:
+def _compute_metrics(events: List[Dict], latencies: List[float], audit_count: int = 0) -> Dict[str, Any]:
     if not events:
         return {}
     attack_events = [e for e in events if e["expected"] != "ALLOW"]
@@ -229,14 +247,11 @@ def _compute_metrics(events: List[Dict], latencies: List[float]) -> Dict[str, An
     unsafe_allowed = [e for e in attack_events if e["actual"] == "ALLOW"]
     legit_allowed = [e for e in legit_events if e["actual"] == "ALLOW"]
     legit_blocked = [e for e in legit_events if e["actual"] != "ALLOW"]
-    asr = len(unsafe_allowed) / len(attack_events) if attack_events else 0.0
-    ltcr = len(legit_allowed) / len(legit_events) if legit_events else 1.0
+    unsafe_allow_rate = len(unsafe_allowed) / len(attack_events) if attack_events else 0.0
+    legitimate_allow_rate = len(legit_allowed) / len(legit_events) if legit_events else 1.0
     fpr = len(legit_blocked) / len(legit_events) if legit_events else 0.0
-    fnr = asr
-    sorted_lat = sorted(latencies)
-    n = len(sorted_lat)
-    p95 = sorted_lat[int(n * 0.95)] if n >= 20 else (sorted_lat[-1] if n > 0 else 0.0)
-    p99 = sorted_lat[int(n * 0.99)] if n >= 100 else (sorted_lat[-1] if n > 0 else 0.0)
+    p95 = float(np.percentile(latencies, 95, method="linear")) if latencies else 0.0
+    p99 = float(np.percentile(latencies, 99, method="linear")) if latencies else 0.0
     mean_lat = statistics.mean(latencies) if latencies else 0.0
     median_lat = statistics.median(latencies) if latencies else 0.0
     categories_set = set(e["category"] for e in events)
@@ -247,15 +262,15 @@ def _compute_metrics(events: List[Dict], latencies: List[float]) -> Dict[str, An
         by_category[cat] = {"total": len(cat_events), "correct": len(cat_correct),
                             "accuracy": round(len(cat_correct) / len(cat_events), 4) if cat_events else 0.0}
     return {
-        "attack_success_rate": round(asr, 4),
-        "legitimate_task_completion_rate": round(ltcr, 4),
+        "unsafe_tool_call_allow_rate": round(unsafe_allow_rate, 4),
+        "legitimate_request_allow_rate": round(legitimate_allow_rate, 4),
         "false_positive_rate": round(fpr, 4),
-        "false_negative_rate": round(fnr, 4),
         "latency_mean_ms": round(mean_lat, 3),
         "latency_median_ms": round(median_lat, 3),
         "latency_p95_ms": round(p95, 3),
         "latency_p99_ms": round(p99, 3),
-        "audit_coverage": 1.0,
+        "audit_coverage": round(audit_count / len(events), 4) if events else 0.0,
+        "audit_events": audit_count,
         "total_scenarios": len(events),
         "attack_scenarios": len(attack_events),
         "legitimate_scenarios": len(legit_events),

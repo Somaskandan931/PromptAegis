@@ -1,7 +1,0 @@
-perturbation_class,sample_size,standard_blocked,standard_recall,standard_aer,hardened_blocked,hardened_recall,improvement_delta
-case_alternation,100,76,0.76,0.24,76,0.76,0.0
-comment_fragmentation,100,76,0.76,0.24,76,0.76,0.0
-advanced_sql,100,76,0.76,0.24,76,0.76,0.0
-url_encoding,100,76,0.76,0.24,76,0.76,0.0
-base64_obfuscation,100,72,0.72,0.28,76,0.76,0.04
-overall_aggregate,500,376,0.752,0.248,380,0.76,0.008

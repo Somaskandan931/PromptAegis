@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-16T17:39:40Z",
+  "training_data": {
+    "hackaprompt_train_sample.csv": "271f70307a46882ad202676e8eaad14f1469de9dfbac93e1807b527d13a84142",
+    "toxicchat_train.csv": "e7eca0ba3b5cdbc647e7ec1b51fdfbbe83b2be5a64e594979f3984d456e77bce",
+    "toxicchat_trigger_train.csv": "d2faeabb728fb550c7d7c6988a7a54008f426f7d106d1d1829561332482801de"
+  },
+  "training_sample_size_per_class": 10000,
+  "classifier_sha256": "7be7874c84ea0b6790994e2a212ecb1048bba7db405c468795af7aa0aa9bf976",
+  "threshold_sha256": "e239483579737c631fa3523cc91078e8c8f2d2c676f757f94cc59451e65ac7af",
+  "note": "Model trained only on up to 10,000 real HackAPrompt training prompts and ToxicChat non-toxic/non-jailbreak training prompts."
+}

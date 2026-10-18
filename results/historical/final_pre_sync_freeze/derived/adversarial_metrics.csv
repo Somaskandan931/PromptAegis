@@ -1,6 +1,0 @@
-perturbation_class,sample_size,standard_recall,hardened_recall,improvement_delta,standard_aer
-case_alternation,100,0.5,0.33,-0.17,0.5
-comment_fragmentation,100,0.5,0.33,-0.17,0.5
-advanced_sql,100,0.5,0.33,-0.17,0.5
-url_encoding,100,0.5,0.33,-0.17,0.5
-base64_obfuscation,100,0.0,0.5,0.5,1.0

@@ -7,11 +7,11 @@ import time
 
 import numpy as np
 
-try:
-    from sentence_transformers import SentenceTransformer
-    _HAS_ST = True
-except ImportError:
-    _HAS_ST = False
+# Importing sentence-transformers eagerly imports PyTorch and can add tens of
+# seconds to API startup and test collection. Load it only when an embedding
+# instance is actually requested; auth/governance API users do not need it.
+SentenceTransformer = None
+_ST_IMPORT_ATTEMPTED = False
 
 import config
 
@@ -29,7 +29,15 @@ class Embedder:
     _instance = None
 
     def __init__(self):
-        if _HAS_ST:
+        global SentenceTransformer, _ST_IMPORT_ATTEMPTED
+        if not _ST_IMPORT_ATTEMPTED:
+            _ST_IMPORT_ATTEMPTED = True
+            try:
+                from sentence_transformers import SentenceTransformer as _SentenceTransformer
+                SentenceTransformer = _SentenceTransformer
+            except ImportError:
+                SentenceTransformer = None
+        if SentenceTransformer is not None:
             self.model = SentenceTransformer(config.EMBEDDING_MODEL_NAME)
         else:
             # Fallback so the API still boots in environments where the

@@ -1,5 +1,5 @@
 """
-Governance API — Prompt Aegis 2.0
+Governance API — PromptAegis
 Exposes all governance management and tool interception endpoints (PRD FR-01 to FR-09).
 
 Routes:
@@ -40,6 +40,7 @@ from database.environments import (
     set_current_environment,
 )
 from governance.interceptor import intercept
+from governance.param_validator import validate_contract_definition
 
 router = APIRouter()
 
@@ -70,6 +71,7 @@ class ToolCreate(BaseModel):
     risk_level: str = Field(..., pattern="^(low|medium|high)$")
     requires_approval: bool = False
     description: str = ""
+    argument_contract: Optional[Dict[str, Any]] = None
 
 class PermissionCreate(BaseModel):
     agent_id: str
@@ -97,6 +99,7 @@ class InterceptRequest(BaseModel):
     configuration: str = "full"
     experiment_run_id: str = ""
     source: str = "runtime"
+    context: Dict[str, Any] = Field(default_factory=dict)
 
 class RateLimitSet(BaseModel):
     limit: int = Field(..., gt=0)
@@ -253,9 +256,14 @@ def register_tool(
     env = _resolve_env_context(env_ctx)
     with environment_scope(env.environment_id):
         tool_id = f"tool_{uuid.uuid4().hex[:8]}"
+        if body.argument_contract is not None:
+            try:
+                validate_contract_definition(body.argument_contract)
+            except ValueError as exc:
+                raise HTTPException(422, f"Invalid argument_contract: {exc}") from exc
         try:
             tool = db.create_tool(tool_id, body.name, body.category, body.risk_level,
-                                  body.requires_approval, body.description)
+                                  body.requires_approval, body.description, body.argument_contract)
             return tool
         except Exception as e:
             if "UNIQUE constraint" in str(e):
@@ -429,6 +437,7 @@ def intercept_tool_call(
             user_id=body.user_id,
             configuration=body.configuration,
             experiment_run_id=body.experiment_run_id,
+            context=body.context,
         )
         if isinstance(result, dict):
             result["environment_id"] = env.environment_id
@@ -579,7 +588,7 @@ def seed_defaults(env_ctx: EnvironmentContext = Depends(get_authenticated_enviro
             detail={
                 "error": "SEEDING_FORBIDDEN",
                 "message": (
-                    f"Seeding synthetic benchmark artifacts is strictly restricted to the 'research_benchmark' environment. "
+                    f"Loading controlled research fixtures is strictly restricted to the 'research_benchmark' environment. "
                     f"Target environment '{env.environment_id}' prohibits synthetic benchmark seeding."
                 ),
                 "target_environment": env.environment_id,

@@ -44,7 +44,7 @@ def _normalize_value(val: str) -> str:
     """
     Keyword-agnostic parameter canonicalization:
     - Bounded URL percent-decoding (up to 2 passes to handle nested encoding)
-    - Base64 payload decoding for explicit markers (base64:...) or standalone base64 tokens
+    - Base64 payload decoding only for explicit markers (base64:...)
     - SQL inline comment fragmentation stripping (/* ... */)
     Does NOT use target-leaked SQL keyword sniffing.
     """
@@ -64,10 +64,6 @@ def _normalize_value(val: str) -> str:
     # 2. Base64 payload decoding (keyword-agnostic)
     if "base64:" in s:
         s = re.sub(r"base64:([A-Za-z0-9+/=]+)", lambda m: _safe_b64_decode(m.group(1)), s)
-    else:
-        # Also decode standalone base64 tokens of length >= 8 that look valid
-        b64_pattern = r"\b[A-Za-z0-9+/]{8,}={0,2}\b"
-        s = re.sub(b64_pattern, lambda m: _safe_b64_decode(m.group(0)), s)
 
     # 3. Strip SQL comment fragmentation (e.g. /**/ or /*...*/)
     s = re.sub(r"/\*.*?\*/", " ", s)
@@ -80,6 +76,7 @@ def evaluate_policies(
     arguments: Dict[str, Any],
     agent_role: str = "default",
     hardened: bool = False,
+    context: Optional[Dict[str, Any]] = None,
 ) -> Tuple[str, str, str]:
     """
     Evaluate all enabled policies in priority order.
@@ -90,6 +87,7 @@ def evaluate_policies(
         arguments: Tool invocation arguments
         agent_role: Role of the agent
         hardened: If True, applies pre-inspection normalization (URL/Base64/SQL comments)
+        context: Trusted runtime attributes, such as session state or environment label.
 
     Returns:
         (action, reason, policy_id)
@@ -98,6 +96,7 @@ def evaluate_policies(
     """
     policies = db.list_policies(enabled_only=True)
     agent = db.get_agent(agent_id)
+    runtime_context = context or {}
 
     for policy in policies:
         pid = policy["policy_id"]
@@ -180,8 +179,19 @@ def evaluate_policies(
             continue
 
         elif ptype == "context_based":
-            # Simple context check: e.g., tool only allowed during certain hours
-            # For research MVP, this always passes through
+            # Example: {"required": {"session_state": "approved"},
+            # "allowed_values": {"environment": ["research_benchmark"]}}
+            required = cond.get("required", {})
+            allowed_values = cond.get("allowed_values", {})
+            if not isinstance(required, dict) or not isinstance(allowed_values, dict):
+                continue
+            for key, expected in required.items():
+                if runtime_context.get(key) != expected:
+                    return action, f"CONTEXT_REQUIREMENT_FAILED:{key}", pid
+            for key, permitted in allowed_values.items():
+                permitted_values = permitted if isinstance(permitted, list) else [permitted]
+                if runtime_context.get(key) not in permitted_values:
+                    return action, f"CONTEXT_NOT_ALLOWED:{key}", pid
             continue
 
         elif ptype == "rate_based":

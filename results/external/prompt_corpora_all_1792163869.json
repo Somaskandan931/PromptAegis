@@ -1,0 +1,131 @@
+{
+  "dataset_family": "local prompt corpora",
+  "created_at": "2026-10-16T15:17:49Z",
+  "detector_mode": "frozen persisted detector and configured semantic index",
+  "detector_artifacts": {
+    "classifier_backend": "LogisticRegression",
+    "classifier_sha256": "057d0b286631ec4017cdd56752566ff3bd355adf928ca914eac1cbfe42d8592a",
+    "threshold_sha256": "e76d3f5ea251097b7912e443a1c37ca76e9ba544ae51f602e16f069c0fdd420b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "method_note": "CSV prompts are screened locally. External-transfer headline metrics use only HackAPrompt attacks and Alpaca benign prompts. In-distribution sources and harmful-content rows are reported separately and must not be pooled into that claim.",
+  "sources": [
+    {
+      "file": "attacks.csv",
+      "label": "attack",
+      "role": "in_distribution_attack",
+      "status": "complete",
+      "sha256": "51a0d25ea021928b65dc76a142e67d06733cf273027b7c10e716f543cd64dfa5",
+      "total": 1207,
+      "actions": {
+        "block": 106,
+        "sanitize": 1096,
+        "pass": 5
+      },
+      "tiers": {
+        "HIGH": 106,
+        "MEDIUM": 1096,
+        "LOW": 5
+      },
+      "flagged": 1202,
+      "attack_detection_rate": 0.995857497928749
+    },
+    {
+      "file": "benign.csv",
+      "label": "benign",
+      "role": "in_distribution_benign",
+      "status": "complete",
+      "sha256": "221fc364873cc4743f41b7aa808b83822b2de0229924bbac79fefaa2831f8871",
+      "total": 2510,
+      "actions": {
+        "pass": 2510
+      },
+      "tiers": {
+        "SAFE": 2503,
+        "LOW": 7
+      },
+      "flagged": 0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "file": "trigger_benign.csv",
+      "label": "benign",
+      "role": "in_distribution_trigger_benign",
+      "status": "complete",
+      "sha256": "3b2c157902754f3c2e980d6d10679348494c35e0f80c02047f2c7cec499546ce",
+      "total": 50,
+      "actions": {
+        "pass": 50
+      },
+      "tiers": {
+        "SAFE": 50
+      },
+      "flagged": 0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "file": "hackaprompt_attacks.csv",
+      "label": "attack",
+      "role": "external_transfer_attack",
+      "status": "complete",
+      "sha256": "50a70d0ae749a6071101c5a5e345f1a4ac96174095b41fb941af96fb5b2c0e64",
+      "total": 393201,
+      "actions": {
+        "pass": 371056,
+        "sanitize": 16140,
+        "block": 6005
+      },
+      "tiers": {
+        "SAFE": 167283,
+        "LOW": 203773,
+        "MEDIUM": 16140,
+        "HIGH": 6005
+      },
+      "flagged": 22145,
+      "attack_detection_rate": 0.056319795727884724
+    },
+    {
+      "file": "alpaca_benign.csv",
+      "label": "benign",
+      "role": "external_transfer_benign",
+      "status": "complete",
+      "sha256": "49187b739aeba8c0081111f04e88e2a8b371b3c3b6ad748499f6b9923f533694",
+      "total": 52002,
+      "actions": {
+        "pass": 52000,
+        "sanitize": 2
+      },
+      "tiers": {
+        "SAFE": 51860,
+        "LOW": 140,
+        "MEDIUM": 2
+      },
+      "flagged": 2,
+      "false_positive_rate": 3.846005922849121e-05
+    },
+    {
+      "file": "harmful_behaviors.csv",
+      "label": "attack",
+      "role": "auxiliary_harmful_content",
+      "status": "complete",
+      "sha256": "ec97e0380ce14ed56407ac2eee48a6ef55181841dcfef923cc4fcd52808c97cc",
+      "total": 100,
+      "actions": {
+        "sanitize": 97,
+        "block": 3
+      },
+      "tiers": {
+        "MEDIUM": 97,
+        "HIGH": 3
+      },
+      "flagged": 100,
+      "attack_detection_rate": 1.0
+    }
+  ],
+  "external_transfer_headline": {
+    "attack_source": "hackaprompt_attacks.csv",
+    "benign_source": "alpaca_benign.csv",
+    "attack_detection_rate": 0.056319795727884724,
+    "false_positive_rate": 3.846005922849121e-05
+  }
+}

@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS tools (
     risk_level TEXT NOT NULL CHECK(risk_level IN ('low', 'medium', 'high')),
     requires_approval INTEGER DEFAULT 0,
     description TEXT DEFAULT '',
+    argument_contract_json TEXT,
     created_at REAL NOT NULL
 );
 
@@ -97,7 +98,8 @@ CREATE TABLE IF NOT EXISTS tool_calls (
     risk_score REAL NOT NULL DEFAULT 0.0,
     latency_ms REAL DEFAULT 0.0,
     experiment_run_id TEXT DEFAULT '',
-    configuration TEXT DEFAULT 'full'
+    configuration TEXT DEFAULT 'full',
+    context_json TEXT NOT NULL DEFAULT '{}'
 );
 CREATE INDEX IF NOT EXISTS idx_tool_calls_timestamp ON tool_calls(timestamp);
 CREATE INDEX IF NOT EXISTS idx_tool_calls_agent ON tool_calls(agent_id);
@@ -151,6 +153,15 @@ def init_db(env: Optional[str] = None):
         conn.execute("PRAGMA journal_mode=WAL;")
         conn.execute("PRAGMA foreign_keys=ON;")
         conn.executescript(_SCHEMA)
+        # Existing research databases predate context-aware policies. SQLite
+        # cannot add the column through CREATE TABLE IF NOT EXISTS, so retain
+        # prior audit records and migrate them in place.
+        columns = {row[1] for row in conn.execute("PRAGMA table_info(tool_calls)").fetchall()}
+        if "context_json" not in columns:
+            conn.execute("ALTER TABLE tool_calls ADD COLUMN context_json TEXT NOT NULL DEFAULT '{}'")
+        tool_columns = {row[1] for row in conn.execute("PRAGMA table_info(tools)").fetchall()}
+        if "argument_contract_json" not in tool_columns:
+            conn.execute("ALTER TABLE tools ADD COLUMN argument_contract_json TEXT")
         conn.commit()
         conn.close()
 
@@ -164,7 +175,6 @@ def get_conn(env: Optional[str] = None):
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL;")
     conn.execute("PRAGMA foreign_keys=ON;")
     try:
         yield conn
@@ -285,34 +295,48 @@ _RISK_SCORES = {"low": 1.0, "medium": 4.0, "high": 8.0}
 
 
 def create_tool(tool_id: str, name: str, category: str, risk_level: str,
-                requires_approval: bool = False, description: str = "") -> Dict[str, Any]:
+                requires_approval: bool = False, description: str = "",
+                argument_contract: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     import time
     ts = time.time()
     with get_conn() as conn:
         conn.execute(
-            "INSERT INTO tools (tool_id, name, category, risk_level, requires_approval, description, created_at) VALUES (?,?,?,?,?,?,?)",
-            (tool_id, name, category, risk_level, int(requires_approval), description, ts)
+            "INSERT INTO tools (tool_id, name, category, risk_level, requires_approval, description, argument_contract_json, created_at) VALUES (?,?,?,?,?,?,?,?)",
+            (tool_id, name, category, risk_level, int(requires_approval), description,
+             json.dumps(argument_contract, sort_keys=True) if argument_contract is not None else None, ts)
         )
     return {"tool_id": tool_id, "name": name, "category": category, "risk_level": risk_level,
-            "requires_approval": requires_approval, "description": description, "created_at": ts}
+            "requires_approval": requires_approval, "description": description,
+            "argument_contract": argument_contract, "created_at": ts}
 
 
 def list_tools() -> List[Dict]:
     with get_conn() as conn:
         rows = conn.execute("SELECT * FROM tools ORDER BY risk_level").fetchall()
-        return [dict(r) for r in rows]
+        return [_decode_tool_contract(dict(r)) for r in rows]
 
 
 def get_tool(tool_id: str) -> Optional[Dict]:
     with get_conn() as conn:
         row = conn.execute("SELECT * FROM tools WHERE tool_id=?", (tool_id,)).fetchone()
-        return dict(row) if row else None
+        return _decode_tool_contract(dict(row)) if row else None
 
 
 def get_tool_by_name(name: str) -> Optional[Dict]:
     with get_conn() as conn:
         row = conn.execute("SELECT * FROM tools WHERE name=?", (name,)).fetchone()
-        return dict(row) if row else None
+        return _decode_tool_contract(dict(row)) if row else None
+
+
+def _decode_tool_contract(row: Dict[str, Any]) -> Dict[str, Any]:
+    raw = row.pop("argument_contract_json", None)
+    try:
+        row["argument_contract"] = json.loads(raw) if raw else None
+    except (TypeError, json.JSONDecodeError):
+        # Invalid persisted contracts are surfaced as absent and consequently
+        # fail closed at the gateway.
+        row["argument_contract"] = None
+    return row
 
 
 def delete_tool(tool_id: str) -> bool:
@@ -414,18 +438,29 @@ def delete_policy(policy_id: str) -> bool:
 def insert_tool_call(call_id: str, agent_id: str, tool_name: str, arguments: dict,
                      decision: str, reason: str, risk_score: float, policy_id: str = "",
                      user_id: str = "", latency_ms: float = 0.0,
-                     experiment_run_id: str = "", configuration: str = "full") -> None:
+                     experiment_run_id: str = "", configuration: str = "full",
+                     context: Optional[dict] = None) -> None:
     import time
     with get_conn() as conn:
         conn.execute(
             """INSERT INTO tool_calls (call_id, timestamp, agent_id, user_id, tool_name,
                arguments_json, decision, reason, policy_id, risk_score, latency_ms,
-               experiment_run_id, configuration)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+               experiment_run_id, configuration, context_json)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (call_id, time.time(), agent_id, user_id, tool_name,
              json.dumps(arguments), decision, reason, policy_id, risk_score,
-             latency_ms, experiment_run_id, configuration)
+             latency_ms, experiment_run_id, configuration, json.dumps(context or {}))
         )
+
+
+def update_tool_call_outcome(call_id: str, decision: str, reason: str) -> bool:
+    """Correct the persisted outcome if a later audit-chain write fails."""
+    with get_conn() as conn:
+        cur = conn.execute(
+            "UPDATE tool_calls SET decision=?, reason=? WHERE call_id=?",
+            (decision, reason, call_id),
+        )
+        return cur.rowcount == 1
 
 
 def fetch_tool_calls(agent_id: Optional[str] = None, decision: Optional[str] = None,
@@ -449,6 +484,7 @@ def fetch_tool_calls(agent_id: Optional[str] = None, decision: Optional[str] = N
         for r in rows:
             d = dict(r)
             d["arguments"] = json.loads(d.pop("arguments_json", "{}"))
+            d["context"] = json.loads(d.pop("context_json", "{}"))
             result.append(d)
         return result
 

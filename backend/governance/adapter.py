@@ -46,6 +46,7 @@ class AgentAdapter:
         tool_name: str,
         arguments: Dict[str, Any],
         user_id: Optional[str] = None,
+        context: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Convert an agent tool request into the standardized PRD §12.1 format."""
         req = StandardToolRequest(
@@ -55,7 +56,9 @@ class AgentAdapter:
             arguments=arguments,
             timestamp=datetime.now(timezone.utc).isoformat(),
         )
-        return req.model_dump()
+        payload = req.model_dump()
+        payload["context"] = context or {}
+        return payload
 
     def execute_tool_call(
         self,
@@ -64,6 +67,7 @@ class AgentAdapter:
         user_id: Optional[str] = None,
         configuration: Optional[str] = None,
         experiment_run_id: str = "",
+        context: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """
         Standardizes the request, routes it through the Prompt Aegis interceptor,
@@ -74,7 +78,7 @@ class AgentAdapter:
 
         # Authorization uses the exact registered identifier. Stripping a
         # namespace could map distinct tools onto the same permission record.
-        standard_req = self.format_request(tool_name, arguments, user_id=uid)
+        standard_req = self.format_request(tool_name, arguments, user_id=uid, context=context)
 
         result = intercept(
             agent_id=self.agent_id,
@@ -83,6 +87,7 @@ class AgentAdapter:
             user_id=uid,
             configuration=config,
             experiment_run_id=experiment_run_id,
+            context=context,
         )
 
         return {

@@ -1,7 +1,18 @@
-# Python
+# =============================================================================
+# PromptAegis .gitignore
+# Keep: source, benchmark definitions, manifests, cited raw results, audit
+#       chains (results/study/**/*.jsonl), references, paper figures, docs.
+# Ignore: environments, databases, secrets, caches, build output, large
+#         downloaded datasets, LaTeX build files, local review packages.
+# =============================================================================
+
+# --- Python ------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg
+*.egg-info/
+.eggs/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -10,10 +21,11 @@ __pycache__/
 .hypothesis/
 .ipynb_checkpoints/
 .coverage
+.coverage.*
 coverage.xml
 htmlcov/
 
-# Scratch & temporary artifacts
+# --- Scratch & temporary artifacts -------------------------------------------
 scratch/
 tmp/
 temp/
@@ -23,54 +35,83 @@ output/
 *.swo
 *.pid
 
-# Virtual environments
+# --- Virtual environments ----------------------------------------------------
 .venv/
 venv/
 env/
 
-# Environment variables
+# --- Environment variables and secrets ---------------------------------------
 .env
 .env.*
 !.env.example
 !backend/.env.example
 !frontend/.env.example
+backend/.env.local
+frontend/.env.*.local
+# Per-install API credential registry (contains local test/live tokens).
+# If this file was ever committed, also run:
+#   git rm --cached -- backend/database/credentials.json
+# and rotate any real key; history is not rewritten by .gitignore.
+backend/database/credentials.json
 
-# Databases
+# --- Databases ---------------------------------------------------------------
 *.db
+*.db-*
 *.sqlite3
 *.sqlite
-*.sqlite-journal
-*.sqlite-wal
-*.sqlite-shm
-backend/database/*.db-*
+*.sqlite-*
 
-# Build
+# --- Build output ------------------------------------------------------------
 build/
 dist/
-*.egg-info/
-
-# Node
-node_modules/
-frontend/.vite/
 frontend/dist/
 
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-*.bak
-
-# Logs
-*.log
+# --- Node --------------------------------------------------------------------
+node_modules/
+frontend/.vite/
+*.tsbuildinfo
+.eslintcache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Model checkpoints
+# --- LaTeX / Overleaf build files (the .tex, .bib, figures and PDF are kept) --
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.spl
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*-blx.bib
+
+# --- IDE / editor ------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+.claude/
+
+# --- OS ----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.bak
+
+# --- Logs --------------------------------------------------------------------
+*.log
+
+# --- Model checkpoints and caches --------------------------------------------
 *.pt
 *.pth
 *.ckpt
@@ -87,28 +128,45 @@ backend/models/downloads/
 *.faiss
 *.index
 
-# Reports
+# --- Archives (source zips, exports, uploads; never commit these) -------------
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# --- Reports -----------------------------------------------------------------
 backend/reports.zip
 
-# Datasets
+# --- Datasets ----------------------------------------------------------------
 backend/data/*.parquet
 backend/data/*.zip
 # Large benchmark corpus; keep locally, but do not commit to GitHub.
 backend/data/hackaprompt_attacks.csv
+# Retired generated/hand-authored seed corpora are not part of research runs.
+backend/data/alpaca_benign.csv
+backend/data/attacks.csv
+backend/data/benign.csv
+backend/data/trigger_benign.csv
 # External source downloads and intermediate corpus builds are reproducible
 # locally and can be much larger than GitHub's file-size limit.
 backend/data/external/
 backend/data/downloads/
+# Prepared train/test splits and manifests are reproducible from source data.
 backend/data/intermediate/
 
 # Keep directory structure
 !backend/data/.gitkeep
 
-# Evaluation outputs
+# --- Evaluation outputs (local only) -----------------------------------------
 backend/results/
 backend/outputs/
 backend/cache/
 
-# Local runtime state
-backend/.env.local
-frontend/.env.*.local
+# --- Local blinded label-review packages and reviewer annotations ------------
+results/review/
+
+# --- Optional: local holding area created by paper/cleanup_results.ps1 -------
+# It receives superseded and contaminated runs. Leave this commented out if you
+# want that execution record committed; uncomment to keep it local only.
+# results_archive/

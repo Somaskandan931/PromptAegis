@@ -63,23 +63,15 @@ CLASS_WEIGHT_CANDIDATES = [
     ("3x attack", {0: 1.0, 1: 3.0}),
 ]
 
-# Precision floor for the "recall-optimal" threshold pick (recommendation
-# #1 + #3): among thresholds that keep benign precision at or above this,
-# choose the one with the highest recall. This keeps the false-positive
-# rate bounded instead of chasing recall unconditionally.
-MIN_ACCEPTABLE_PRECISION = 0.90
+# Constrain false positives directly on the benign development examples.
+# Precision depends on the attack prevalence in the chosen split, while FPR
+# is interpretable as the fraction of benign prompts incorrectly flagged.
+MAX_ACCEPTABLE_FPR = 0.01
 
 # ---------------------------------------------------------------------------
-# Attack-category taxonomy (review feedback: attacks.csv mixes genuine
-# instruction-override / prompt-injection phrasing (HackAPrompt levels,
-# Developer Mode Jailbreak, Instruction Override, Persona Hijack, System
-# Prompt Leak, Safety Bypass, Credential Exfiltration) with JBB-Behaviors
-# rows, which are harmful-CONTENT requests ("write malware", "explain
-# identity theft") rather than attempts to override the model's
-# instructions. Both are adversarial and both belong in the training set,
-# but reporting a single blended accuracy/recall number overstates what
-# "prompt injection detection" means. These maps let evaluation report
-# recall separately per category instead of hiding the split.
+# The active attack training partition contains HackAPrompt submissions.
+# Keep the harmful-content taxonomy available for internal development
+# checks, but do not mix unrelated harmful-request rows into this study.
 # ---------------------------------------------------------------------------
 PROMPT_INJECTION_CLUSTERS = {
     "Developer Mode Jailbreak",
@@ -114,7 +106,7 @@ def _categorize(cluster_name):
         return "prompt_injection"
     if name in HARMFUL_CONTENT_CLUSTERS:
         return "harmful_content_request"
-    if name in ("benign.csv", "trigger_benign.csv"):
+    if name in ("toxicchat_train.csv", "toxicchat_trigger_train.csv"):
         return "benign"
     return "unlabeled"
 
@@ -126,11 +118,7 @@ def _load_column(path: str, col: str = "text"):
 
 
 def _stratified_sample_df(df, group_col, n, random_state=RANDOM_STATE):
-    """Downsamples a dataframe to at most n rows, spread proportionally
-    across group_col so small-but-important groups (e.g. the 10-row
-    harmful-content clusters buried inside 393k HackAPrompt rows) don't
-    get wiped out by a plain df.sample(n). Every group keeps at least 1
-    row (capped at its own size) if the group exists at all."""
+    """Downsample while keeping source-level groups represented when possible."""
     if len(df) <= n:
         return df
     groups = df.groupby(group_col, dropna=False)
@@ -191,8 +179,7 @@ def _featurize(texts, label, semantic_engine, clusters=None):
     for inspection (recommendation #4).
 
     Uses analyze_batch() (one batched SBERT call) instead of calling
-    analyze() per row -- with large corpora (e.g. the full HackAPrompt
-    dataset merged into attacks.csv), one-at-a-time encoding is the
+    analyze() per row -- with larger corpora, one-at-a-time encoding is the
     dominant cost and can turn a few-minute run into a multi-hour one.
     """
     clusters = clusters if clusters is not None else [None] * len(texts)
@@ -211,12 +198,7 @@ def _featurize(texts, label, semantic_engine, clusters=None):
 
 
 def build_dataset(sample_size=None):
-    """sample_size: if set, downsamples the attack corpus (stratified by
-    cluster_name so the tiny harmful-content clusters survive) and the
-    benign corpus to roughly this many rows each BEFORE any featurizing
-    or SBERT encoding happens. attacks.csv alone is ~393k rows, so
-    embedding it in full is what makes a run take a long time -- pass
-    --fast or --sample-size N for a quick smoke-test run."""
+    """Load configured real corpora and split them before embedding."""
     attacks_df = pd.read_csv(config.ATTACK_CORPUS_PATH, low_memory=False)
     if sample_size:
         attacks_df = _stratified_sample_df(attacks_df, "cluster_name", sample_size)
@@ -256,9 +238,9 @@ def build_dataset(sample_size=None):
         y_train += ys
 
     for texts, label, clusters, source in [
-        (test_attacks, 1, test_attack_clusters, "attacks.csv"),
-        (test_benign, 0, None, "benign.csv"),
-        (test_trigger, 0, None, "trigger_benign.csv"),
+        (test_attacks, 1, test_attack_clusters, "hackaprompt_train_sample.csv"),
+        (test_benign, 0, None, "toxicchat_train.csv"),
+        (test_trigger, 0, None, "toxicchat_trigger_train.csv"),
     ]:
         clusters = clusters if clusters is not None else [source] * len(texts)
         xs, ys, txt, clu = _featurize(texts, label, semantic_engine, clusters)
@@ -290,26 +272,27 @@ def _print_threshold_sweep(y_test, probs):
     cutoff, sweep thresholds and show the precision/recall/F1 trade-off so
     the right operating point can be picked deliberately."""
     print("\nThreshold sweep (benign=negative, attack=positive):")
-    print(f"{'threshold':>10} {'precision':>10} {'recall':>10} {'f1':>8}")
+    print(f"{'threshold':>10} {'precision':>10} {'recall':>10} {'f1':>8} {'benign_fpr':>12}")
     for t in np.arange(0.30, 0.71, 0.05):
         p, r, f1 = _metrics_at_threshold(y_test, probs, t)
-        print(f"{t:>10.2f} {p:>10.3f} {r:>10.3f} {f1:>8.3f}")
+        benign = y_test == 0
+        fpr = float(np.mean(probs[benign] >= t)) if np.any(benign) else 0.0
+        print(f"{t:>10.2f} {p:>10.3f} {r:>10.3f} {f1:>8.3f} {fpr:>12.3f}")
 
 
-def _select_threshold(y_test, probs, min_precision=MIN_ACCEPTABLE_PRECISION):
-    """Picks the classifier's own decision threshold: the highest-recall
-    point on the PR curve that still keeps precision >= min_precision. If
-    no threshold clears that precision bar (small/noisy test sets), falls
-    back to the F1-maximizing threshold instead of silently returning
-    nothing useful."""
+def _select_threshold(y_test, probs, max_fpr=MAX_ACCEPTABLE_FPR):
+    """Choose highest recall while keeping benign development FPR <= max_fpr."""
     precisions, recalls, thresholds = precision_recall_curve(y_test, probs)
-    # precision_recall_curve returns len(thresholds) == len(precisions) - 1
     precisions, recalls = precisions[:-1], recalls[:-1]
+    benign = y_test == 0
+    if not np.any(benign):
+        raise ValueError("Threshold calibration requires benign development examples.")
+    fprs = np.array([np.mean(probs[benign] >= t) for t in thresholds])
 
-    eligible = [i for i in range(len(thresholds)) if precisions[i] >= min_precision]
+    eligible = [i for i in range(len(thresholds)) if fprs[i] <= max_fpr]
     if eligible:
         best_i = max(eligible, key=lambda i: recalls[i])
-        reason = f"highest recall with precision >= {min_precision:.2f}"
+        reason = f"highest recall with benign FPR <= {max_fpr:.2%}"
     else:
         f1s = [
             2 * precisions[i] * recalls[i] / (precisions[i] + recalls[i])
@@ -317,9 +300,9 @@ def _select_threshold(y_test, probs, min_precision=MIN_ACCEPTABLE_PRECISION):
             for i in range(len(thresholds))
         ]
         best_i = int(np.argmax(f1s))
-        reason = f"no threshold reached precision >= {min_precision:.2f}; used max-F1 instead"
+        reason = f"no threshold met benign FPR <= {max_fpr:.2%}; used max-F1 instead"
 
-    return float(thresholds[best_i]), float(precisions[best_i]), float(recalls[best_i]), reason
+    return float(thresholds[best_i]), float(precisions[best_i]), float(recalls[best_i]), float(fprs[best_i]), reason
 
 
 def _inspect_false_negatives(y_test, preds, test_texts, test_clusters, limit=15):
@@ -337,7 +320,7 @@ def _inspect_false_negatives(y_test, preds, test_texts, test_clusters, limit=15)
         print(f"  {cluster or 'unlabeled'}: {count}")
 
     category_counts = Counter(_categorize(test_clusters[i]) for i in fn_idx)
-    print("By category (prompt_injection vs harmful_content_request -- see review note above):")
+    print("By source attack category:")
     for category, count in category_counts.most_common():
         print(f"  {category}: {count}")
 
@@ -371,10 +354,7 @@ def _category_breakdown(y_test, preds, test_clusters):
         recall = stats["caught"] / stats["total"] if stats["total"] else 0.0
         print(f"{cat:<26} {stats['total']:>6} {recall:>8.3f}")
     print(
-        "Note: 'harmful_content_request' rows (JBB-Behaviors) test whether the\n"
-        "gateway also flags harmful-content asks; they are not instruction-\n"
-        "override attempts, so don't cite this recall number as \"prompt\n"
-        "injection detection accuracy\" without noting the split above."
+        "Development diagnostics are not independent external test results."
     )
     return categories
 
@@ -390,19 +370,15 @@ def _fit_and_score(class_weight, X_train, y_train, X_test, y_test):
 
 def _parse_args():
     parser = argparse.ArgumentParser(
-        description="Train the Layer C classifier. By default uses the full "
-                     "corpus (~393k attack rows) -- pass --fast or "
-                     "--sample-size for a quick run."
+        description="Train the classifier on the configured real-data corpora."
     )
     parser.add_argument(
         "--sample-size", type=int, default=None,
-        help="Downsample attacks.csv and benign.csv to at most this many "
-             "rows each (stratified by attack cluster) before training.",
+        help="Downsample the configured attack and benign corpora to at most this many rows each.",
     )
     parser.add_argument(
         "--fast", action="store_true",
-        help="Shortcut for --sample-size 2000, just to sanity-check the "
-             "pipeline end-to-end quickly.",
+        help="Shortcut for --sample-size 2000; do not use for paper results.",
     )
     return parser.parse_args()
 
@@ -457,15 +433,14 @@ def main():
         roc_auc = pr_auc = None
         print("ROC-AUC / PR-AUC skipped: test set only contains one class.")
 
-    # Recommendation #1 + #3: sweep thresholds, then pick the recall-optimal
-    # one (precision floor MIN_ACCEPTABLE_PRECISION) instead of shipping the
-    # default 0.5 cutoff.
+    # Select the highest-recall threshold subject to the benign FPR target.
     _print_threshold_sweep(y_test, probs)
-    best_threshold, best_precision, best_recall, reason = _select_threshold(y_test, probs)
+    best_threshold, best_precision, best_recall, best_fpr, reason = _select_threshold(y_test, probs)
     best_f1 = 2 * best_precision * best_recall / (best_precision + best_recall) if (best_precision + best_recall) else 0.0
     print(
-        f"\nRecall-optimal threshold: {best_threshold:.3f} "
-        f"(precision={best_precision:.3f}, recall={best_recall:.3f}, f1={best_f1:.3f}) -- {reason}"
+        f"\nFPR-constrained threshold: {best_threshold:.3f} "
+        f"(precision={best_precision:.3f}, recall={best_recall:.3f}, f1={best_f1:.3f}, "
+        f"benign_fpr={best_fpr:.3f}) -- {reason}"
     )
 
     tuned_preds = (probs >= best_threshold).astype(int)
@@ -487,7 +462,7 @@ def main():
     category_stats = _category_breakdown(y_test, tuned_preds, test_clusters)
 
     if roc_auc is not None:
-        print("\nFor an IEEE paper (recall-optimal operating point):")
+        print("\nInternal development metrics (not an independent test result):")
         print(f"{'Metric':<12}{'Value':>10}")
         print(f"{'Precision':<12}{best_precision * 100:>9.1f}%")
         print(f"{'Recall':<12}{best_recall * 100:>9.1f}%")
@@ -512,6 +487,8 @@ def main():
             "high_classifier_threshold": round(min(best_threshold + 0.20, 0.95), 4),
             "precision_at_threshold": round(best_precision, 4),
             "recall_at_threshold": round(best_recall, 4),
+            "benign_fpr_at_threshold": round(best_fpr, 4),
+            "max_acceptable_benign_fpr": MAX_ACCEPTABLE_FPR,
             "class_weight": best_name,
             # Review feedback: keep the category split alongside the
             # headline numbers so anyone reading this file later (e.g.

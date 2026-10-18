@@ -69,13 +69,15 @@ DEFAULT_CREDENTIALS = {
         "allowed_roles": ["developer", "admin"],
         "created_at": 1790900000.0,
     },
-    "pa_live_connected_app_key": {
-        "environment_id": "connected_application",
-        "name": "Connected Application Integration Key",
-        "allowed_roles": ["application_gateway", "admin"],
-        "created_at": 1790900000.0,
-    },
 }
+
+# Retired demo token from earlier releases. Deny it even if an old local
+# credentials registry still contains a record for it.
+RETIRED_TEST_CREDENTIALS = {"pa_live_connected_app_key"}
+
+
+def _test_credentials_enabled() -> bool:
+    return os.getenv("PROMPTAEGIS_ALLOW_TEST_CREDENTIALS", "").strip().lower() in {"1", "true", "yes"}
 
 
 from contextlib import contextmanager
@@ -231,16 +233,18 @@ class CredentialManager:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         if not os.path.exists(path):
             with open(path, "w", encoding="utf-8") as fp:
-                json.dump(DEFAULT_CREDENTIALS, fp, indent=2)
+                json.dump(DEFAULT_CREDENTIALS if _test_credentials_enabled() else {}, fp, indent=2)
 
     @classmethod
     def get_credential(cls, token: str) -> Optional[Dict[str, Any]]:
         if not token or not isinstance(token, str):
             return None
+        if token in RETIRED_TEST_CREDENTIALS:
+            return None
 
         # 1. Environment Variable Overrides (for live deployments/containers)
         env_connected = os.getenv("PROMPTAEGIS_CONNECTED_APP_KEY")
-        if env_connected and token == env_connected:
+        if env_connected and len(env_connected) >= 32 and token == env_connected:
             return {
                 "environment_id": "connected_application",
                 "name": "Live Connected Application Key (from ENV)",
@@ -276,13 +280,16 @@ class CredentialManager:
                 creds = json.load(fp)
             if token in creds:
                 rec = dict(creds[token])
-                rec.setdefault("is_test_credential", token in DEFAULT_CREDENTIALS)
+                is_test = bool(rec.get("is_test_credential", token in DEFAULT_CREDENTIALS))
+                if is_test and (not _test_credentials_enabled() or rec.get("environment_id") == "connected_application"):
+                    return None
+                rec["is_test_credential"] = is_test
                 return rec
         except Exception:
             pass
 
         # 3. Deterministic Seed Fallback for Dev/Testing
-        if token in DEFAULT_CREDENTIALS:
+        if token in DEFAULT_CREDENTIALS and _test_credentials_enabled():
             rec = dict(DEFAULT_CREDENTIALS[token])
             rec["is_test_credential"] = True
             return rec

@@ -1289,7 +1289,7 @@ function InvariantsView({ policies, onRefresh, currentEnv }) {
       <div style={styles.viewControlsBar}>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
           <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>Type:</span>
-          {['ALL', 'role_based', 'parameter_validation', 'risk_threshold'].map((t) => (
+          {['ALL', 'role_based', 'tool_based', 'parameter_based', 'context_based'].map((t) => (
             <button
               key={t}
               style={{
@@ -1412,8 +1412,9 @@ function InvariantsView({ policies, onRefresh, currentEnv }) {
                     onChange={(e) => setNewPolicy({ ...newPolicy, policy_type: e.target.value })}
                   >
                     <option value="role_based">role_based</option>
-                    <option value="parameter_validation">parameter_validation</option>
-                    <option value="risk_threshold">risk_threshold</option>
+                    <option value="tool_based">tool_based</option>
+                    <option value="parameter_based">parameter_based</option>
+                    <option value="context_based">context_based</option>
                   </select>
                 </div>
 
@@ -1450,6 +1451,11 @@ function InvariantsView({ policies, onRefresh, currentEnv }) {
                   value={newPolicy.conditionJson}
                   onChange={(e) => setNewPolicy({ ...newPolicy, conditionJson: e.target.value })}
                 />
+                {newPolicy.policy_type === 'context_based' && (
+                  <div style={styles.formHint}>
+                    Example: {`{"required":{"session_state":"approved"},"allowed_values":{"environment":["research_benchmark"]}}`}
+                  </div>
+                )}
               </div>
 
               <div style={styles.formGroup}>
@@ -1871,6 +1877,7 @@ function VerificationLabView({
   const [labAgentId, setLabAgentId] = useState(initialTargetPrincipal?.agent_id || (agents[0]?.agent_id || ''))
   const [labToolName, setLabToolName] = useState(initialTargetCapability || (tools[0]?.name || ''))
   const [labArgsJson, setLabArgsJson] = useState('{\n  "customer_id": "101"\n}')
+  const [labContextJson, setLabContextJson] = useState('{\n  "environment": "research_benchmark",\n  "session_state": "approved"\n}')
   const [labConfig, setLabConfig] = useState('full')
   const [evaluating, setEvaluating] = useState(false)
   const [labResult, setLabResult] = useState(null)
@@ -1914,6 +1921,7 @@ function VerificationLabView({
     setLabResult(null)
 
     let parsedArgs = {}
+    let parsedContext = {}
     try {
       parsedArgs = JSON.parse(labArgsJson)
     } catch (e) {
@@ -1921,9 +1929,16 @@ function VerificationLabView({
       setEvaluating(false)
       return
     }
+    try {
+      parsedContext = JSON.parse(labContextJson)
+    } catch (e) {
+      setLabError(`Invalid trusted context JSON: ${e.message}`)
+      setEvaluating(false)
+      return
+    }
 
     try {
-      const res = await api.intercept(labAgentId, labToolName, parsedArgs, labConfig, 'verification_lab')
+      const res = await api.intercept(labAgentId, labToolName, parsedArgs, labConfig, 'verification_lab', parsedContext)
       setLabResult(res)
       if (onRefresh) onRefresh()
     } catch (err) {
@@ -2074,6 +2089,19 @@ function VerificationLabView({
               value={labArgsJson}
               onChange={(e) => setLabArgsJson(e.target.value)}
             />
+          </div>
+
+          <div style={styles.formGroup}>
+            <label style={styles.formLabel}>Trusted Runtime Context (JSON)</label>
+            <textarea
+              style={styles.textareaMono}
+              rows={5}
+              value={labContextJson}
+              onChange={(e) => setLabContextJson(e.target.value)}
+            />
+            <div style={styles.formHint}>
+              Context policies evaluate authenticated integration attributes, not model-generated prompt text.
+            </div>
           </div>
 
           <button
@@ -3898,5 +3926,12 @@ const styles = {
     fontFamily: 'var(--font-mono)',
     fontSize: 10,
     color: 'var(--text-dim)',
+  },
+  formHint: {
+    marginTop: 6,
+    color: 'var(--text-dim)',
+    fontSize: 11,
+    lineHeight: 1.45,
+    fontFamily: 'var(--font-mono)',
   },
 }

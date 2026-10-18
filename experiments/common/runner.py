@@ -27,7 +27,7 @@ from experiments.common.clock import (
 
 # Backend imports
 from database import db
-from governance.interceptor import intercept
+from governance.legacy_interceptor import intercept
 from governance.rate_limiter import reset_rate_limits
 from api.governance import seed_defaults
 
@@ -182,6 +182,7 @@ class BenchmarkRunner:
                         arguments=args,
                         configuration=interceptor_cfg,
                         experiment_run_id=run_id,
+                        context={"environment": "research_benchmark", "session_state": "approved"},
                     )
                     measured_latency_ms = (time.perf_counter() - t0) * 1000.0
 
@@ -212,6 +213,8 @@ class BenchmarkRunner:
                         "is_correct": 1 if correct else 0,
                         "reason": reason,
                         "policy_id": policy_id,
+                        "audit_call_id": intercept_result.get("call_id", ""),
+                        "context": {"environment": "research_benchmark", "session_state": "approved"},
                         "risk_score": risk_score,
                         "first_blocking_stage": stage,
                         "blocking_mechanism": stage,

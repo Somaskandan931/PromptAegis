@@ -30,8 +30,8 @@ const CONFIGURATIONS = [
     id: 'full',
     label: 'FULL GOVERNANCE',
     tag: 'Complete Reference Monitor',
-    desc: 'Rate limiting + RBAC + canonicalization + policy + risk/approval + structured audit.',
-    details: 'All PromptAegis sequential mediation controls active with comprehensive audit recording.',
+    desc: 'Rate limiting + RBAC + policy + risk/approval + structured audit.',
+    details: 'Composes the configured gateway controls and records each decision in the audit store.',
   },
 ]
 
@@ -70,9 +70,9 @@ const SCENARIO_CATEGORIES = [
   },
   {
     id: 'legitimate',
-    label: 'Legitimate Tasks',
+    label: 'Expected-Allow Requests',
     type: 'Benign',
-    desc: 'Authorized, benign agent tasks to measure task completion and false positives.',
+    desc: 'Controlled proposed calls expected to pass the gateway; no end-to-end task is executed.',
   },
 ]
 
@@ -245,8 +245,8 @@ export default function ExperimentRunner() {
         label: cfg.label,
         tag: cfg.tag,
         run: run || null,
-        asr: m?.asr ?? m?.attack_success_rate,
-        ltcr: m?.ltcr ?? m?.legitimate_task_completion_rate,
+        unsafeAllow: m?.unsafe_tool_call_allow_rate ?? m?.attack_success_rate,
+        legitimateAllow: m?.legitimate_request_allow_rate ?? m?.legitimate_task_completion_rate,
         medianLatency: m?.latency_median_ms ?? m?.latency?.median ?? null,
         totalScenarios: run?.total_scenarios ?? m?.total_scenarios ?? null,
         completedAt: run?.completed_at || run?.started_at,
@@ -263,7 +263,7 @@ export default function ExperimentRunner() {
       <PageHeader
         eyebrow="Scientific Evaluation"
         title="Research Benchmark"
-        subtitle="Evaluate PromptAegis security configurations against controlled attack and legitimate-task scenarios."
+        subtitle="Compare gateway decisions on controlled proposed tool calls; this replay does not execute an LLM or measure task completion."
       />
 
       {/* ── Explanatory Concept Card ── */}
@@ -273,16 +273,16 @@ export default function ExperimentRunner() {
           <span style={styles.explainerTitle}>What does this do?</span>
         </div>
         <p style={styles.explainerBody}>
-          <strong>Research Benchmark</strong> runs the selected benchmark scenarios under a chosen governance configuration and measures <strong>Attack Success Rate (ASR)</strong>, <strong>Legitimate Task Completion Rate (LTCR)</strong>, and execution latency.
+          <strong>Research Benchmark</strong> replays controlled proposed tool calls through the gateway. It measures the <strong>unsafe-call allow rate</strong>, <strong>legitimate-call allow rate</strong>, and gateway latency; it does not execute an LLM or measure end-to-end task completion.
         </p>
         <div style={styles.metricDefinitionRow}>
           <div style={styles.definitionPill}>
-            <span style={styles.defBadgeRed}>ASR (Attack Success Rate)</span>
-            <span style={styles.defText}>Percentage of attack scenarios that bypassed controls. <em>Lower is better (0.0% is optimal).</em></span>
+            <span style={styles.defBadgeRed}>Unsafe-call allow rate</span>
+            <span style={styles.defText}>Share of expected-unsafe proposed calls that the gateway allowed. <em>Lower is better.</em></span>
           </div>
           <div style={styles.definitionPill}>
-            <span style={styles.defBadgeGreen}>LTCR (Legitimate Completion)</span>
-            <span style={styles.defText}>Percentage of authorized benign tasks that executed successfully. <em>Higher is better (100.0% is optimal).</em></span>
+            <span style={styles.defBadgeGreen}>Legitimate-call allow rate</span>
+            <span style={styles.defText}>Share of expected-allowed calls that the gateway allowed. This is not task completion. <em>Higher is better.</em></span>
           </div>
         </div>
       </div>
@@ -505,30 +505,30 @@ export default function ExperimentRunner() {
             </div>
 
             <div style={styles.resultMetricBox}>
-              <div style={styles.resultMetricLabel}>Attack Success Rate (ASR)</div>
+              <div style={styles.resultMetricLabel}>Unsafe Tool-call Allow Rate</div>
               <div
                 style={{
                   ...styles.resultMetricValue,
-                  color: (activeMetrics?.attack_success_rate ?? 0) === 0 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-high, #f87171)',
+                  color: ((activeMetrics?.unsafe_tool_call_allow_rate ?? activeMetrics?.attack_success_rate) ?? 0) === 0 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-high, #f87171)',
                 }}
               >
-                {activeMetrics?.attack_success_rate != null
-                  ? `${(activeMetrics.attack_success_rate * 100).toFixed(1)}%`
+                {(activeMetrics?.unsafe_tool_call_allow_rate ?? activeMetrics?.attack_success_rate) != null
+                  ? `${((activeMetrics.unsafe_tool_call_allow_rate ?? activeMetrics.attack_success_rate) * 100).toFixed(1)}%`
                   : '—'}
               </div>
               <div style={styles.resultMetricHelp}>Lower is better (0.0% is optimal)</div>
             </div>
 
             <div style={styles.resultMetricBox}>
-              <div style={styles.resultMetricLabel}>Legitimate Task Completion (LTCR)</div>
+              <div style={styles.resultMetricLabel}>Legitimate Request Allow Rate</div>
               <div
                 style={{
                   ...styles.resultMetricValue,
-                  color: (activeMetrics?.legitimate_task_completion_rate ?? 1) >= 0.95 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-medium, #facc15)',
+                  color: ((activeMetrics?.legitimate_request_allow_rate ?? activeMetrics?.legitimate_task_completion_rate) ?? 1) >= 0.95 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-medium, #facc15)',
                 }}
               >
-                {activeMetrics?.legitimate_task_completion_rate != null
-                  ? `${(activeMetrics.legitimate_task_completion_rate * 100).toFixed(1)}%`
+                {(activeMetrics?.legitimate_request_allow_rate ?? activeMetrics?.legitimate_task_completion_rate) != null
+                  ? `${((activeMetrics.legitimate_request_allow_rate ?? activeMetrics.legitimate_task_completion_rate) * 100).toFixed(1)}%`
                   : '—'}
               </div>
               <div style={styles.resultMetricHelp}>Higher is better (100.0% is optimal)</div>
@@ -616,8 +616,8 @@ export default function ExperimentRunner() {
             <thead>
               <tr>
                 <th style={styles.th}>Configuration</th>
-                <th style={styles.th}>Attack Success Rate (ASR)</th>
-                <th style={styles.th}>Legitimate Completion (LTCR)</th>
+                <th style={styles.th}>Unsafe Tool-call Allow Rate</th>
+                <th style={styles.th}>Legitimate-call Allow Rate</th>
                 <th style={styles.th}>Median Latency</th>
                 <th style={styles.th}>Evaluated Scenarios</th>
                 <th style={styles.th}>Last Evaluated</th>
@@ -633,30 +633,30 @@ export default function ExperimentRunner() {
                     </div>
                   </td>
                   <td style={styles.td}>
-                    {row.asr != null ? (
+                    {row.unsafeAllow != null ? (
                       <span
                         style={{
                           fontFamily: 'var(--font-mono)',
                           fontWeight: 700,
-                          color: row.asr === 0 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-high, #f87171)',
+                          color: row.unsafeAllow === 0 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-high, #f87171)',
                         }}
                       >
-                        {(row.asr * 100).toFixed(1)}%
+                        {(row.unsafeAllow * 100).toFixed(1)}%
                       </span>
                     ) : (
                       <span style={styles.mutedPlaceholder}>Not yet evaluated</span>
                     )}
                   </td>
                   <td style={styles.td}>
-                    {row.ltcr != null ? (
+                    {row.legitimateAllow != null ? (
                       <span
                         style={{
                           fontFamily: 'var(--font-mono)',
                           fontWeight: 700,
-                          color: row.ltcr >= 0.95 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-medium, #facc15)',
+                          color: row.legitimateAllow >= 0.95 ? 'var(--tier-safe, #4ade80)' : 'var(--tier-medium, #facc15)',
                         }}
                       >
-                        {(row.ltcr * 100).toFixed(1)}%
+                        {(row.legitimateAllow * 100).toFixed(1)}%
                       </span>
                     ) : (
                       <span style={styles.mutedPlaceholder}>—</span>
@@ -704,8 +704,8 @@ export default function ExperimentRunner() {
                 <th style={styles.th}>Run</th>
                 <th style={styles.th}>Configuration</th>
                 <th style={styles.th}>Scenarios</th>
-                <th style={styles.th}>ASR</th>
-                <th style={styles.th}>LTCR</th>
+                <th style={styles.th}>Unsafe-call allow</th>
+                <th style={styles.th}>Legitimate-call allow</th>
                 <th style={styles.th}>Status</th>
                 <th style={styles.th}>Started</th>
                 <th style={styles.th}>Details</th>
@@ -725,8 +725,8 @@ export default function ExperimentRunner() {
               ) : (
                 history.map((run) => {
                   const m = run.metrics ?? run.results ?? {}
-                  const asr = m?.asr ?? m?.attack_success_rate
-                  const ltcr = m?.ltcr ?? m?.legitimate_task_completion_rate
+                  const asr = m?.unsafe_tool_call_allow_rate ?? m?.attack_success_rate
+                  const ltcr = m?.legitimate_request_allow_rate ?? m?.legitimate_task_completion_rate
                   const isExpanded = expandedRunId === run.run_id
                   const detail = expandedData[run.run_id]
                   const displayName = getHumanRunName(run, history)

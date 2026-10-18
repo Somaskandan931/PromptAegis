@@ -1,11 +1,12 @@
 {
-  "medium_classifier_threshold": 0.0387,
-  "high_classifier_threshold": 0.2387,
-  "precision_at_threshold": 0.9,
-  "recall_at_threshold": 0.9238,
-  "class_weight": "balanced",
+  "medium_classifier_threshold": 0.2271,
+  "high_classifier_threshold": 0.4271,
+  "precision_at_threshold": 0.9954,
+  "recall_at_threshold": 0.9532,
+  "benign_fpr_at_threshold": 0.0094,
+  "max_acceptable_benign_fpr": 0.01,
+  "class_weight": "3x attack",
   "recall_by_category": {
-    "harmful_content_request": 0.44,
-    "prompt_injection": 0.9675
+    "prompt_injection": 0.9532
   }
 }

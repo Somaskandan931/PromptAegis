@@ -1,0 +1,119 @@
+{
+  "dataset_family": "local prompt corpora",
+  "created_at": "2026-10-16T13:13:19Z",
+  "detector_mode": "frozen persisted detector and configured semantic index",
+  "method_note": "CSV prompts are screened locally. External-transfer headline metrics use only HackAPrompt attacks and Alpaca benign prompts. In-distribution sources and harmful-content rows are reported separately and must not be pooled into that claim.",
+  "sources": [
+    {
+      "file": "attacks.csv",
+      "label": "attack",
+      "role": "in_distribution_attack",
+      "status": "complete",
+      "total": 1207,
+      "actions": {
+        "block": 106,
+        "sanitize": 1096,
+        "pass": 5
+      },
+      "tiers": {
+        "HIGH": 106,
+        "MEDIUM": 1096,
+        "LOW": 5
+      },
+      "flagged": 1202,
+      "attack_detection_rate": 0.995857497928749
+    },
+    {
+      "file": "benign.csv",
+      "label": "benign",
+      "role": "in_distribution_benign",
+      "status": "complete",
+      "total": 2510,
+      "actions": {
+        "pass": 2510
+      },
+      "tiers": {
+        "SAFE": 2498,
+        "LOW": 12
+      },
+      "flagged": 0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "file": "trigger_benign.csv",
+      "label": "benign",
+      "role": "in_distribution_trigger_benign",
+      "status": "complete",
+      "total": 50,
+      "actions": {
+        "pass": 50
+      },
+      "tiers": {
+        "SAFE": 50
+      },
+      "flagged": 0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "file": "hackaprompt_attacks.csv",
+      "label": "attack",
+      "role": "external_transfer_attack",
+      "status": "complete",
+      "total": 393201,
+      "actions": {
+        "pass": 361016,
+        "sanitize": 26180,
+        "block": 6005
+      },
+      "tiers": {
+        "SAFE": 151246,
+        "LOW": 209770,
+        "MEDIUM": 26180,
+        "HIGH": 6005
+      },
+      "flagged": 32185,
+      "attack_detection_rate": 0.08185381013781755
+    },
+    {
+      "file": "alpaca_benign.csv",
+      "label": "benign",
+      "role": "external_transfer_benign",
+      "status": "complete",
+      "total": 52002,
+      "actions": {
+        "pass": 52000,
+        "sanitize": 2
+      },
+      "tiers": {
+        "SAFE": 51774,
+        "LOW": 226,
+        "MEDIUM": 2
+      },
+      "flagged": 2,
+      "false_positive_rate": 3.846005922849121e-05
+    },
+    {
+      "file": "harmful_behaviors.csv",
+      "label": "attack",
+      "role": "auxiliary_harmful_content",
+      "status": "complete",
+      "total": 100,
+      "actions": {
+        "sanitize": 97,
+        "block": 3
+      },
+      "tiers": {
+        "MEDIUM": 97,
+        "HIGH": 3
+      },
+      "flagged": 100,
+      "attack_detection_rate": 1.0
+    }
+  ],
+  "external_transfer_headline": {
+    "attack_source": "hackaprompt_attacks.csv",
+    "benign_source": "alpaca_benign.csv",
+    "attack_detection_rate": 0.08185381013781755,
+    "false_positive_rate": 3.846005922849121e-05
+  }
+}

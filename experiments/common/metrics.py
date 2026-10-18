@@ -38,6 +38,15 @@ def compute_configuration_metrics(
     total_correct = sum(1 for e in events if e.get("is_correct") == 1)
     overall_accuracy = (total_correct / total) if total > 0 else 0.0
 
+    # PRD utility and observability measures. A successful tool execution is
+    # an ALLOW decision; other outcomes prevent the call from crossing the
+    # protected-tool boundary. Audit coverage comes from interceptor call IDs.
+    executed_tool_calls = sum(1 for e in events if e.get("actual_decision") == "ALLOW")
+    prevented_tool_calls = total - executed_tool_calls
+    audit_events_recorded = sum(1 for e in events if e.get("audit_call_id"))
+    tool_execution_reduction_rate = (prevented_tool_calls / total) if total > 0 else 0.0
+    audit_coverage = (audit_events_recorded / total) if total > 0 else 0.0
+
     # Category breakdown
     categories = sorted(set(e.get("category", "unknown") for e in events))
     by_category: Dict[str, Any] = {}
@@ -90,6 +99,11 @@ def compute_configuration_metrics(
         "false_positive_rate": round(fpr, 6),
         "false_negative_rate": round(asr, 6),
         "overall_accuracy": round(overall_accuracy, 6),
+        "executed_tool_calls": executed_tool_calls,
+        "prevented_tool_calls": prevented_tool_calls,
+        "tool_execution_reduction_rate": round(tool_execution_reduction_rate, 6),
+        "audit_events_recorded": audit_events_recorded,
+        "audit_coverage": round(audit_coverage, 6),
         "latency_mean_ms": round(mean_lat, 3),
         "latency_median_ms": round(p50, 3),
         "latency_p95_ms": round(p95, 3),

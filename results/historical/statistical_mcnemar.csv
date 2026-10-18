@@ -1,7 +1,0 @@
-comparison,b_cfg1_only,c_cfg2_only,chi2,p_value,odds_ratio,cohens_g,significant
-baseline vs full,20,343,285.6309,4.452236603599141e-64,0.0583,0.4449,True
-baseline vs permission,20,320,262.9441,3.915456614089999e-59,0.0625,0.4412,True
-baseline vs policy,20,360,302.4237,9.766504899328358e-68,0.0556,0.4474,True
-permission vs full,0,23,21.0435,4.489784498638631e-06,0.0213,0.5,True
-policy vs full,17,0,15.0588,0.000104211945158089,35.0,0.5,True
-permission vs policy,0,40,38.025,6.984393061522137e-10,0.0123,0.5,True

@@ -1,0 +1,286 @@
+{
+ "baseline": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 25,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 238,
+  "latency_ms": {
+   "median": 4.1395,
+   "p95": 6.51835,
+   "p99": 8.613769999999999,
+   "mean": 4.482254098360656
+  },
+  "latency_original_run_ms": {
+   "median": 65.6725,
+   "p95": 118.01079999999997,
+   "p99": 182.08746999999997,
+   "mean": 73.76699180327869,
+   "n": 244
+  }
+ },
+ "rbac_only": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 13,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 226,
+  "latency_ms": {
+   "median": 4.689,
+   "p95": 6.38785,
+   "p99": 6.8473999999999995,
+   "mean": 4.959741803278687
+  },
+  "latency_original_run_ms": {
+   "median": 85.51650000000001,
+   "p95": 170.75485,
+   "p99": 234.9938699999998,
+   "mean": 96.68315573770492,
+   "n": 244
+  }
+ },
+ "policy_only": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 10,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 215,
+  "latency_ms": {
+   "median": 7.077500000000001,
+   "p95": 10.1385,
+   "p99": 12.149359999999996,
+   "mean": 7.503508196721311
+  },
+  "latency_original_run_ms": {
+   "median": 152.23399999999998,
+   "p95": 241.97365,
+   "p99": 263.10810999999995,
+   "mean": 164.7621598360656,
+   "n": 244
+  }
+ },
+ "schema_only": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 3,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 206,
+  "latency_ms": {
+   "median": 4.023,
+   "p95": 5.946649999999999,
+   "p99": 6.955469999999998,
+   "mean": 4.343631147540983
+  }
+ },
+ "rbac_schema": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 203,
+  "latency_ms": {
+   "median": 4.644,
+   "p95": 6.92575,
+   "p99": 8.511069999999995,
+   "mean": 5.400807377049181
+  }
+ },
+ "rbac_policy": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 10,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 215,
+  "latency_ms": {
+   "median": 8.357,
+   "p95": 13.8177,
+   "p99": 16.38972999999998,
+   "mean": 9.45347131147541
+  }
+ },
+ "full": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 0,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 114,
+  "latency_ms": {
+   "median": 9.6885,
+   "p95": 14.161049999999998,
+   "p99": 17.37543999999999,
+   "mean": 9.67416393442623
+  },
+  "latency_original_run_ms": {
+   "median": 190.435,
+   "p95": 281.79705,
+   "p99": 312.7536399999998,
+   "mean": 187.2984631147541,
+   "n": 244
+  }
+ },
+ "full_minus_rbac": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 0,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 114,
+  "latency_ms": {
+   "median": 9.189499999999999,
+   "p95": 13.779,
+   "p99": 15.953309999999991,
+   "mean": 9.294762295081968
+  }
+ },
+ "full_minus_schema": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 10,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 0,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 134,
+  "latency_ms": {
+   "median": 10.313,
+   "p95": 16.49745,
+   "p99": 23.50464999999997,
+   "mean": 11.094254098360654
+  }
+ },
+ "full_minus_policy": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 0,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 122,
+  "latency_ms": {
+   "median": 6.615,
+   "p95": 9.07695,
+   "p99": 9.88967,
+   "mean": 6.708471311475409
+  }
+ },
+ "full_minus_rate": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 0,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 189,
+  "latency_ms": {
+   "median": 8.4125,
+   "p95": 12.03355,
+   "p99": 14.888689999999993,
+   "mean": 8.773602459016393
+  }
+ },
+ "full_minus_approval": {
+  "attack_scenarios": 49,
+  "asr_unsafe": 0,
+  "approval_scenarios": 6,
+  "approval_bypass_unsafe": 4,
+  "benign_scenarios": 39,
+  "benign_false_block": 0,
+  "task_checks": 43,
+  "task_checks_passed": 43,
+  "calls": 244,
+  "executed_calls": 120,
+  "latency_ms": {
+   "median": 10.288499999999999,
+   "p95": 14.8203,
+   "p99": 20.754729999999988,
+   "mean": 10.289950819672132
+  }
+ },
+ "_stage_attribution_full": {
+  "legitimate": {
+   "none": 30
+  },
+  "negative_control": {
+   "none": 9
+  },
+  "unauthorized_tool": {
+   "rbac": 6
+  },
+  "prompt_injection": {
+   "rbac": 6
+  },
+  "privilege_escalation": {
+   "schema": 6
+  },
+  "parameter_manipulation": {
+   "schema": 23
+  },
+  "context_sensitive": {
+   "policy": 8
+  },
+  "approval_required": {
+   "approval": 6
+  },
+  "rate_limit": {
+   "none": 75,
+   "rate": 75
+  }
+ },
+ "_rate_limit_executed": {
+  ".L5": {
+   "full": 5,
+   "full_minus_rate": 15
+  },
+  ".L20": {
+   "full": 20,
+   "full_minus_rate": 35
+  }
+ }
+}

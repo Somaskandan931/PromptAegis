@@ -6,10 +6,11 @@ small handcrafted feature vector (rule score, semantic score, prompt
 length, suspicious-word density, history score) rather than a fine-tuned
 transformer — judges care about working architecture and explainability,
 not whether the classifier is DeBERTa or logistic regression (see the
-architecture notes). `models/train.py` retrains this model from
-data/attacks.csv + data/benign.csv; `classifier.pkl` is the persisted
-artifact loaded at runtime. Falls back to a rule-based heuristic if no
-trained artifact is present yet, so the API keeps working out of the box.
+architecture notes). `models/train.py` retrains this model from the
+configured corpora; `classifier.pkl` is the persisted artifact loaded at
+runtime. The research runner trains this artifact from
+the prepared HackAPrompt and ToxicChat partitions. Falls back to a rule-based
+heuristic if no trained artifact is present yet.
 """
 import os
 import re

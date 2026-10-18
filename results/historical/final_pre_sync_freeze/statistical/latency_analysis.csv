@@ -1,6 +1,0 @@
-comparison,n,baseline_median_ms,target_median_ms,median_paired_diff_ms,mean_paired_diff_ms,std_paired_diff_ms,wilcoxon_stat,wilcoxon_p_value
-baseline_vs_rbac_only,600,8.6,9.403,0.668,0.881,2.725,52903.5,1.8166619006595977e-18
-baseline_vs_policy_only,600,8.6,10.511,1.787,2.123,2.784,15865.5,1.7945868350484426e-68
-baseline_vs_full_normalized,600,8.6,17.151,8.628,8.878,2.267,0.0,5.978238429493547e-100
-baseline_vs_full_burst,600,8.6,11.628,3.498,4.514,3.552,1291.0,3.6626049994691775e-97
-baseline_vs_hardened,600,8.6,11.955,3.662,4.729,3.738,1445.0,7.827048154390472e-97

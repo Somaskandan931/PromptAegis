@@ -1,0 +1,25 @@
+{
+  "dataset": "PromptAegis project-authored adversarial normalization probe",
+  "purpose": "decision-level normalization sensitivity; not an external benchmark",
+  "seed_file": "backend/data/benchmark/parameter_manipulation.json",
+  "seed_file_sha256": "4a4f97b55e0c9bddc18444ebc981aa7759c5af36aff3b6c79fbbc11131bb6469",
+  "generator": "experiments/v2/generate_adversarial_extension.py",
+  "generator_sha256": "5b504e398fbebd1680d99a26247020015235aefd1f3e9e994eb3b0511fe6b376",
+  "generated_file_sha256": "085c0a37d6fb94e020cbcc9219dc43817a5dc7054ae86c3a9c4949740a2e6e24",
+  "seed_scenarios": 100,
+  "mutation_classes": [
+    "case_alternation",
+    "comment_fragmentation",
+    "advanced_sql",
+    "url_encoding",
+    "base64_obfuscation"
+  ],
+  "cases_per_mutation": 100,
+  "scenario_count": 500,
+  "label_status": "inherited_from_project_authored_seed_labels; not independently reviewed",
+  "limitations": [
+    "synthetic transformations",
+    "decision-only legacy runner",
+    "not evidence of real attack prevalence"
+  ]
+}

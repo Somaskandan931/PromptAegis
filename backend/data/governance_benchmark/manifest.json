@@ -1,0 +1,79 @@
+{
+  "by_category_and_split": {
+    "approval_required": {
+      "dev": 6,
+      "test": 4,
+      "tune": 8,
+      "validation": 6
+    },
+    "context_sensitive": {
+      "dev": 8,
+      "test": 8,
+      "tune": 8
+    },
+    "legitimate": {
+      "dev": 30,
+      "test": 33,
+      "tune": 16,
+      "validation": 19
+    },
+    "negative_control": {
+      "dev": 9,
+      "test": 11,
+      "tune": 4,
+      "validation": 6
+    },
+    "parameter_manipulation": {
+      "dev": 23,
+      "test": 23,
+      "tune": 16,
+      "validation": 30
+    },
+    "privilege_escalation": {
+      "dev": 6,
+      "test": 6,
+      "tune": 10,
+      "validation": 2
+    },
+    "prompt_injection": {
+      "dev": 6,
+      "test": 6,
+      "tune": 6
+    },
+    "provenance_dependent": {
+      "dev": 6,
+      "test": 6,
+      "tune": 3,
+      "validation": 3
+    },
+    "rate_limit": {
+      "dev": 6,
+      "test": 6,
+      "tune": 3,
+      "validation": 3
+    },
+    "unauthorized_tool": {
+      "dev": 6,
+      "test": 10,
+      "tune": 4,
+      "validation": 10
+    }
+  },
+  "call_observations": 709,
+  "dataset_version": "2.0.0",
+  "exact_duplicates_removed_by_construction": true,
+  "generator_sha256": "82a82421d18c7fe3f8668de0d8640bd816c7b62e31d1fc2379301a611be7b020",
+  "groups": 65,
+  "label_status": "author_labeled_pending_independent_review",
+  "scenario_count": 376,
+  "scenarios_sha256": "119400b9f0f198272f5970356dba646c7372dec131745b52ba94f5d6df80efd3",
+  "schema_version": "2.0",
+  "seed": 20261017,
+  "split_scenario_counts": {
+    "dev": 106,
+    "test": 113,
+    "tune": 78,
+    "validation": 79
+  },
+  "unique_gateway_keys": 349
+}

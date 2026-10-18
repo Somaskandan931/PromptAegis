@@ -245,7 +245,7 @@ export const api = {
   deletePolicy: (policyId) => request(`/policies/${policyId}`, { method: 'DELETE' }),
 
   // Runtime Tool Interception (FR-05/06/07)
-  intercept: (agentId, toolName, args = {}, config = 'full', source = 'runtime') =>
+  intercept: (agentId, toolName, args = {}, config = 'full', source = 'runtime', context = {}) =>
     request('/intercept', {
       method: 'POST',
       body: JSON.stringify({
@@ -254,6 +254,7 @@ export const api = {
         arguments: args,
         configuration: config,
         source: source,
+        context: context,
       }),
     }),
 

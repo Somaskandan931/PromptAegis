@@ -38,9 +38,16 @@ CREDENTIALS_REGISTRY_PATH = os.path.join(DATABASE_DIR, "credentials.json")
 DB_PATH = BENCHMARK_DB_PATH
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 
-ATTACK_CORPUS_PATH = os.path.join(DATA_DIR, "attacks.csv")
-BENIGN_CORPUS_PATH = os.path.join(DATA_DIR, "benign.csv")
-TRIGGER_BENIGN_CORPUS_PATH = os.path.join(DATA_DIR, "trigger_benign.csv")
+REAL_SPLIT_DIR = os.path.join(DATA_DIR, "intermediate")
+ATTACK_CORPUS_PATH = os.environ.get(
+    "PROMPTAEGIS_ATTACK_CORPUS_PATH", os.path.join(REAL_SPLIT_DIR, "hackaprompt_train_sample.csv")
+)
+BENIGN_CORPUS_PATH = os.environ.get(
+    "PROMPTAEGIS_BENIGN_CORPUS_PATH", os.path.join(REAL_SPLIT_DIR, "toxicchat_train.csv")
+)
+TRIGGER_BENIGN_CORPUS_PATH = os.environ.get(
+    "PROMPTAEGIS_TRIGGER_BENIGN_CORPUS_PATH", os.path.join(REAL_SPLIT_DIR, "toxicchat_trigger_train.csv")
+)
 
 # ---------------------------------------------------------------------------
 # Embedding model
@@ -112,7 +119,36 @@ CORS_ORIGINS = ["http://localhost:5173", "http://localhost:3000"]
 # ---------------------------------------------------------------------------
 # Downstream LLM provider
 # ---------------------------------------------------------------------------
+# Groq model IDs that have been shut down, mapped to the replacement Groq
+# recommends (https://console.groq.com/docs/deprecations). A stale value in
+# backend/.env or the shell (e.g. GROQ_MODEL=llama-3.3-70b-versatile) would
+# otherwise fail every request with HTTP 404 "model_not_found".
+RETIRED_GROQ_MODELS = {
+    "llama-3.3-70b-versatile": "openai/gpt-oss-120b",   # shut down 2026-08-16
+    "llama-3.1-8b-instant": "openai/gpt-oss-20b",       # shut down 2026-08-16
+    "qwen/qwen3.6-27b": "qwen/qwen3.8-27b",             # shut down 2026-09-14
+    "qwen/qwen3-32b": "openai/gpt-oss-120b",            # shut down 2026-07-17
+    "meta-llama/llama-4-scout-17b-16e-instruct": "openai/gpt-oss-120b",  # 2026-07-17
+}
+DEFAULT_GROQ_MODEL = "openai/gpt-oss-120b"
+
+
+def resolve_groq_model(model: str) -> str:
+    """Return a live Groq model ID, remapping retired IDs with a warning."""
+    model = (model or "").strip() or DEFAULT_GROQ_MODEL
+    replacement = RETIRED_GROQ_MODELS.get(model)
+    if replacement:
+        import warnings
+        warnings.warn(
+            f"Groq model '{model}' has been retired; using '{replacement}' instead. "
+            f"Update GROQ_MODEL in backend/.env or your shell to silence this.",
+            RuntimeWarning, stacklevel=2,
+        )
+        return replacement
+    return model
+
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = resolve_groq_model(os.getenv("GROQ_MODEL", DEFAULT_GROQ_MODEL))
 GROQ_BASE_URL = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
 LLM_TIMEOUT_SECONDS = float(os.getenv("LLM_TIMEOUT_SECONDS", "45"))

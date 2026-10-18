@@ -1,6 +1,0 @@
-configuration,asr,asr_ci_lower,asr_ci_upper,ltcr,ltcr_ci_lower,ltcr_ci_upper
-baseline,1.0,1.0,1.0,1.0,1.0,1.0
-permission,0.4,0.358,0.442,1.0,1.0,1.0
-policy,0.26,0.222,0.298,1.0,1.0,1.0
-full,0.26,0.222,0.298,1.0,1.0,1.0
-hardened,0.26,0.222,0.298,1.0,1.0,1.0

@@ -1,0 +1,64 @@
+{
+  "dataset_family": "real prompt holdouts",
+  "created_at": "2026-10-16T17:44:43Z",
+  "detector_mode": "frozen persisted detector and configured semantic index",
+  "detector_artifacts": {
+    "classifier_backend": "LogisticRegression",
+    "classifier_sha256": "7be7874c84ea0b6790994e2a212ecb1048bba7db405c468795af7aa0aa9bf976",
+    "threshold_sha256": "e239483579737c631fa3523cc91078e8c8f2d2c676f757f94cc59451e65ac7af",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "prepared_data_manifest_sha256": "f6ce67d2df8361cbf8556fbac881abba084747b2a252fe8865353a100e804ba9",
+  "method_note": "Only the held-out HackAPrompt attack split and the native ToxicChat test split are screened. ToxicChat rows are filtered to non-toxic and non-jailbreak user prompts; they are benign proxies, not labels proving the absence of prompt injection.",
+  "sources": [
+    {
+      "file": "hackaprompt_test.csv",
+      "label": "attack",
+      "role": "heldout_real_attack",
+      "status": "complete",
+      "sha256": "7ee750600e3d76a8f0f4cc034ac4b9827229f522f1df948b635cd0aebdef4735",
+      "total": 78641,
+      "actions": {
+        "pass": 34579,
+        "sanitize": 41812,
+        "block": 2250
+      },
+      "tiers": {
+        "LOW": 31561,
+        "MEDIUM": 41812,
+        "HIGH": 2250,
+        "SAFE": 3018
+      },
+      "flagged": 44062,
+      "intervention_rate": 0.5602929769458679
+    },
+    {
+      "file": "toxicchat_test.csv",
+      "label": "benign",
+      "role": "heldout_real_benign_proxy",
+      "status": "complete",
+      "sha256": "4925e92f6144755344cdb5bb51dfca70b6bf9da05653cf6e135edb45fec3cc3e",
+      "total": 4721,
+      "actions": {
+        "pass": 4710,
+        "block": 7,
+        "sanitize": 4
+      },
+      "tiers": {
+        "SAFE": 4655,
+        "LOW": 55,
+        "HIGH": 7,
+        "MEDIUM": 4
+      },
+      "flagged": 11,
+      "false_positive_rate": 0.0023300148273670833
+    }
+  ],
+  "external_transfer_headline": {
+    "attack_source": "hackaprompt_test.csv",
+    "benign_proxy_source": "toxicchat_test.csv",
+    "intervention_rate": 0.5602929769458679,
+    "benign_proxy_intervention_rate": 0.0023300148273670833
+  },
+  "interpretation_boundary": "Standalone prompt screening only. HackAPrompt rows are a row-level held-out split; ToxicChat is a native held-out split of consented user prompts. These rates do not measure tool-call authorization or task completion."
+}

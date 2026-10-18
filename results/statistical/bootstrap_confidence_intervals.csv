@@ -1,7 +1,0 @@
-configuration,asr,asr_ci_lower,asr_ci_upper,ltcr,ltcr_ci_lower,ltcr_ci_upper
-baseline,1.0,1.0,1.0,1.0,1.0,1.0
-rbac_only,0.4,0.358,0.442,1.0,1.0,1.0
-policy_only,0.33,0.29,0.372,1.0,1.0,1.0
-full_normalized,0.3,0.26,0.34,1.0,1.0,1.0
-full_burst,0.26,0.222,0.298,1.0,1.0,1.0
-hardened,0.268,0.23,0.308,1.0,1.0,1.0
