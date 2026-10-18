@@ -170,3 +170,12 @@ results/review/
 # It receives superseded and contaminated runs. Leave this commented out if you
 # want that execution record committed; uncomment to keep it local only.
 # results_archive/
+
+
+# --- Manuscript: kept in Overleaf, not published with the code ---
+paper/*.tex
+paper/*.pdf
+paper/*.bib
+paper/OVERLEAF_INSTRUCTIONS.md
+paper/figures/
+paper/generated/

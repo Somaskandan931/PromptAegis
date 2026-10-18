@@ -12,6 +12,7 @@
 ![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61dafb)
 ![Evidence](https://img.shields.io/badge/evidence-development%20split%20only-yellow)
 ![Labels](https://img.shields.io/badge/labels-author--assigned%2C%20not%20independently%20reviewed-red)
+![Run](https://img.shields.io/badge/canonical%20run-frozen%20at%20909a5b1-brightgreen)
 
 [Overview](#overview) · [Architecture](#architecture) · [Results](#results) · [Quick start](#quick-start) · [Reproduce](#reproducing-the-study) · [Repo map](#repository-map) · [Limitations](#limitations)
 
@@ -61,7 +62,20 @@ Stages run in a fixed order and the first blocking stage decides. Stage 0 (well-
 
 ## Results
 
-All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls), run `governance_dev_20261018T081010Z_9e7d0639` (all twelve configurations; recorded source hashes match this tree, see [reproduction check](docs/REPRODUCTION_CHECK.md)). They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
+All numbers come from the **development split** (100 in-scope scenarios from 21 template groups, 244 first-attempt calls), run `governance_dev_20261018T081010Z_9e7d0639` (all twelve configurations), produced from Git revision `909a5b1` on a clean worktree. They are descriptive. No confidence intervals or significance tests are reported because the effective sample size is far below 100.
+
+### Provenance of the reported run
+
+| | |
+|---|---|
+| **Canonical run** | `results/study/governance_dev_20261018T081010Z_9e7d0639.json` (12 configurations, 106 scenarios, 100 in scope) |
+| **Git revision** | `909a5b128b6f91826d3f68a684c07d4968f6c9c3`, `git_worktree_dirty: false` (the check ignores the runner's own `results/` output) |
+| **Source hashes** | Scenario set, manifest, runner, gateway, validator and sandbox runtime match that revision |
+| **Claim registry** | `results/provenance/claim_registry.json`, 120 claims linked to the raw run and pilot |
+| **Tests** | 102 passing (`python -m pytest -q tests`) |
+| **History only** | Earlier runs `governance_dev_20261017T150806Z_056a4792` (4 configurations, used for the original-run latency panel), `governance_dev_20261017T182314Z_2a97d190` and `governance_dev_20261018T072638Z_13a891ae` (same counts, no clean-worktree freeze) |
+
+See the [reproduction check](docs/REPRODUCTION_CHECK.md) and the [paper-to-code map](docs/PAPER_TO_CODE_MAP.md).
 
 ### Headline comparison
 
@@ -120,7 +134,7 @@ With the stage on, exactly the configured number of calls executes (5 of 15, 20 
 | Policy-only | 152.2 | 164.8 | 242.0 | 263.1 |
 | Full | 190.4 | 187.3 | 281.8 | 312.8 |
 
-Re-running the **same code and scenarios** gave medians of 4.1 / 4.7 / 7.1 / 9.7 ms. The ordering agrees, the magnitudes differ by more than 10×, so no deployment overhead is claimed.
+Re-running the **same code and scenarios** gave medians of 4.1 / 4.7 / 7.1 / 9.7 ms. The ordering agrees, the magnitudes differ by more than 10×, so no deployment overhead is claimed. A randomized, warmed-up, repeated protocol is available (`latency` command, step 3b below); its output is not yet reported in the manuscript.
 
 ### Closed-loop LLM pilot (exploratory)
 
@@ -187,10 +201,10 @@ python experiments\run_research.py latency --repetitions 10 --warmup 2
 # 4. Rebuild the claim registry from the raw run, then test
 cd ..
 python experiments\run_research.py registry --ablation results\study\governance_dev_20261018T081010Z_9e7d0639.json --pilot results\study\llm_20261017T171952Z_9c41232a.json
-python -m pytest -q tests
+python -m pytest -q tests --basetemp=tmp\pytest   # --basetemp avoids Windows temp-folder permission errors; tmp/ is gitignored
 ```
 
-The runner refuses to start while another benchmark is active (a lock file under `results/study/`); concurrent runs on 17 Oct 2026 contaminated each other, see `results/study/CONTAMINATED_RUNS.md`. To cite a run in a paper, commit first and run from a clean checkout so the run records a Git revision. Validation and test splits stay locked until an independent label-review record is bound to the dataset hash.
+The runner refuses to start while another benchmark is active (a lock file under `results/study/`); concurrent runs on 17 Oct 2026 contaminated each other, see `results/study/CONTAMINATED_RUNS.md`. To cite a run in a paper, commit first and run from a clean checkout so the run records a Git revision; the runner records `git_worktree_dirty` while ignoring its own `results/` output, so a clean tree reads `false`. Re-running creates a new run ID, which you then update in this README, `results/study/README.md`, `docs/REPRODUCTION_CHECK.md`, `docs/PAPER_TO_CODE_MAP.md` and the provenance test (`CANONICAL_RUN`). Validation and test splits stay locked until an independent label-review record is bound to the dataset hash.
 
 ## Repository map
 
@@ -200,10 +214,12 @@ backend/        FastAPI app, governance gateway, sandbox, SQLite registries
                 rate limiter, risk scorer, audit chain
   sandbox/      in-memory business world, runtime, agent harness
 frontend/       React + Vite dashboard and experiment page
-experiments/    run_research.py (canonical entry point), benchmark and LLM runners, stats
-results/        study/ runs with audit chains, review/, provenance/, external/
+experiments/    run_research.py (canonical entry point)
+  study/        benchmark, LLM closed-loop, latency protocol, analysis, claim registry
+  archive/      legacy_studies/: superseded scripts kept for provenance, not used for reported results
+results/        study/ runs with audit chains, review/, provenance/ (claim registry, legacy/), external/
 paper/          LaTeX manuscript, figure scripts, generated tables
-docs/           protocol, threat model, status, PRD matrix, audits
+docs/           protocol, threat model, status, PRD matrix, paper-to-code map, reproduction check
   images/       PNG figures used by this README
 tests/          pytest suite
 ```
@@ -352,7 +368,7 @@ blinded worksheet; retain its ignored private ID key locally.
 ### Tests and local prototype
 
 ```powershell
-python -m pytest -q tests
+python -m pytest -q tests --basetemp=tmp\pytest
 ```
 
 Start the API in one terminal:
@@ -374,7 +390,7 @@ The API uses SQLite files under `backend\database\`. Do not commit database file
 
 ### Paper and Overleaf
 
-Use Elsevier `elsarticle` as a working format unless the supervisor or target venue requires a different template. Upload `paper/PromptAegis_Governance_Study.tex`, `paper/references.bib`, and referenced figures. Follow [paper/OVERLEAF_INSTRUCTIONS.md](paper/OVERLEAF_INSTRUCTIONS.md). Confirm institutional requirements before finalizing author, funding, CRediT, and generative-AI declarations.
+Use Elsevier `elsarticle` as a working format unless the supervisor or target venue requires a different template. Upload `paper/PromptAegis_Governance_Study.tex`, `paper/references.bib`, and referenced figures. Follow [paper/OVERLEAF_INSTRUCTIONS.md](paper/OVERLEAF_INSTRUCTIONS.md). The compiled manuscript is `paper/PromptAegis_Governance_Study.pdf`. The manuscript deliberately contains no file paths, run IDs or repository URLs; those are documented here and in the [paper-to-code map](docs/PAPER_TO_CODE_MAP.md), which links each reported claim to its code, test and record. Confirm institutional requirements before finalizing author, funding, CRediT, and generative-AI declarations.
 
 ### Repository hygiene
 
@@ -393,7 +409,7 @@ If a tracked file ever held a real key, rotate the key; removing the file from t
 
 - Scenarios, contracts, labels and the effect oracle were written by the same people; independent annotation has not been done.
 - The 100 in-scope scenarios come from only 21 template groups, so the effective sample size is much smaller than 100.
-- The development split was used while building the gateway; results are not held-out estimates. Validation and test are locked.
+- The development split was used while building the gateway; results are not held-out estimates. Validation and test are locked. The canonical run is frozen at a Git revision, but that fixes provenance only: it is still development-split and author-labelled.
 - The scripted agent never reads text, so injection-labelled scenarios test how the gateway handles a structured call, not whether a model can be manipulated.
 - The live pilot uses one model, 12 tasks, and produced one structured injected proposal.
 - The in-memory sandbox is not OS isolation; human approval is simulated; the audit chain is not externally anchored.
@@ -410,8 +426,9 @@ Closest architectural relative: **Progent** (privilege control at the tool bound
 @misc{promptaegis2026,
   title  = {PromptAegis: Design and Experimental Evaluation of a Deterministic
             Policy-Enforcement Gateway for Tool-Using AI Agents},
-  author = {Author details to be completed},
+  author = {Somaskandan, Rajagopal},
   year   = {2026},
-  note   = {Research prototype; development-split evidence only}
+  url    = {https://github.com/Somaskandan931/PromptAegis},
+  note   = {Research prototype; development-split evidence only; canonical run frozen at revision 909a5b1}
 }
 ```
