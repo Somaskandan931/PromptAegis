@@ -1,6 +1,16 @@
 # PRD implementation matrix
 
-Last reviewed: 18 October 2026, against `paper/PromptAegis_Governance_Study.tex` and runs `056a4792` (4 configurations) and `2a97d190` (12 configurations, re-execution on the delivered source).
+Last reviewed: 19 October 2026, against `paper/PromptAegis_Governance_Study.tex` and canonical run `9e7d0639`.
+
+## Authoritative benchmark runs
+
+| Run ID | Role | git\_worktree\_dirty | gateway\_sha256 | git revision |
+|--------|------|----------------------|-----------------|--------------|
+| `9e7d0639` | **Canonical dev run** — all main-results tables (ASR, LTCR, latency Tab. 7, ablation) | `false` | `2a6051d7` | `909a5b1` |
+| `056a4792` | Earlier 4-configuration exploratory latency run (Fig. 8 left panel only) | `true` | `5d432035` | `ee43195` |
+| `2a97d190` | 12-configuration re-execution for Fig. 8 right panel; outcomes match `9e7d0639` | `null` | `2a6051d7` | — |
+
+The development split (106 scenarios, 100 in scope) was used for all reported results. The validation split (79 scenarios) and test split (113 scenarios) are locked and have not been run.
 
 "Implemented" means a code path exists and was exercised on the **development split only**. It does not mean production readiness, independent validation, or generalization.
 
@@ -56,7 +66,7 @@ Last reviewed: 18 October 2026, against `paper/PromptAegis_Governance_Study.tex`
 | Security and utility metrics | Met (separately reported, as PRD 24.8 advises) |
 | Ablation | Met |
 | Results exportable | Met |
-| Entire experiment reproducible | Partly: no run frozen at a clean commit; latency not reproducible across machines |
+| Entire experiment reproducible | Partly: canonical run `9e7d0639` was produced from revision `909a5b1` with `git_worktree_dirty: false` and can be re-executed; absolute latency values are machine-dependent and not reproducible across hardware; validation and test splits are locked and have not been run |
 
 ## 4. Figures and the PRD
 

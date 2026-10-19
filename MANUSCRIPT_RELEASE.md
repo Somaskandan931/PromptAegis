@@ -113,8 +113,8 @@ tracked in Git; obtain these files via GitHub release or author request (see abo
 |------|---------|------|
 | `paper/PromptAegis_Governance_Study.pdf` (Master) | `101EE57BC4F37089E6F1969FD177EDB0CED218DF3FD8BA6819A5DC323D38A2EF` | 515,927 bytes |
 | `paper/PromptAegis_Governance_Study.tex` (Master) | `922B368BA956067D6BB52E7023F3430DE61D9AAE294B10BC8F9110D9CFD37971` | 58,223 bytes |
-| `paper/PromptAegis_Governance_Study_Anonymized.pdf` (Anonymized) | `6E1A9CE7A97FA9CC05A86DCFC6D252DD6337526A31FEFC120F913369F5084075` | 494,428 bytes |
-| `paper/PromptAegis_Governance_Study_Anonymized.tex` (Anonymized) | `330DE42CD364F4BF1E150FDF583FD46FAF8DB1DBA1022673E12ADB81AFDFF9A9` | 58,183 bytes |
+| `paper/PromptAegis_Governance_Study_Anonymized.pdf` (Anonymized) | `922BF67771C01E174B2A4CC283AA47BD09CB655B55CD957FA652D9726C177B24` | 488,879 bytes |
+| `paper/PromptAegis_Governance_Study_Anonymized.tex` (Anonymized) | `884DF1EE248B73394E1F7F15ED9DAC173D4FA67B43ECF1A1F13ECD6A2FB88136` | 56,730 bytes |
 | `paper/references.bib` | `99EECBAB04EFCB743CA3E4F6C39DE2F457E2C191DA81CA2333F08D69134C7613` | 7,529 bytes |
 | `paper/figures/fig_latency.pdf` | `FA6C788DA19975B963AD2D2D2A3A48D894EB219A6AA6F70298B3E35EC78E3710` | 17,362 bytes |
 | `docs/images/fig_latency.png` | `0EC9C3377A3DC74F9B05A1C89979CE80142D712331FC3125A2E73A3FDD63A0E4` | 53,307 bytes |
