@@ -127,14 +127,14 @@ With the stage on, exactly the configured number of calls executes (5 of 15, 20 
 
 ![Latency distributions in two runs](docs/images/fig_latency.png)
 
-| Configuration | Median ms | Mean ms | p95 ms | p99 ms |
-|---|---:|---:|---:|---:|
-| Baseline | 65.7 | 73.8 | 118.0 | 182.1 |
-| RBAC-only | 85.5 | 96.7 | 170.8 | 235.0 |
-| Policy-only | 152.2 | 164.8 | 242.0 | 263.1 |
-| Full | 190.4 | 187.3 | 281.8 | 312.8 |
+| Configuration | Median ms | Mean ms | p95 ms | p99 ms | Source |
+|---|---:|---:|---:|---:|---|
+| Baseline | 56.4 | 73.6 | 137.7 | 300.9 | Canonical run `9e7d0639` (n=244) |
+| RBAC-only | 56.6 | 71.0 | 133.6 | 217.7 | Canonical run `9e7d0639` (n=244) |
+| Policy-only | 148.8 | 160.6 | 259.2 | 338.8 | Canonical run `9e7d0639` (n=244) |
+| Full | 171.3 | 176.1 | 283.0 | 384.5 | Canonical run `9e7d0639` (n=244) |
 
-Re-running the **same code and scenarios** gave medians of 4.1 / 4.7 / 7.1 / 9.7 ms. The ordering agrees, the magnitudes differ by more than 10×, so no deployment overhead is claimed. A randomized, warmed-up, repeated protocol is available (`latency` command, step 3b below); its output is not yet reported in the manuscript.
+These values are from the canonical twelve-configuration run (`9e7d0639`, `git_worktree_dirty: false`, `gateway_sha256: 2a6051d7`), computed from raw `total_latency_ms` call records (first-attempt, in-scope scenarios). An earlier four-configuration run (`056a4792`, `git_worktree_dirty: true`, gateway `5d432035`) recorded medians of 65.7/85.5/152.2/190.4 ms; those values are not directly comparable because the gateway implementation differed. The two panels in the latency figure correspond to these two runs; the ordering of configurations agrees but magnitudes are not interchangeable. No deployment overhead is claimed. A randomized latency protocol is available but not yet reported.
 
 ### Closed-loop LLM pilot (exploratory)
 
@@ -224,7 +224,7 @@ docs/           protocol, threat model, status, PRD matrix, paper-to-code map, r
 tests/          pytest suite
 ```
 
-Key documents: [Experiment protocol](docs/research/EXPERIMENT_PROTOCOL.md) · [Threat model](docs/research/THREAT_MODEL.md) · [Independent label review](docs/research/INDEPENDENT_LABEL_REVIEW.md) · [Status](docs/research/STATUS.md) · [PRD implementation matrix](docs/PRD_IMPLEMENTATION_MATRIX.md) · [Paper-to-code map](docs/PAPER_TO_CODE_MAP.md) · [Reproduction check](docs/REPRODUCTION_CHECK.md) · [Manuscript](paper/PromptAegis_Governance_Study.tex)
+Key documents: [Experiment protocol](docs/research/EXPERIMENT_PROTOCOL.md) · [Threat model](docs/research/THREAT_MODEL.md) · [Independent label review](docs/research/INDEPENDENT_LABEL_REVIEW.md) · [Status](docs/research/STATUS.md) · [PRD implementation matrix](docs/PRD_IMPLEMENTATION_MATRIX.md) · [Paper-to-code map](docs/PAPER_TO_CODE_MAP.md) · [Reproduction check](docs/REPRODUCTION_CHECK.md) · [Manuscript availability](MANUSCRIPT_RELEASE.md)
 
 ## More detail
 
