@@ -29,7 +29,7 @@ Last reviewed: 18 October 2026, against `paper/PromptAegis_Governance_Study.tex`
 |---|---|---|
 | RQ1 policy-controlled vs unrestricted | Paper main-results table and ablation figure | Answered on dev split; ASR 25/49 -> 0/49 |
 | RQ2 permissions vs legitimate completion | Paper trade-off section, Fig. security-utility | 43/43 task checks and 0/39 false blocks everywhere; suite cannot expose over-blocking (6 benign template groups) |
-| RQ3 latency overhead | Paper latency table and Fig. latency | Ordering consistent across two runs (4.1->9.7 ms vs 66->190 ms medians); absolute values machine-dependent, so no overhead estimate |
+| RQ3 latency overhead | Paper latency table and Fig. latency | Ordering consistent across runs (56.4->171.3 ms median in canonical run 9e7d0639, 65.7->190.4 ms in exploratory run 056a4792); absolute values machine-dependent, so no overhead estimate |
 | RQ4 distinguishing legitimate from unsafe calls | Exact agreement; benign false block | Answered within suite; labels author-assigned |
 | RQ5 rate limiting | Paper rate-limit paragraph, Fig. rate | Enforcement of limit shown; no attack-containment or legitimate-burst cost measured |
 | RQ6 best security-utility mix | 12-configuration ablation | RBAC+Schema reaches 0/49 ASR; Approval needed to hold the 4 approval-required exports; utility flat so trade-off is not discriminated |

@@ -113,6 +113,7 @@ ax[0].set_yticks(y)
 ax[0].set_yticklabels([LABEL[k] for k in ORDER])
 fig.tight_layout()
 fig.savefig("figures/fig_security_utility.pdf")
+fig.savefig("../docs/images/fig_security_utility.png", dpi=200)
 plt.close(fig)
 
 # ---------------------------------------- Fig B: first blocking stage (full)
@@ -149,6 +150,7 @@ ax.set_xlabel("Proposed calls (full gateway, in-scope development scenarios)")
 ax.legend(frameon=False, ncol=6, fontsize=6.5, loc="lower center", bbox_to_anchor=(0.45, 1.0), columnspacing=1.0, handlelength=1.2)
 fig.tight_layout()
 fig.savefig("figures/fig_stage_attribution.pdf")
+fig.savefig("../docs/images/fig_stage_attribution.png", dpi=200)
 plt.close(fig)
 M["_stage_attribution_full"] = {c: dict(tab[c]) for c in cats}
 
@@ -173,6 +175,7 @@ for a, (suf, lim) in zip(ax, ((".L5", 5), (".L20", 20))):
 ax[0].legend(frameon=False, fontsize=7, loc="upper left")
 fig.tight_layout()
 fig.savefig("figures/fig_rate_limit.pdf")
+fig.savefig("../docs/images/fig_rate_limit.png", dpi=200)
 plt.close(fig)
 M["_rate_limit_executed"] = {
     suf: {k: int(cum_executed(C[k], suf)[0][-1]) for k in ("full", "full_minus_rate")}
@@ -184,17 +187,18 @@ fig, ax = plt.subplots(1, 2, figsize=(7.2, 2.5), sharey=False)
 ax[0].boxplot([orig_lat[k] for k in prim], tick_labels=[LABEL[k] for k in prim], showfliers=False,
               whis=(5, 95), patch_artist=True, boxprops=dict(facecolor="#dbe9f6"),
               medianprops=dict(color="#c0392b"))
-ax[0].set_title("Original run (cited in the latency table)", fontsize=8)
+ax[0].set_title("Earlier exploratory run 056a4792\n(git_worktree_dirty: true, gateway 5d432035)", fontsize=7.5)
 ax[0].set_ylabel("Per-call time, gateway + tool (ms)")
 re_lat = {k: np.array([r["total_latency_ms"] for s in in_scope(C[k]) for r in s["records"]]) for k in prim}
 ax[1].boxplot([re_lat[k] for k in prim], tick_labels=[LABEL[k] for k in prim], showfliers=False,
               whis=(5, 95), patch_artist=True, boxprops=dict(facecolor="#fde8d0"),
               medianprops=dict(color="#c0392b"))
-ax[1].set_title("Re-execution (12-configuration run)", fontsize=8)
+ax[1].set_title("12-configuration re-execution 2a97d190\n(gateway 2a6051d7, same code as canonical 9e7d0639)", fontsize=7.5)
 for a in ax:
     a.grid(axis="y", alpha=0.25)
 fig.tight_layout()
 fig.savefig("figures/fig_latency.pdf")
+fig.savefig("../docs/images/fig_latency.png", dpi=200)
 plt.close(fig)
 
 # ---------------------------------------------------- LaTeX table
